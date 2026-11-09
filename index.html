@@ -1,0 +1,3658 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>港股IPO业务操作指南——金牌银行家Guidebook</title>
+<meta name="description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="港股IPO业务操作指南">
+<meta property="og:title" content="港股IPO业务操作指南——金牌银行家Guidebook">
+<meta property="og:description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="港股IPO业务操作指南——金牌银行家Guidebook">
+<meta name="twitter:description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<style>
+  :root {
+    --sidebar-width: 260px;
+    --color-primary: #1a3a5c;
+    --color-accent: #c9a84c;
+    --color-bg: #f8f7f4;
+    --color-card: #ffffff;
+    --color-text: #2d2d2d;
+    --color-text-light: #5a5a5a;
+    --color-border: #e5e0d8;
+    --color-highlight: #f0ebe0;
+    --color-info: #2c5f8a;
+    --color-success: #2e7d32;
+    --color-warning: #e67e22;
+    --color-danger: #c0392b;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.8;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ==================== SIDEBAR ==================== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--color-primary);
+    color: #fff;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+  }
+
+  .sidebar-header {
+    padding: 28px 22px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .sidebar-header .logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .sidebar-header h1 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .sidebar-header .subtitle {
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    padding: 12px 0;
+  }
+
+  .sidebar-nav .nav-section-title {
+    padding: 14px 22px 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.45;
+    font-weight: 600;
+  }
+
+  .sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 22px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .sidebar-nav a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  .sidebar-nav a.active {
+    color: var(--color-accent);
+    background: rgba(201,168,76,0.1);
+    border-left-color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .sidebar-nav a .nav-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .sidebar-nav a.active .nav-num {
+    background: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .sidebar-footer {
+    padding: 16px 22px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 11px;
+    opacity: 0.4;
+    line-height: 1.6;
+  }
+
+  /* ==================== MAIN CONTENT ==================== */
+  .main-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 40px 56px 80px 48px;
+    max-width: 1100px;
+  }
+
+  /* Hero section */
+  .hero {
+    margin-bottom: 48px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+
+  .hero .meta span { display: flex; align-items: center; gap: 4px; }
+
+  /* Hero: 贡献邀请 */
+  .cover-cta {
+    margin-top: 26px;
+    max-width: 820px;
+    padding: 18px 22px;
+    background: rgba(201, 168, 76, 0.07);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 6px;
+  }
+
+  .cover-cta-head strong {
+    display: block;
+    font-size: 15px;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+  }
+
+  .cover-cta-head span {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--color-text-light);
+  }
+
+  .cover-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--color-primary);
+    background: #fff;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: background .18s, color .18s, border-color .18s;
+  }
+
+  .cta-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cta-btn.cta-primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cta-btn.cta-primary:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+
+  .contrib-panel {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--color-border);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--color-text-light);
+  }
+
+  .contrib-panel h4 {
+    font-size: 13px;
+    color: var(--color-primary);
+    margin: 12px 0 4px;
+  }
+
+  .contrib-panel h4:first-child { margin-top: 0; }
+
+  .contrib-panel ol,
+  .contrib-panel ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .contrib-panel li { margin-bottom: 3px; }
+
+  /* Section styling */
+  .section {
+    margin-bottom: 48px;
+    scroll-margin-top: 24px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section h2 .sec-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 28px 0 12px;
+    padding-left: 14px;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 20px 0 8px;
+  }
+
+  .section p {
+    margin-bottom: 14px;
+    color: var(--color-text-light);
+  }
+
+  /* Info cards */
+  .info-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-card .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-card .card-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    background: var(--color-highlight);
+    border-left: 4px solid var(--color-accent);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .highlight-box strong {
+    color: var(--color-primary);
+  }
+
+  /* Warning box */
+  .warning-box {
+    background: #fef9e7;
+    border-left: 4px solid var(--color-warning);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .warning-box .warn-title {
+    font-weight: 700;
+    color: var(--color-warning);
+    margin-bottom: 4px;
+  }
+
+  /* Tip box */
+  .tip-box {
+    background: #eaf7ea;
+    border-left: 4px solid var(--color-success);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .tip-box .tip-title {
+    font-weight: 700;
+    color: var(--color-success);
+    margin-bottom: 4px;
+  }
+
+  /* Tables */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  table thead {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-light);
+  }
+
+  table tbody tr:hover {
+    background: var(--color-highlight);
+  }
+
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .clickable-row {
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .clickable-row:hover {
+    background: var(--color-highlight) !important;
+  }
+
+  .clickable-row td:last-child::after {
+    content: ' ↗';
+    font-size: 11px;
+    color: var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .clickable-row:hover td:last-child::after {
+    opacity: 1;
+  }
+
+  /* Process flow */
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .flow-step {
+    flex: 1;
+    min-width: 120px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+
+  .flow-step .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .flow-step .step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .flow-step .step-desc {
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+  }
+
+  /* Pipeline (horizontal flow) */
+  .pipeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin: 24px 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .pipeline-stage {
+    text-align: center;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+
+  .pipeline-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .pipeline-body {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 14px 12px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pipeline-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+  }
+
+  .pipeline-detail {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  .pipeline-time {
+    font-size: 10px;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--color-highlight);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  .pipeline-arrow {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    font-size: 20px;
+    color: var(--color-accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 24px;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .pipeline {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .pipeline-stage { min-width: auto; }
+    .pipeline-arrow {
+      transform: rotate(90deg);
+      padding-top: 0;
+      padding: 4px 0;
+    }
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 10px 16px;
+    margin: 4px 0;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .checklist li::before {
+    content: '☐';
+    color: var(--color-accent);
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .checklist li.done::before {
+    content: '☑';
+    color: var(--color-success);
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  .tag-blue { background: #dbeafe; color: #1e40af; }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-orange { background: #fff7ed; color: #9a3412; }
+  .tag-red { background: #fce4ec; color: #880e4f; }
+  .tag-gray { background: #f3f4f6; color: #4b5563; }
+
+  /* TOC within section */
+  .section-toc {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    margin: 16px 0;
+  }
+
+  .section-toc .toc-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+  }
+
+  .section-toc ol {
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: var(--color-text-light);
+  }
+
+  .section-toc ol li {
+    margin: 4px 0;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    z-index: 99;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    background: var(--color-accent);
+  }
+
+  /* Print */
+  @media print {
+    .sidebar, .back-to-top { display: none; }
+    .main-content { margin-left: 0; padding: 20px; max-width: 100%; }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar-nav { display: flex; flex-wrap: wrap; padding: 8px; }
+    .sidebar-nav .nav-section-title { display: none; }
+    .sidebar-nav a { padding: 6px 12px; font-size: 12px; border-left: none; }
+    body { flex-direction: column; }
+    .main-content { margin-left: 0; padding: 24px 16px 60px; }
+    .hero h1 { font-size: 24px; }
+    .section h2 { font-size: 20px; }
+    .flow-steps { flex-direction: column; }
+    .page-nav { flex-wrap: wrap; gap: 10px; }
+    .page-nav .page-indicator { order: -1; width: 100%; padding: 0 0 8px; }
+    .page-nav button { flex: 1 1 45%; }
+  }
+
+  /* ==================== PRINCIPLES LIST SPACING ==================== */
+  .principles-list li { margin-bottom: 14px; line-height: 1.95; }
+  .principles-list li:last-child { margin-bottom: 0; }
+
+  /* ==================== PAGINATION ==================== */
+  /* Only the active page is shown; all others are hidden. */
+  .hero, .section { display: none; }
+  .hero.active, .section.active {
+    display: block;
+    animation: pageFade 0.25s ease;
+  }
+  @keyframes pageFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .page-nav {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border);
+  }
+  .page-nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 22px;
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    border-radius: var(--radius);
+    color: var(--color-primary);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-sm);
+  }
+  .page-nav button.next { text-align: right; align-items: flex-end; }
+  .page-nav button:hover:not(:disabled) {
+    border-color: var(--color-accent);
+    background: var(--color-highlight);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .page-nav button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .page-nav .nav-label {
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-weight: 400;
+  }
+  .page-nav .nav-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .page-nav .page-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--color-text-light);
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+
+  /* ==================== 5.1 A1 PACK TABLE ==================== */
+  .a1-table thead th {
+    background: var(--color-primary);
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .a1-table td {
+    line-height: 1.65;
+    vertical-align: top;
+  }
+  .a1-table td:first-child {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 12.5px;
+    color: #1f2a37;
+    background: rgba(201,168,76,0.10);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .a1-table td:first-child code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: 12.5px;
+    word-break: break-all;
+  }
+</style>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body style="position: relative;">
+
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">GUIDEBOOK</div>
+    <h1>港股IPO<br>业务操作指南</h1>
+    <div class="subtitle">金牌银行家 · 执行组</div>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#cover"><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">⌂</span>指南首页</a>
+    <a href="#sec0" class=""><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">✦</span>手册概览与使用说明</a>
+    <a href="#sec-intro"><span class="nav-num" style="background:var(--color-accent);color:var(--color-primary);">0</span>港股IPO相关基础知识</a>
+    <div class="nav-section-title">执行层面</div>
+    <a href="#sec1"><span class="nav-num">1</span>项目承揽</a>
+    <a href="#sec2"><span class="nav-num">2</span>项目立项</a>
+    <a href="#sec3"><span class="nav-num">3</span>尽职调查</a>
+    <a href="#sec4"><span class="nav-num">4</span>质控内核</a>
+    <a href="#sec5"><span class="nav-num">5</span>申报审核</a>
+    <a href="#sec6"><span class="nav-num">6</span>发行上市</a>
+    <a href="#sec7"><span class="nav-num">7</span>底稿归档</a>
+    <div class="nav-section-title">其他资料</div>
+    <a href="#sec8"><span class="nav-num">8</span>规则汇编</a>
+  </nav>
+  <div class="sidebar-footer">
+    版本 V2.2 · 2026年11月<br>
+    投行分会执行小组
+  </div>
+</aside>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main-content">
+
+  <!-- HERO (cover page) -->
+  <div class="hero active" id="cover">
+    <div class="badge">Guidebook</div>
+    <h1>港股IPO业务操作指南<br><span style="font-size:0.62em;color:var(--color-accent);font-weight:600;letter-spacing:0.04em;">——金牌银行家Guidebook</span></h1>
+    <div class="meta">
+      <span>📋 适用对象：新入职员工 / 首次参与港股IPO项目人员</span>
+      <span>📅 更新日期：2026年11月9日</span>
+      <span>👥 维护部门：投行分会执行小组</span>
+    </div>
+
+    <div class="cover-cta">
+      <div class="cover-cta-head">
+        <strong>欢迎一起完善这本 Guidebook</strong>
+        <span style="white-space: pre-wrap;">本手册由投行分会执行小组维护。规则、监管口径和各家做法每年都在变，文中的内容难免有滞后，欢迎大家把项目上验证过的做法、踩过的坑和刚出台的规则补充进来，下一版汇总采纳，共同建设！​​​</span>
+      </div>
+      <div class="cover-cta-actions">
+        
+        
+        
+      </div>
+      <div class="contrib-panel" id="contribPanel" hidden="">
+        <h4>提交方式</h4>
+        <p style="margin:0;">复制上面的模板，填好后发回投行分会执行小组，或在版本评审会上直接提出。每季度汇总一次，采纳的条目会在页脚修订记录中注明建议人。</p>
+        <h4>写作要求</h4>
+        <ol>
+          <li><strong>一节一议：</strong>每条建议只针对一个小节，便于核对与回滚。</li>
+          <li><strong>写清三段：</strong>现行表述 → 建议改为 → 依据。只说“这里不对”，编写组无法判断怎么改。</li>
+          <li><strong>附依据：</strong>尽量给出《上市规则》条文号、指引信编号或具体项目实例；属经验判断的请注明“经验判断”。</li>
+          <li><strong>脱敏：</strong>涉及客户名称、交易金额、未公开项目信息的，请先脱敏再提交。</li>
+        </ol>
+        <h4>当前更需要补充的方向</h4>
+        <ul>
+          <li>第1—2章：2026年新规下非公开递交、提前递表的实际排期经验。</li>
+          <li>第3章：分行业尽调的特殊关注点（生物科技、特专科技、消费连锁等）。</li>
+          <li>第5章：A+H 项目在备案与审核环节与首次上市的差异。</li>
+          <li>第6章：机制A／机制B在近期项目中的定价与配售结果。</li>
+          <li>全篇：可公开的一线案例（脱敏后），用于替换文中的原则性表述。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SECTION 0: 手册概览与使用说明 ==================== -->
+  <section class="section" id="sec0">
+    <h2><span class="sec-num">✦</span>手册概览与使用说明</h2>
+
+    <h3>一、本手册能帮你解决什么</h3>
+    <p>本手册面向<strong>投行新员工及首次参与港股IPO项目人员</strong>编写，目的是帮助你在最短时间内了解港股IPO全流程，并拿到可以直接使用的操作指引。具体而言，本手册将帮你：</p>
+
+    <div class="info-card">
+      <div class="card-title">本手册的用途</div>
+      <table>
+        <thead><tr><th style="width:30%">解决的问题</th><th>具体内容</th></tr></thead>
+        <tbody>
+          <tr><td><strong>了解港股IPO整体流程</strong></td><td>从项目承揽到挂牌交易的七个阶段，每个阶段的里程碑节点、参与方角色、关键输出物和时间节奏</td></tr>
+          <tr><td><strong>熟悉关键尽调事项</strong></td><td>业务、财务、法律三大尽职调查模块的核心关注点与核查方法</td></tr>
+          <tr><td><strong>理解审核与监管要求</strong></td><td>联交所反馈问询流程及中国证监会备案要求</td></tr>
+          <tr><td><strong>知道该找谁、什么时候找</strong></td><td>各阶段关键对接方及协作节点提示</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>二、港股IPO全流程（七阶段）</h3>
+    <p>港股IPO项目从启动到完成挂牌交易，通常需要<strong>8-12个月</strong>视CSRC备案进度、项目复杂度和市场窗口而定。以下为标准流程的七个阶段：</p>
+
+    <div class="pipeline">
+      <div class="pipeline-stage">
+        <div class="pipeline-num">1</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">项目承揽</div>
+          <div class="pipeline-detail">客户开发 · 初步评估<br>签署NDA</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">2</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">项目立项</div>
+          <div class="pipeline-detail">AML核查 · 冲突排查<br>签署保荐协议</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">3</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">尽职调查</div>
+          <div class="pipeline-detail">业务·财务·法律尽调<br>第三方走访·调档</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">4</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">质控内核</div>
+          <div class="pipeline-detail">底稿审核 · 招股书验证<br>内核会议</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">5</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">申报审核</div>
+          <div class="pipeline-detail">递交A1 · 3轮反馈<br>聆讯 · CSRC备案</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">6</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">发行上市</div>
+          <div class="pipeline-detail">路演·簿记·定价<br>配售·挂牌</div>
+        </div>
+      </div>
+      <div class="pipeline-arrow">→</div>
+      <div class="pipeline-stage">
+        <div class="pipeline-num">7</div>
+        <div class="pipeline-body">
+          <div class="pipeline-title">底稿归档</div>
+          <div class="pipeline-detail">底稿整理 · 电子化<br>质控终审封存</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>三、章节导航</h3>
+    <p>本手册依次为<strong>本章使用说明 → 第0章基础知识 → 第1-8章正文</strong>，共<strong>1个基础章＋8个正文章</strong>，分为"基础知识"（第0章）、"执行层面"（第1-7章）和"其他资料"（第8章）三部分：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th style="width:8%">章节</th><th style="width:22%">标题</th><th>核心内容</th></tr></thead>
+        <tbody>
+          <tr class="clickable-row" data-href="#sec-intro"><td><span class="tag tag-blue">基础</span></td><td><strong>第0章 · 港股IPO相关基础知识</strong></td><td>什么是港股IPO、企业为何赴港上市、主要中介机构、红筹/VIE/第二上市/双重主要上市/SPAC/De-SPAC/18A/18B/18C概念定义、缩略语与术语表</td></tr>
+          <tr class="clickable-row" data-href="#sec1"><td><span class="tag tag-blue">执行</span></td><td><strong>第1章 · 项目承揽</strong></td><td>客户开发路径、非公开（保密）递交下的项目跟踪、项目评估五维度、香港主板上市条件（三大财务测试、分层公众持股量与初始自由流通量）、商务谈判与保密协议、港股投资者偏好</td></tr>
+          <tr class="clickable-row" data-href="#sec2"><td><span class="tag tag-blue">执行</span></td><td><strong>第2章 · 项目立项</strong></td><td>立项整体流程（前置流程／IBS发起／审批流程）、立项申请材料清单、内部立项口径与SP签字额度约束、财务期间选择与提前递表、AML反洗钱核查、利益冲突排查（A1前三周）、观察名单入单管理、立项会与立项表决、保荐协议与委任函签署、立项报告重点复核事项</td></tr>
+          <tr class="clickable-row" data-href="#sec3"><td><span class="tag tag-blue">执行</span></td><td><strong>第3章 · 尽职调查</strong></td><td>业务/财务/法律三大尽调模块详解、尽调问卷模板、客户供应商走访要求、财务尽调"雷区"</td></tr>
+          <tr class="clickable-row" data-href="#sec4"><td><span class="tag tag-blue">执行</span></td><td><strong>第4章 · 质控内核</strong></td><td>Legal Call、ESC Meeting、CC Meeting标准流程及注意事项</td></tr>
+          <tr class="clickable-row" data-href="#sec5"><td><span class="tag tag-blue">执行</span></td><td><strong>第5章 · 申报审核</strong></td><td>A1申请文件清单、电子递交流程、港交所三轮反馈时间线、中国证监会备案制全流程、聆讯准备</td></tr>
+          <tr class="clickable-row" data-href="#sec6"><td><span class="tag tag-blue">执行</span></td><td><strong>第6章 · 发行上市</strong></td><td>路演与簿记建档全流程、回拨机制、定价决策框架、挂牌交易操作</td></tr>
+          <tr class="clickable-row" data-href="#sec7"><td><span class="tag tag-blue">执行</span></td><td><strong>第7章 · 底稿归档</strong></td><td>底稿归档意义与监管要求、四节点上传时点、按项目类型的归档时限、底稿质量要求、配套事项与责任主体、底稿管理操作细则</td></tr>
+          <tr class="clickable-row" data-href="#sec8"><td><span class="tag tag-green">资料</span></td><td><strong>第8章 · 规则汇编</strong></td><td>近年规则修订时间轴、港交所上市规则、SFC保荐人指引、中国证监会备案要求、官方参考链接</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ==================== 港股IPO相关基础知识 ==================== -->
+  <section class="section" id="sec-intro">
+    <h2><span class="sec-num">0</span>港股IPO相关基础知识</h2>
+
+    <p>本章介绍全书的基础概念。在进入"项目承揽—立项—尽调—审核—发行"的执行流程之前，需要先弄清三组基本问题：<strong>港股IPO是什么、企业为什么要来、谁来一起做</strong>（0.1—0.3 节）；<strong>市场上常见的上市架构与特殊上市制度分别指什么</strong>（0.4 节）；以及<strong>不同上市规则下工作方法是否要跟着变</strong>（0.5 节）。最后在 0.6 节提供全书统一的缩略语与术语表，避免后文反复解释。</p>
+
+    <h3>0.1 什么是港股IPO</h3>
+    <p>港股首次公开发行（Initial Public Offering，简称IPO）是指企业首次在香港联合交易所有限公司（"港交所"）向公众投资者发售股票并挂牌交易的过程。港股IPO是境内企业对接国际资本市场的主要通道之一，也是亚洲最活跃的新股融资市场之一。</p>
+
+    <h3>0.2 企业为何选择赴港上市</h3>
+    <p>企业选择在香港上市主要基于以下考量：</p>
+    <ul style="padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);">
+      <li><strong>上市时间可控：</strong>港股IPO监管审核和发行阶段相对市场化，时间节奏可预期，企业可较快实现上市目标，有效把控上市时间窗口。</li>
+      <li><strong>国际化投资者基础：</strong>香港市场汇聚国际机构投资者、亚太区基金及内地长线投资者，有利于充分挖掘企业价值，获得合理的IPO估值。</li>
+      <li><strong>再融资效率高：</strong>香港市场支持闪电配售等灵活再融资方式，审批程序简便，有利于企业抓住市场窗口进行后续融资。</li>
+      <li><strong>对接海外资本市场：</strong>利用香港国际金融中心地位，接触海外并购机会和外资战略投资者，拓宽债务融资渠道。</li>
+      <li><strong>提升国际品牌形象：</strong>在港上市有助于提升企业的公司治理水平和国际品牌地位，支持海外业务扩张。</li>
+      <li><strong>上市制度包容性强：</strong>港交所允许未盈利的生物科技公司（18A章）、特专科技公司（18C章）等新经济企业上市，对不同发展阶段的企业具有较高的接纳度。</li>
+    </ul>
+
+    <h3>0.3 港股IPO主要中介机构</h3>
+    <p>港股IPO项目涉及众多中介机构，各方在项目中扮演不同的角色并承担相应的法律责任。新员工在项目执行中需要与各方频繁协作，了解各方的角色定位、职责边界和工作节奏是执行项目的基础。以下为港股IPO项目中主要中介机构的角色与职责概述：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:16%">中介机构</th><th style="width:22%">角色定位</th><th>核心职责</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>保荐人</strong></td>
+            <td>上市项目的总协调人和质量把关者</td>
+            <td>① 统筹整个上市项目的执行进度与质量；② 进行独立尽职调查，确保招股书信息披露真实、准确、完整；③ 就上市申请向港交所承担主要沟通责任；④ 协调各中介机构工作；⑤ 对发行人是否符合上市条件作出独立判断。保荐人不得依赖其他专业人士的工作替代自身独立判断。</td>
+          </tr>
+          <tr>
+            <td><strong>全球协调人（GCM）<br>／账簿管理人（Bookrunner）</strong></td>
+            <td>承销团的牵头方与簿记管理人（可由保荐人兼任，也可另聘）</td>
+            <td>① 牵头组建承销团、确定承销团成员及分销份额；② 作为账簿管理人负责簿记建档、订单收集与配售建议；③ 参与发行结构与定价决策（发行规模、机制A/机制B选择、回拨安排、基石与锚定投资者额度）；④ 组织路演并协调国际市场分销；⑤ 按承销协议承担包销/尽力包销责任。同一机构可同时担任保荐人与GCM，但两项职责的法律基础不同，须分别履约、分别留痕。</td>
+          </tr>
+          <tr>
+            <td><strong>发行人境外律师<br>（写书律师／香港律师）</strong></td>
+            <td>招股书撰写与香港法律事务顾问</td>
+            <td>① 主笔招股书（财务、行业、中国法律章节以外的绝大部分内容）；② 统筹各中介的招股书贡献稿并负责统稿；③ 出具香港法律意见；④ 处理与港交所及SFC的法律沟通事项；⑤ 牵头招股书验证（Verification）。</td>
+          </tr>
+          <tr>
+            <td><strong>发行人境外律师<br>（境外/离岸法律意见）</strong></td>
+            <td>注册地及离岸法律意见的出具方</td>
+            <td>① 就发行人注册地法律（开曼、BVI、百慕大等）出具法律意见，涵盖公司有效存续、股本结构、章程条款、董事会及股东决议的有效性；② 就重组方案在注册地法律下的合规性出具意见；③ 就股份登记、股东名册、股份质押等事项出具意见。实践中"写书律师"与"出境外法律意见的律师"一般分开聘任，不宜由同一家同时承担。</td>
+          </tr>
+          <tr>
+            <td><strong>发行人中国律师</strong></td>
+            <td>中国法律事务顾问</td>
+            <td>① 出具中国法律意见书（涵盖历史沿革、合规、诉讼等）；② 协助获取全套合规证明（工商、税务、社保、海关等）；③ 就外商投资、外资准入等境内监管事项提供法律意见；④ 协助中国证监会备案材料的准备。</td>
+          </tr>
+          <tr>
+            <td><strong>保荐人境外律师</strong></td>
+            <td>保荐人的独立香港及离岸法律顾问</td>
+            <td>① 协助保荐人审阅及验证招股书陈述；② 就保荐人履职相关的香港法律及SFC监管问题提供意见；③ 协助审核保荐协议的责任条款；④ 辅助保荐人应对SFC/港交所监管问询。</td>
+          </tr>
+          <tr>
+            <td><strong>保荐人境内律师</strong></td>
+            <td>保荐人的独立中国法律顾问</td>
+            <td>① 就发行人境内法律事项向保荐人提供独立意见；② 协助核查境内合规证明（工商、税务、社保、海关等）的完整性；③ 就中国证监会境外上市备案相关法律问题提供支持；④ 配合保荐人应对境内监管问询。</td>
+          </tr>
+          <tr>
+            <td><strong>申报会计师/审计师</strong></td>
+            <td>财务信息的独立鉴证者</td>
+            <td>① 出具涵盖至少三个财政年度的会计师报告（审计报告；<strong>18A生物科技公司为两个财政年度</strong>）；② 出具内控审阅报告（如适用）；③ 协助编制盈利预测及现金流预测备忘录；④ 审阅招股书财务章节；⑤ 就财务数据的准确性和HKFRS/IFRS合规性出具意见。</td>
+          </tr>
+          <tr>
+            <td><strong>行业顾问</strong></td>
+            <td>行业研究与市场分析专家</td>
+            <td>① 出具独立的行业研究报告（作为招股书"行业概览"章节的基础）；② 提供市场规模、增速、竞争格局等第三方数据支撑；③ 协助保荐人验证发行人的行业地位陈述。</td>
+          </tr>
+          <tr>
+            <td><strong>内控顾问</strong></td>
+            <td>内部控制系统的独立评估者</td>
+            <td>① 就发行人内部控制系统及制度出具<strong>内控检讨报告</strong>，作为保荐人声明（附录E1）及PN21尽调中内控结论的支撑文件；② 指出内控缺陷并提出整改建议；③ 协助公司完成内控整改以达到上市要求。内控报告须单独出具、在形式上保持独立；实务中多由申报会计师内控团队或其他独立机构承担（见3.3节），规则并未强制另聘。</td>
+          </tr>
+          <tr>
+            <td><strong>ESG顾问</strong></td>
+            <td>环境、社会及管治披露与合规顾问</td>
+            <td>① 协助建立ESG数据收集口径并完成碳盘查（范围一／二／三）；② 按《上市规则》附录C2《环境、社会及管治报告守则》编制ESG报告；③ 协助招股书中"环境、社会及管治"章节的披露及重大ESG风险识别；④ 协助应对港交所就ESG披露提出的问询；⑤ 协助搭建上市后的ESG治理架构。香港市场对ESG披露的要求逐年收紧，建议在申报前即聘请。</td>
+          </tr>
+          <tr>
+            <td><strong>合规顾问</strong></td>
+            <td>上市后持续合规监督者</td>
+            <td>① 上市后首个完整财政年度内持续为发行人提供《上市规则》合规咨询；② 就关连交易、须予公布交易、内幕消息披露等事项提供意见；③ 发行人须在上市前正式委任合规顾问。</td>
+          </tr>
+          <tr>
+            <td><strong>背景调查机构</strong></td>
+            <td>独立第三方背景调查</td>
+            <td>对发行人、实际控制人、董事、高管及主要股东进行独立背景调查（包括诉讼检索、制裁筛查、负面舆情检索、工商信息核查等）。保荐人应独立聘任背景调查机构，不得依赖发行人及其关联方推荐。</td>
+          </tr>
+          <tr>
+            <td><strong>公关公司/投资者关系顾问</strong></td>
+            <td>媒体与投资者沟通策略顾问</td>
+            <td>① 协助制定媒体策略和舆情管理方案；② 协助准备新闻稿及媒体通稿；③ 协助组织上市仪式及媒体活动；④ 上市后协助投资者关系维护。</td>
+          </tr>
+          <tr>
+            <td><strong>收款银行/股份登记处</strong></td>
+            <td>公开发售的收款和股份登记服务</td>
+            <td>① 处理香港公开发售环节的投资者认购款项收取；② 作为股份过户登记处，管理股东名册和股份过户登记。股份过户登记处须为<strong>港交所接纳／核准</strong>的过户登记处，并为<strong>香港证券登记公司总会</strong>会员；收款银行须为持牌银行。</td>
+          </tr>
+          <tr>
+            <td><strong>印刷商（Printer）</strong></td>
+            <td>A1申请文件与招股书的排版、翻译及电子递交执行方</td>
+            <td>① <strong>通过港交所电子提交系统（ESS）代为递交A1申请</strong>及全套附件（详见5.2节）；② 招股书中英文排版、校对与版本管理；③ 组织招股书翻译并保证中英文版本一致；④ 印制及分发纸质招股章程（如适用）；⑤ 按递交时间窗口管理文件版本锁定。印刷商是A1的实际递交主体，但递交内容与合规责任仍由保荐人承担。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">中介机构的确定方式</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>保荐人：</strong>通常在商务谈判与竞标（Beauty Parade）后确定，且须在递交A1前至少2个月获委任。</li>
+        <li><strong>其他中介：</strong>一般由保荐人提名、发行人聘任。</li>
+        <li><strong>确定顺序（供参考）：</strong>保荐人 → 发行人律师、保荐人律师 → 行业顾问、内控顾问 → ESG顾问、背景调查机构、印刷商、收款银行／股份登记处。律师与审计师进场越早，报告期安排越不容易返工。</li>
+        <li><strong>内部筛选标准：</strong>律所原则上须在公司白名单上并经LG同意；除A+H类项目外，其他项目原则上选用四大会计师事务所。</li>
+      </ul>
+    </div>
+
+    <h3>0.4 常见上市架构与特殊上市制度</h3>
+    <p>同一个"港股IPO"，背后可能是完全不同的架构与规则章节。执行中最常见的误解，是把红筹项目当成H股项目准备材料，或把18C项目套用第八章的财务测试。下表先统一概念。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:15%">概念</th><th style="width:38%">含义</th><th>执行要点</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>红筹架构</strong></td>
+            <td>发行人注册于境外（开曼、BVI、百慕大等），通过境外控股平台间接持有境内运营实体权益，以境外主体在港上市。</td>
+            <td>须完成37号文登记、返程投资与外资并购合规、跨境资金路径清晰；招股书须完整披露重组步骤、定价依据与税务处理。</td>
+          </tr>
+          <tr>
+            <td><strong>VIE架构</strong></td>
+            <td>境外上市主体通过一系列合约（而非股权）控制境内持牌运营实体，用于外资准入受限行业（如增值电信、教育、传媒等）。</td>
+            <td>合约安排的可执行性、控制力与经济利益转移是港交所与SFC的问询重点；须由发行人中国律师就合约安排合法性出具意见；相关风险须单独、充分披露。</td>
+          </tr>
+          <tr>
+            <td><strong>第二上市</strong></td>
+            <td>已在合资格交易所主要上市的公司，将部分股份在港交所再次上市（《主板上市规则》第19C章）。</td>
+            <td>可豁免部分《上市规则》要求，但须持续符合主要上市地规则；市值与合规记录门槛按19C章执行。</td>
+          </tr>
+          <tr>
+            <td><strong>双重主要上市</strong></td>
+            <td>在港交所与另一交易所同时作主要上市，须完全符合港交所《上市规则》。</td>
+            <td>不享受第二上市的豁免，合规成本更高；优势是可纳入港股通、投资者基础更广。</td>
+          </tr>
+          <tr>
+            <td><strong>SPAC<br>（第18B章）</strong></td>
+            <td>特殊目的收购公司（Special Purpose Acquisition Company），先以现金上市募集资金，再在期限内并购有实际业务的标的。</td>
+            <td>18B章对发起人资格、最低募资规模、股东赎回安排、独立第三方投资等有专门规定；SPAC本身无业务，招股书披露重点在发起人背景与并购策略。</td>
+          </tr>
+          <tr>
+            <td><strong>De-SPAC</strong></td>
+            <td>SPAC公布并购目标并完成业务合并交易（De-SPAC Transaction）的全过程。</td>
+            <td>并购交易须满足18B.41最低独立第三方投资额等要求；交易完成后，继承公司须符合新上市的规定。</td>
+          </tr>
+          <tr>
+            <td><strong>第18A章</strong></td>
+            <td>生物科技公司上市制度，允许未有收入或盈利的生物科技公司上市。</td>
+            <td>须有核心产品通过概念阶段、获得资深投资者投资、上市市值达标等；尽调重点为研发管线、临床试验合规与核心产品权利归属。</td>
+          </tr>
+          <tr>
+            <td><strong>第18C章</strong></td>
+            <td>特专科技公司上市制度（2023年3月31日生效），覆盖新一代信息技术、先进硬件、先进材料、新能源及节能环保、新食品及农业技术等领域。</td>
+            <td>分"已商业化"与"未商业化"两档，对应不同市值与研发开支比例要求；市值门槛自2024年9月1日起临时下调（已商业化40亿港元、未商业化80亿港元），适用至2027年8月31日（详见8.1节）。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>0.5 不同上市规则下的尽调方法是否不同</h3>
+    <div class="highlight-box">
+      <strong>📌 结论：</strong>无论项目适用第八章、第18A章、第18B章、第18C章还是第19C章，<strong>保荐人的尽职调查方法基本相同</strong>——都是"PN21尽调计划 → 业务／财务／法律三条线 → 第三方走访 → 招股书验证 → 底稿归档"这套动作。<strong>差异只集中在两处：上市条件，以及部分法律事项。</strong>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th style="width:16%">差异维度</th><th>具体差异</th><th style="width:22%">对执行的影响</th></tr></thead>
+        <tbody>
+          <tr><td><strong>上市条件</strong></td><td>第八章看财务测试（盈利／市值＋收入＋现金流／市值＋收入）；18A看核心产品与市值；18C看商业化状态、研发开支比例、资深独立投资者；19C看主要上市地合规记录与市值</td><td>影响立项判断与"是否符合上市条件"的意见，<strong>不改变尽调方法</strong></td></tr>
+          <tr><td><strong>法律事项</strong></td><td>VIE合约安排、红筹重组、外资准入、行业牌照与资质、数据合规等在特定架构下需增加专项法律尽调</td><td>需在法律尽调清单中<strong>增补专项模块</strong>，并由中国律师出具专项意见</td></tr>
+          <tr><td><strong>信息披露重点</strong></td><td>18A须披露研发管线与临床进展；18C须披露产品商业化状态与研发投入；SPAC须披露发起人背景与并购策略</td><td>影响招股书章节结构与MDD访谈提纲，<strong>不改变验证方法</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>因此本手册第3章（尽职调查）的做法可直接套用于适用各章的项目，只需在上表的"上市条件"与"法律事项"两处作针对性调整，不必另设一套流程。</p>
+
+    <h3>0.6 缩略语与术语表</h3>
+    <p>下表为全书统一口径。后文首次出现处已加注中文全称，重复出现时直接使用缩略语。内部部门代号（LG、CP、ESC、BDC、IBI、LC、IBS、RM）以公司内部组织架构为准。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th style="width:12%">缩略语</th><th style="width:34%">全称</th><th>中文释义与说明</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A1</strong></td><td>Form M103（上市申请表格，即A1表格；M104为随A1提交的补充资料）</td><td>"递交A1"即向港交所正式提交主板上市申请，是项目最重要的里程碑节点</td></tr>
+          <tr><td><strong>AP</strong></td><td>Application Proof</td><td>申请版本招股书，于递交A1时在披露易刊发</td></tr>
+          <tr><td><strong>PHIP</strong></td><td>Post-Hearing Information Pack</td><td>聆讯后资料集，<strong>聆讯通过后</strong>刊发，不是聆讯前版本</td></tr>
+          <tr><td><strong>OC</strong></td><td>OC Announcement</td><td>海外监管公告，A+H项目在境内同步披露的公告</td></tr>
+          <tr><td><strong>PN21</strong></td><td>Practice Note 21（《上市规则》第21项应用指引）</td><td>保荐人尽职调查与工作底稿的监管指引，尽调计划即以其为框架</td></tr>
+          <tr><td><strong>IRL</strong></td><td>Information Request List</td><td>信息请求清单，由保荐人境外律师制作并发出</td></tr>
+          <tr><td><strong>RFL</strong></td><td>Request for List（Request List）</td><td>文件清单，与IRL同义，A1 Pack中亦作文件索引</td></tr>
+          <tr><td><strong>MDD</strong></td><td>Management Due Diligence</td><td>管理层尽职调查，招股书"概览／策略／优势"（OSS）章节的写作基础</td></tr>
+          <tr><td><strong>TPDD</strong></td><td>Third Party Due Diligence</td><td>第三方尽职调查，含客户、供应商、银行走访</td></tr>
+          <tr><td><strong>FDD</strong></td><td>Financial Due Diligence</td><td>财务尽职调查，港股项目中主要由审计师执行</td></tr>
+          <tr><td><strong>LDD</strong></td><td>Legal Due Diligence</td><td>法律尽职调查，由发行人境外律师及中国律师主导</td></tr>
+          <tr><td><strong>OSS</strong></td><td>Overview, Strategy, Strengths</td><td>招股书开篇三章，内容直接来源于MDD成果</td></tr>
+          <tr><td><strong>PDIE</strong></td><td>Pre-Deal Investor Education</td><td>分析师预路演，正式路演前由承销商研究分析师向机构投资者推介</td></tr>
+          <tr><td><strong>NDR</strong></td><td>Non-Deal Roadshow</td><td>非交易路演，不带发行的投资者沟通</td></tr>
+          <tr><td><strong>ECM</strong></td><td>Equity Capital Markets</td><td>股本市场部，主导发行方案、路演与配售</td></tr>
+          <tr><td><strong>CIA</strong></td><td>Cornerstone Investment Agreement</td><td>基石投资协议，基石投资者据此认购并有锁定期</td></tr>
+          <tr><td><strong>GCM</strong></td><td>Global Coordinator</td><td>全球协调人，承销团牵头方</td></tr>
+          <tr><td><strong>BrM</strong></td><td>Bookrunner</td><td>账簿管理人，负责簿记建档与配售建议</td></tr>
+          <tr><td><strong>SP</strong></td><td>Sponsor</td><td>保荐人（签字保荐人），每名SP可同时签署的活跃项目数量有限</td></tr>
+          <tr><td><strong>EB</strong></td><td>Execution Banker</td><td>执行质量负责人，对项目执行质量负责</td></tr>
+          <tr><td><strong>LB</strong></td><td>Lead Banker</td><td>项目主办人</td></tr>
+          <tr><td><strong>RB</strong></td><td>Responsible Banker</td><td>项目牵头人</td></tr>
+          <tr><td><strong>RO</strong></td><td>Responsible Officer</td><td>负责人员，SFC持牌机构须委任的监管负责人</td></tr>
+          <tr><td><strong>LG</strong></td><td>Legal（内部审核条线）</td><td>法律审核，负责协议、招股书及重大法律事项的内部审批</td></tr>
+          <tr><td><strong>CP</strong></td><td>Compliance（内部审核条线）</td><td>合规审核，参与Legal Call与内核表决</td></tr>
+          <tr><td><strong>LC</strong></td><td>Legal &amp; Compliance</td><td>法律合规部门（中控室），负责观察名单审批与利益冲突报告接收</td></tr>
+          <tr><td><strong>ESC</strong></td><td>Execution Sponsor Committee</td><td>执行保荐人委员会，即"申请全面审核会议"（部分文件中亦称ESA Meeting）</td></tr>
+          <tr><td><strong>IBI</strong></td><td>内核部门（内部代号）</td><td>港股IPO保荐项目的内核代表，参与立项表决</td></tr>
+          <tr><td><strong>BDC</strong></td><td>立项管理部门（内部代号）</td><td>负责立项受理、分配立项委员、确认表决结果</td></tr>
+          <tr><td><strong>RM</strong></td><td>Relationship Manager</td><td>客户关系负责人</td></tr>
+          <tr><td><strong>IBS</strong></td><td>投资银行业务系统</td><td>内部项目管理系统，立项、观察名单、底稿归档均在其中操作</td></tr>
+          <tr><td><strong>ESS</strong></td><td>HKEX Electronic Submission System</td><td>港交所电子提交系统，A1由印刷商经此递交</td></tr>
+          <tr><td><strong>FINI</strong></td><td>Fast Interface for New Issuance</td><td>港交所新股结算平台，定价至挂牌由T+5缩短至T+2</td></tr>
+          <tr><td><strong>WVR</strong></td><td>Weighted Voting Rights</td><td>不同投票权（同股不同权）架构</td></tr>
+          <tr><td><strong>SFC</strong></td><td>Securities and Futures Commission</td><td>香港证券及期货事务监察委员会</td></tr>
+          <tr><td><strong>CSRC</strong></td><td>China Securities Regulatory Commission</td><td>中国证券监督管理委员会</td></tr>
+          <tr><td><strong>HKEX</strong></td><td>Hong Kong Exchanges and Clearing Limited</td><td>香港交易所；其全资附属公司联交所（SEHK）为上市规则执行主体</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 1: 项目承揽 ==================== -->
+  <section class="section" id="sec1">
+    <h2><span class="sec-num">1</span>项目承揽</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>客户开发与项目来源</li>
+        <li>项目初步评估</li>
+        <li>香港主板基础上市条件</li>
+        <li>商务谈判与保密协议</li>
+        <li>港股投资者偏好</li>
+      </ol>
+    </div>
+
+    <h3>1.1 客户开发与项目来源</h3>
+    <p>港股IPO项目的客户开发是投行业务的起点。项目来源通常包括以下几个方面：</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-label">现有客户关系</div>
+        <div class="step-desc">存量客户再融资/分拆上市需求</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-label">行业研究驱动</div>
+        <div class="step-desc">主动筛选符合上市条件的标的</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-label">中介机构推荐</div>
+        <div class="step-desc">律所/审计/PE机构推荐项目</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-label">公开信息追踪</div>
+        <div class="step-desc">媒体报道/融资新闻/行业论坛</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示 — 如何跟踪正在申报的项目</div>
+      <p>进入团队后，第一时间熟悉团队已有的客户地图和行业覆盖范围。建议每周查一次港交所披露易的<strong>"新上市"专区</strong>：<code>https://www1.hkexnews.hk/app/appindex.html</code>（路径：披露易首页 → 新上市 → 申请版本及聆讯后资料集）。该页面按主板／GEM 列出所有在审项目的<b>申请版本（AP）</b>、<b>聆讯后资料集（PHIP）</b>及<b>撤回／失效／被发回</b>记录，是反向推导竞标机会最直接的公开来源。注意：披露易首页（<code>https://www.hkexnews.hk</code>）只是公告检索入口，无法直达上述专区。</p>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 规则变化 — 非公开（保密）递交已全面开放</div>
+      <p>自<strong>2026年7月24日</strong>起，所有新申请人均可选择以<strong>非公开（保密）形式递交</strong>上市申请，不再限于合资格第二上市申请人、18A／18C 公司或个案豁免。这意味着"看到申请版本公开"不再是项目启动的可靠信号——很多项目在递表后数月内都不会出现在披露易上。相应的项目跟踪方式应调整为：</p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>关注 PHIP 刊发：</strong>非公开递交的申请人须在刊发 PHIP 当日一并刊发申请公告，PHIP 是第一个必然公开的节点。</li>
+        <li><strong>关注配售结果公告与上市公告：</strong>发行完成后，配售结果公告、正式招股章程、上市公告均会公开，可用于回溯项目全周期。</li>
+        <li><strong>关注港交所"处理中申请"统计：</strong>联交所每月发布的《有关首次公开招股申请、除牌和停牌公司之报告》列明受理、批准、被发回及处理期限已过的申请数量，可判断市场供给节奏。</li>
+        <li><strong>关注中介机构与行业侧信息：</strong>印刷商、律师、审计师的排期，以及企业融资新闻、备案辅导信息，往往早于公开披露。</li>
+      </ul>
+    </div>
+
+    <h3>1.2 项目初步评估</h3>
+    <p>在接触潜在客户前，需要进行项目初步评估，主要包括以下维度：</p>
+
+    <div class="info-card">
+      <div class="card-title">项目初步评估五大维度</div>
+      <table>
+        <thead>
+          <tr><th>评估维度</th><th>核心关注点</th><th>信息来源</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>行业前景</strong></td><td>行业增速、政策环境、可比公司估值</td><td>行业研报、Wind、Bloomberg</td></tr>
+          <tr><td><strong>公司质地</strong></td><td>收入/利润规模、增长趋势、竞争优势</td><td>公司财务报表、管理层访谈</td></tr>
+          <tr><td><strong>上市可行性</strong></td><td>是否满足主板上市条件、合规瑕疵</td><td>律师初步尽调、公开查询</td></tr>
+          <tr><td><strong>时间窗口</strong></td><td>市场情绪、行业风口、公司融资紧迫性</td><td>市场研判、内部策略会</td></tr>
+          <tr><td><strong>竞争格局</strong></td><td>其他投行竞争情况、我方差异化优势</td><td>行业关系网络</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南</div>
+      <p>切勿仅凭公司管理层口头描述做判断。务必交叉验证财务数据，重点关注：收入确认政策是否合规、关联交易比例是否过高、历史股权变动是否存在税务瑕疵。曾经有项目因未发现公司存在大额表外担保，导致尽调阶段被迫终止。</p>
+    </div>
+
+    <h3>1.3 香港主板基础上市条件</h3>
+    <p>根据《香港联合交易所有限公司证券上市规则》（"上市规则"）第八章，主板上市申请人需满足以下基本条件（注：本指南不考虑GEM创业板）：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>条件类别</th><th>具体要求</th><th>规则依据</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>财务测试（三选一）</strong></td>
+            <td>
+              <strong>盈利测试：</strong>过去三个财政年度盈利合计≥8,000万港元（首两年≥4,500万港元，最近一年≥3,500万港元）<br><br>
+              <strong>市值/收入/现金流测试：</strong>上市时市值≥20亿港元；最近一个经审计财政年度收入≥5亿港元；前三个财政年度经营业务现金流入合计≥1亿港元<br><br>
+              <strong>市值/收入测试：</strong>上市时市值≥40亿港元；最近一个经审计财政年度收入≥5亿港元
+            </td>
+            <td>上市规则 8.05</td>
+          </tr>
+          <tr>
+            <td><strong>营业记录</strong></td>
+            <td>不少于三个财政年度的营业记录，且管理层最近三个财政年度基本不变，所有权和控制权最近一个财政年度基本不变</td>
+            <td>上市规则 8.05(1)</td>
+          </tr>
+          <tr>
+            <td><strong>市值要求</strong></td>
+            <td>新申请人上市时市值至少为<strong>5亿港元</strong>；同时，<strong>公众持股部分</strong>于上市时的预期市值不得低于<strong>1.25亿港元</strong>（8.09(1)），两项须同时满足</td>
+            <td>上市规则 8.09(1)-(2)</td>
+          </tr>
+          <tr>
+            <td><strong>初始公众持股量<br>（分层）</strong></td>
+            <td>按上市时该类别股份的<strong>预期市值</strong>分层：
+              <br>· 市值不超过<strong>60亿港元</strong>：<strong>25%</strong>
+              <br>· 超过60亿但不超过<strong>300亿港元</strong>：<strong>下列较高者</strong>——(i) 使公众持股的预期市值达到<strong>15亿港元</strong>的百分比；(ii) <strong>15%</strong>
+              <br>· 超过<strong>300亿港元</strong>：<strong>下列较高者</strong>——(i) 使公众持股的预期市值达到<strong>45亿港元</strong>的百分比；(ii) <strong>10%</strong>
+              <br><br>上述分层为一般发行人（<strong>非在中国内地注册成立、且只有单一类别股份</strong>）的口径；H股发行人的对应规定见下一行，分层标准相同。
+            </td>
+            <td>上市规则 8.08(1)</td>
+          </tr>
+          <tr>
+            <td><strong>初始公众持股量<br>（H股，无其他上市股份）</strong></td>
+            <td>按<strong>H股所属类别</strong>上市时预期市值分层（分母为该类别已发行股份总数，不含库存股份）：
+              <br>· 不超过<strong>60亿港元</strong>：<strong>25%</strong>
+              <br>· 超过60亿但不超过<strong>300亿港元</strong>：下列较高者——(i) 使公众持股的预期市值达到<strong>15亿港元</strong>的百分比；(ii) <strong>15%</strong>
+              <br>· 超过<strong>300亿港元</strong>：下列较高者——(i) 使公众持股的预期市值达到<strong>45亿港元</strong>的百分比；(ii) <strong>10%</strong>
+              <br><br><span style="color:var(--color-danger);font-weight:600;">注意：</span>H股项目<strong>不适用</strong>下行的10%／30亿港元口径，须按本行分层测算。
+            </td>
+            <td>上市规则 8.08(1)；<br>中国发行人：19A.13A(1)</td>
+          </tr>
+          <tr>
+            <td><strong>初始公众持股量<br>（A+H）</strong></td>
+            <td><strong>A+H发行人</strong>（拥有其他上市股份的中国发行人）：H股公众持股≥<strong>H股所属类别已发行股份的10%</strong>（不含库存股份），<u>或</u>该部分H股预期市值<strong>≥30亿港元</strong>，满足其一即可。原门槛为15%，2025年8月4日起下调。</td>
+            <td>中国发行人公开市场规定：<br>19A.13A(2)</td>
+          </tr>
+          <tr>
+            <td><strong>初始自由流通量</strong></td>
+            <td>除公众持股量外，另须满足<strong>自由流通量</strong>要求（即由公众持有且不受任何禁售限制、上市时可供交易的股份）：
+              <br>· 一般发行人：占已发行股份（不含库存股份）<strong>≥10%</strong>，且预期市值<strong>≥5,000万港元</strong>；<u>或</u>预期市值<strong>≥6亿港元</strong>
+              <br>· A+H发行人：占<strong>A+H股份总数≥5%</strong>，且预期市值<strong>≥5,000万港元</strong>；<u>或</u>预期市值<strong>≥6亿港元</strong>
+            </td>
+            <td>上市规则 8.08A</td>
+          </tr>
+          <tr>
+            <td><strong>股东分布</strong></td>
+            <td>至少300名公众股东；持股量最高的三名公众股东持有的股份不得超过公众持股量的50%</td>
+            <td>上市规则 8.08(2)-(3)</td>
+          </tr>
+          <tr>
+            <td><strong>会计准则</strong></td>
+            <td>会计师报告须按<strong>香港财务报告准则（HKFRS）</strong>或<strong>国际财务报告准则（IFRS）</strong>编制；在<strong>中国内地注册成立</strong>的"中国发行人"可选择按<strong>中国企业会计准则（CAS）</strong>编制财务报表（<strong>红筹架构不可选用</strong>）。采用IFRS的发行人须披露并解释IFRS与HKFRS的重大差异、量化其财务影响；CAS路径不适用该调节要求。</td>
+            <td>上市规则 4.11</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>🔑 规则变化（2025年8月4日生效）：</strong>公众持股量已由原来的"单一25%＋较低市值门槛"改为上表的<strong>分层结构</strong>，并新增<strong>初始自由流通量</strong>测试，两者须同时满足。新规适用于<strong>所有发行人，以及所有在2025年8月4日或之后刊发上市文件的新申请人</strong>。<span style="color:var(--color-danger);font-weight:600;">持续公众持股量已于2026年1月1日起适用新规</span>，并适用于<strong>全体上市发行人（含此前已上市者）</strong>：默认沿用上市时指定的门槛，另可选择<strong>替代门槛</strong>（公众持股≥已上市类别股份的10%且市值&gt;10亿港元）；A+H发行人为H股≥A+H股份总数<strong>5%</strong>或市值&gt;10亿港元；并须按月报及年报披露；公众持股严重不足者以"<strong>-PF</strong>"股份标记替代停牌，18个月内未恢复即除牌（同日生效HKEX-GL121-26）。<br><br>
+      <strong>实操提示：</strong>市值在60亿港元、300亿港元两个临界点附近的项目，两种口径可能得出不同结果（例如市值恰好60亿港元时，25%为15亿港元，与"15亿港元市值＋15%"两条线重合；市值略高于60亿港元时，则须比较"15亿港元折算百分比"与15%孰高）。建议在发行方案设计阶段用两种口径分别测算，取较高者，并预留承销团超额配售权（Greenshoe）对自由流通量的影响。
+    </div>
+
+    <div class="highlight-box">
+      <strong>🔑 特别提示：</strong>对于中国内地注册成立的发行人（H股），还需同步满足中国证监会《境内企业境外发行证券和上市管理试行办法》（2023年3月31日生效）的备案要求。备案材料须在向港交所递交A1申请后3个工作日内提交中国证监会，取得备案通知书后方可完成上市。详见本指南第8章"规则汇编"。
+    </div>
+
+    <h3>1.4 商务谈判与保密协议</h3>
+    <p>初步评估通过后，进入商务谈判阶段。关键流程如下：</p>
+
+    <ul class="checklist">
+      <li><strong>签署保密协议（NDA）：</strong>与客户签署双向保密协议，明确保密信息范围和期限。可使用团队标准NDA模板，法务审核后方可签署。</li>
+      <li><strong>提交项目建议书（Pitch Book）：</strong>内容包括公司简介、团队优势、对客户行业的理解、初步估值分析、建议上市方案和时间表。</li>
+      <li><strong>竞标演示（Beauty Parade）：</strong>如有多家投行竞争，需进行现场演示。注意准备Q&amp;A预案，包括市场估值区间、可比公司选择理由、承销费率范围等。</li>
+      <li><strong>委任条款谈判：</strong>确定保荐人角色（独家保荐人/联席保荐人/全球协调人等）、承销费率结构（固定+浮动）、报销安排等。</li>
+    </ul>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南</div>
+      <p>商务谈判阶段切忌"过度承诺"。例如：不要过度承诺估值范围或上市时间表。建议在Pitch Book中给出合理区间，并注明"受市场条件影响"。</p>
+    </div>
+
+    <h3>1.5 港股投资者偏好</h3>
+    <p>港股是一个由<strong>国际机构投资者定价</strong>的市场。同一个行业、同一梯队的公司，在港股能拿到的估值可能显著低于A股，也可能因为"稀缺性"而获得超额认购——差别不在财务报表，而在<strong>这批买家认不认这个故事</strong>。理解投资者偏好，不只是发行阶段（第6章）的事，它直接决定承揽阶段该不该投入资源、立项阶段这个项目"卖不卖得出去"。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:18%">标的类型</th><th style="width:34%">市场偏好与估值逻辑</th><th style="width:20%">典型例子</th><th>对项目的启示</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>大盘蓝筹／行业龙头</strong></td>
+            <td>流动性好、市值大，具备纳入主要指数与被动资金配置的条件；估值以PE、EV/EBITDA对标全球同业</td>
+            <td>各行业市值前列的龙头公司</td>
+            <td>适合大额发行；基石与锚定投资者相对容易落实，但估值谈判空间小</td>
+          </tr>
+          <tr>
+            <td><strong>高成长型</strong></td>
+            <td>收入或利润复合增速显著高于行业平均，投资者愿意为成长支付溢价，但对"增速放缓"极其敏感</td>
+            <td>科技、消费、医疗领域的高增长企业</td>
+            <td>MDD与招股书必须把增长驱动讲透（客户、单价、复购、产能），避免"只有故事没有数据"</td>
+          </tr>
+          <tr>
+            <td><strong>稳定分红／现金流型</strong></td>
+            <td>股息率高、现金流稳定，受保险资金、养老金及高股息策略基金青睐；估值锚是股息率而非增速</td>
+            <td>公用事业、能源、电信、银行</td>
+            <td>分红政策须在招股书明确；历史派息记录、可分配利润与现金流匹配度要经得起验证</td>
+          </tr>
+          <tr>
+            <td><strong>中国稀缺产业链标的</strong></td>
+            <td>处于全球难以替代、代表中国产业升级方向的环节，国际长线资金愿意给出"稀缺性溢价"，超额认购倍数通常最高</td>
+            <td>宁德时代（动力电池）、中际旭创（光模块）等</td>
+            <td>承揽阶段的优先方向；应尽早锁定长线锚定投资者，并在Pitch中突出"全球对标＋不可替代性"</td>
+          </tr>
+          <tr>
+            <td><strong>缺乏独特性的赛道</strong></td>
+            <td>同质化竞争、技术门槛与全球对标不明显，且短期内供给集中涌入，投资者容易"审美疲劳"</td>
+            <td>部分机器人、一般制造类标的</td>
+            <td>立项阶段即应警惕"卖不出去"的风险，慎重投入签字额度与团队资源（见2.1节立项口径）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">三项补充判断</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>估值锚是全球同业，不是A股同业。</strong>港股定价看的是全球可比公司的PE/EV倍数，A+H两地估值存在差异是常态，不能拿A股估值直接推港股发行价。</li>
+        <li><strong>南向资金（港股通）影响结构而非定价。</strong>南向资金对中小市值标的的边际影响较大，但在大型IPO的定价环节，主导力量仍是国际长线基金与对冲基金。</li>
+        <li><strong>"稀缺"重于"热门"。</strong>热门赛道里排在后面的公司，往往比冷门赛道里的全球龙头更难卖。判断标准是"全球范围内有没有可替代的上市标的"，而不是"这个行业今年热不热"。</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 判断"可卖性"的三个问题</div>
+      <p>在承揽与立项阶段，项目组应能明确回答：<strong>① 谁是买家？</strong>（哪几类基金、有没有明确的锚定／基石意向）<strong>② 对标是谁？</strong>（全球可比公司名单及估值区间）<strong>③ 市场能不能吃下？</strong>（发行规模相对于同类标的日均成交额、近期IPO募资规模是否合理）。三个问题中有一个答不上来，就应在立项材料中如实提示发行风险。</p>
+    </div>
+
+  </section>
+
+  <!-- ==================== SECTION 2: 项目立项 ==================== -->
+  <section class="section" id="sec2">
+    <h2><span class="sec-num">2</span>项目立项</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>立项申请与材料准备</li>
+        <li>反洗钱（AML）核查</li>
+        <li>利益冲突核查</li>
+        <li>观察名单入单管理</li>
+        <li>立项会流程</li>
+        <li>保荐协议/委任函模板</li>
+        <li>签署保荐协议流程</li>
+        <li>立项报告重点关注事项</li>
+      </ol>
+    </div>
+
+    <h3>2.1 立项申请与材料准备</h3>
+    <p>当项目升级为正式项目后，项目团队需首先提交<strong>立项申请</strong>。立项申请是内部审批的第一道关卡，旨在确保公司资源投入于符合风险偏好的项目。立项是决定公司调配资源、控制项目风险的重要环节。</p>
+
+    <div class="info-card">
+      <div class="card-title">立项申请材料清单</div>
+      <ol style="padding-left:20px;margin-top:8px;">
+        <li><strong>立项申请书</strong> — 包括项目基本情况、发行人概况、行业分析、初步上市方案、预计时间表、收费结构预估</li>
+        <li><strong>项目初步评估报告</strong> — 基于前期初步尽调形成的项目评估文件（可由VP/D起草）</li>
+        <li><strong>保密协议签署确认</strong> — 已签署的NDA扫描件</li>
+        <li><strong>潜在风险提示</strong> — 尽职调查中已识别的潜在风险点及缓释措施</li>
+        <li><strong>团队配置方案</strong> — 项目参与人员名单及角色分工（包括保荐人负责人、项目负责人、各条线执行人员）</li>
+      </ol>
+    </div>
+
+    <h4>2.1.1 立项整体流程：前置流程 → IBS发起 → 审批流程</h4>
+    <p>立项不是一个"填表动作"，而是由三条流程串起来的：先在系统外把前置事项做完，再在IBS里发起，最后走完审批流程拿到项目Code。项目组最容易漏的是<strong>前置流程中的观察名单入单与利益冲突核查</strong>——这两项没有完成，IBS无法正常发起立项。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:33%">① 立项前置流程</th><th style="width:33%">② IBS发起立项</th><th>③ 立项审批流程</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              ① 在IBS系统"创建项目"，需填写项目规模、收入、费率及预计完成时间等字段；同时确定项目管理角色，包括<strong>授权签字人、RB、LB、EB、SP</strong>。<br><br>
+              ② 创建项目后，在"项目承揽阶段"下发起<strong>"观察名单入单申请流程"</strong>，系统填报相关信息，并经<strong>LC中控室</strong>审批同意。<br><br>
+              ③ 发起<strong>"立项前利益冲突核查流程"</strong>：<br>
+              · 全体项目组成员填写《中金香港投行项目涉及个人利益冲突情形核查表》；<br>
+              · BDC对拟申请立项的项目确认与部门在先项目或在先客户承诺不存在利益冲突的邮件（<strong>需项目组先发送邮件给BDC</strong>）；<br>
+              · 项目组完成《利益冲突核查说明》，逐项核查并提供结论和核查底稿。<br><br>
+              ④ 撰写立项报告，并撰写、准备立项相关附件（见本章2.1材料清单与2.8重点复核事项）。
+            </td>
+            <td>
+              ① 在IBS发起立项，填写<strong>立项审批单</strong>，立项类型区分为"一般立项、保密立项"等。<br><br>
+              ② 按立项要求，在IBS提交立项报告以及相关附件。<br><br>
+              ③ 详细的立项流程指引请参考BDC发布的<strong>《立项参考（2026年10月）》</strong>；系统内的字段说明与校验规则，以IBS立项模块的填报提示为准。<br><br>
+              <em>提示：前置流程与IBS发起可以部分并行——立项报告撰写期间即可同步完成观察名单入单与利益冲突核查，但两者必须在提交立项审批前完成。</em>
+            </td>
+            <td>
+              发起立项 → 立项申请人 → 二级组负责人审批 → BDC立项处理人分配立项委员 → 立项委员审核及表决 → BDC立项处理人确认立项表决结果并提交IB管理层（或其指定人员）审批 → IB管理层审批 → 系统发出Code设置通知邮件 → FC分配Code。<br><br>
+              <strong>关键要求：</strong><br>
+              · 立项申请人必须为<strong>VP及以上的项目组成员</strong>；<br>
+              · 立项委员包括：<strong>ESC、IBI（港股IPO保荐项目）、BDC、行业组、ECM、LG、CP、RM、战客组（如涉及）</strong>；<br><span style="color:var(--color-text-light);font-size:0.95em;">（ESC：执行保荐人委员会；IBI：内核部门；BDC：立项管理部门；ECM：股本市场部；LG：法律；CP：合规；RM：客户关系负责人）</span><br>
+              · 香港IPO保荐项目由BDC依据项目规模及整体项目情况决定是否召开<strong>立项讨论会</strong>；参与方包括项目组、二级组负责人、立项委员、立项审核员（如有）、1.5道防线审核人员（如有）。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>2.1.2 公司内部立项口径：为什么"符合条件"不等于"可以立项"</h4>
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 立项的真实约束：签字额度，而不是上市条件</div>
+      <p>公司港股项目储备<strong>已超过100个</strong>，而<strong>每名SP（签字保荐人）同时只能签署5个活跃项目</strong>（<strong>公司内部签字额度管理口径，非港交所／SFC的监管上限</strong>）。这意味着全公司可承载的活跃项目数量是刚性的、远小于项目储备的。因此立项不是"符合上市条件就立"，而是<strong>在有限签字额度内择优</strong>。</p>
+      <p style="margin-top:10px;">据此，立项时应优先挑选同时满足以下两条的项目：</p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>风险低：</strong>初步尽调未发现影响上市条件的实质障碍，不存在难以整改的合规瑕疵（如土地房产瑕疵、社保公积金大额欠缴、历史股权变动税务问题、实际控制人变更等）；</li>
+        <li><strong>卖得出去：</strong>行业主题有明确的全球对标、投资者需求可验证、发行规模在市场可承接范围内。判断方法可参考1.5节"判断'可卖性'的三个问题"（谁是买家、对标是谁、市场能不能吃下）。</li>
+      </ul>
+      <p style="margin-top:10px;">一个"条件合规但卖不动"的项目，占用的是一名SP一年的签字额度，机会成本远高于立项阶段投入的尽调资源。这条约束在立项材料中应当被明确写出，而不是只放在项目组心里。项目数量与签字额度的动态平衡机制见<strong>2.8.4</strong>。</p>
+    </div>
+
+    <h4>2.1.3 财务期间选择与提前递表（early filing）</h4>
+    <p>财务期间选择是立项阶段就要定下来的事，因为它直接决定A1的递交窗口，而A1窗口又决定整个项目的挂牌时间。港股有一个可以争取时间的机制——<strong>提前递表（early filing）</strong>：若发行人年结日为12月31日，可在<strong>次年2月前</strong>以"<strong>两个完整财政年度＋截至9月30日的9个月</strong>"的财务资料递交A1，先把申请递进去、启动审核，后续再补足第三个完整财政年度的审计数据。</p>
+    <div class="tip-box">
+      <div class="tip-title">⚠️ 适用前提（不可省略）</div>
+      <p>① 该安排<strong>不是所有项目的通用权利</strong>：只有在选择《上市规则》8.05(3)"市值／收入测试"、并能援引<strong>8.05A</strong>以较短营业记录期上市时才成立（管理层须具备至少三年行业经验、最近一个审计年度管理层不变）；走8.05(1)盈利测试的项目仍须具备三个完整财政年度的营业记录。<br>
+      ② 按第4.04条及HKEX-GL6-09的行政惯例，递交A1时招股书初稿须已载"最近一期经审计资产负债表结算日前<strong>三个财政年度</strong>"的审计数据，并加做距A1不超过6个月的期末段——"两个完整年度"只是<strong>期末段的起点</strong>，不是可报送财务资料的全部。<br>
+      ③ 具体适用须逐项与联交所确认，项目组不得自行假设；立项材料中应写明依据的条文或指引编号。</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:20%">方案</th><th style="width:24%">递表时可用数据</th><th style="width:16%">递表窗口</th><th style="width:22%">后续须补足</th><th>适用场景</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>完整三年数据</strong></td>
+            <td>三个完整财政年度的审计数据</td>
+            <td>第三年审计报告出具后（通常次年3-4月）</td>
+            <td>—</td>
+            <td>财务基础好、时间充裕、不急于抢窗口的项目</td>
+          </tr>
+          <tr>
+            <td><strong>提前递表<br>（early filing，"两年＋9月30日"）</strong></td>
+            <td>两个完整财政年度＋截至9月30日的9个月数据</td>
+            <td><strong>次年2月前</strong></td>
+            <td>第三个完整财政年度的审计数据，在后续反馈轮次或加期（Update）时补足</td>
+            <td>抢市场窗口、希望尽早启动审核，<strong>且符合8.05A较短营业记录期条件</strong>的项目的项目</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">时间表排布技巧</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>倒排而非顺排：</strong>以目标挂牌月份为锚点，逐段倒推"挂牌 ← 聆讯 ← A1 ← 立项 ← 尽调启动"，每段之间留出缓冲（A1至聆讯通常3-6个月；A+H项目还须叠加中国证监会备案，见5.5节）。</li>
+        <li><strong>避开审计高峰：</strong>3-4月（年报）与8-9月（中报）是审计师、律师最紧张的时段，递表或走访安排在这两个窗口，资源和响应速度都会打折。</li>
+        <li><strong>宁可换报告期末，不要硬赶年结：</strong>若发行人财务核算基础较弱、内控待整改，可选6月30日或9月30日作为报告期末，用时间换整改质量；强行以12月31日为期末，往往在首轮反馈中因数据口径问题反复。</li>
+        <li><strong>提前递表不等于降低披露标准：</strong>递交的申请版本仍须"大致完备"，否则可能被退回；且自2026年7月24日起，退回申请会公开<strong>全部参与中介机构的名称、角色及退回原因</strong>，声誉成本很高。</li>
+        <li><strong>A+H项目单独排布：</strong>备案周期（近12个月同类项目中位数，见5.5节），须在立项时间表中单独列示，不能与港交所审核时间串行假设。</li>
+      </ol>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 操作指引</div>
+      <p>公司对立项有详细指引，具体请以<strong>BDC发布的《立项参考（2026年10月）》</strong>及IBS立项模块内的填报说明为准。本节仅列执行层面的关键节点与常见遗漏，不替代公司制度；两者不一致时，以公司制度及BDC的最新通知为准。</p>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 人员执业资格要求</div>
+      <p>参与保荐项目的员工，<strong>必须先通过 Paper 1 及 Paper 16 考试，并取得相应牌照后，方可开展项目工作</strong>。未取得牌照的人员不得独立执行保荐相关工作。团队配置时须核实每位拟参与成员的持牌状态，确保项目组符合监管的持牌要求。</p>
+    </div>
+
+    <h3>2.2 反洗钱（AML）核查</h3>
+    <p>根据香港证监会（SFC）《打击洗钱及恐怖分子资金筹集指引》，保荐人须在接纳客户前完成反洗钱核查。此环节为强制性合规要求，<strong>不得跳过或事后补做</strong>。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>核查事项</th><th>具体要求</th><th>负责方</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>客户身份识别（KYC）</td>
+            <td>收集发行人、控股股东、实际控制人、董事及高管的身份证明文件、股权结构图、最终受益人信息</td>
+            <td>项目团队</td>
+          </tr>
+          <tr>
+            <td>制裁名单筛查</td>
+            <td>核查相关方是否在联合国、美国OFAC、欧盟、香港等制裁名单中</td>
+            <td>合规部</td>
+          </tr>
+          <tr>
+            <td>政治公众人物（PEP）筛查</td>
+            <td>识别发行人股东/管理层中是否存在政治公众人物及其关联</td>
+            <td>合规部</td>
+          </tr>
+          <tr>
+            <td>负面新闻检索</td>
+            <td>通过公开渠道检索发行人及相关方是否存在负面信息（诉讼、处罚、舆论危机等）</td>
+            <td>项目团队 + 合规部</td>
+          </tr>
+          <tr>
+            <td>资金来源审查</td>
+            <td>了解发行人原始资金来源、历史融资情况，判断是否存在洗钱风险</td>
+            <td>项目团队</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南</div>
+      <p>AML核查中最容易被忽视的是<strong>最终受益人（UBO）穿透</strong>。对于多层离岸架构的发行人，必须穿透至最终自然人，不得以"离岸信托""代持"等名义止步于某一层法人。如无法穿透至最终自然人，需向合规部专项报备。</p>
+    </div>
+
+    <h3>2.3 利益冲突核查</h3>
+    <p>利益冲突核查（Conflict Check）是保荐人内部风险控制的核心环节之一，须在立项前完成。主要排查以下冲突类型：</p>
+
+    <ul class="checklist">
+      <li><strong>客户间冲突：</strong>新客户是否与现有保荐客户存在同业竞争关系</li>
+      <li><strong>项目间冲突：</strong>是否同时担任竞争对手或上下游企业的保荐人</li>
+      <li><strong>股权投资冲突：</strong>公司自有资金/关联基金是否持有发行人竞争对手的股权</li>
+      <li><strong>人员冲突：</strong>项目团队成员是否在发行人处担任独立非执行董事或其他职务</li>
+      <li><strong>利益输送风险：</strong>是否存在关联交易、集团内部交易等需特别关注的情形</li>
+    </ul>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 时间要求 — 递交A1前至少三周完成核查并提交LC</div>
+      <p>港股项目必须在<strong>递交A1前至少三周</strong>，完成<strong>发行人关联方</strong>（董事、监事、高管、主要股东及其控制的企业、关联公司）与<strong>公司自身</strong>（含自营持仓、关联基金、资产管理账户）的利益冲突核查，并<strong>将核查报告提交LC（法律合规）</strong>。这是硬性时间要求，不是"申报前顺手做一下"的事项。</p>
+      <p style="margin-top:10px;"><strong>两点容易混淆，须区分：</strong></p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>立项前利益冲突核查</strong>（见2.1.1前置流程）：回答"这个项目我们能不能接"，由项目组填写核查表、BDC出具无冲突邮件、项目组完成《利益冲突核查说明》。</li>
+        <li><strong>A1前利益冲突核查</strong>：回答"从立项到申报这段时间，有没有新增冲突"，核查范围扩大到发行人关联方与公司各业务条线，报告提交LC。两次核查的结论不能相互替代。</li>
+      </ul>
+      <p style="margin-top:10px;"><strong>实操建议：</strong>把"A1前第3周"作为申报时间表上的一个固定里程碑，与内核材料准备同步排期。若此时才发现冲突，轻则启动回避与信息隔离墙安排，重则须退出项目——此时已投入的尽调成本无法收回，且会影响发行人与其他中介的安排。</p>
+    </div>
+
+    <h3>2.4 观察名单入单管理</h3>
+    <p>对于已建立初步联系但尚未正式签署委任协议的项目，应纳入团队的<strong>观察名单（Watch List）</strong>进行系统化管理：</p>
+
+    <div class="info-card">
+      <div class="card-title">观察名单入单标准操作流程</div>
+      <p><strong>Step 1 — 信息录入：</strong>在团队CRM或项目管理系统中录入公司基本信息、联系人、初步评估结论、预计签约时间等。</p>
+      <p><strong>Step 2 — 利益冲突初查：</strong>提交至合规部门进行初步利益冲突检索，确保目标客户不与现有客户或正在执行的项目存在冲突。</p>
+      <p><strong>Step 3 — 定期跟踪：</strong>指定专人定期跟踪观察名单项目进展，更新状态。</p>
+    </div>
+
+    <h3>2.5 立项会流程</h3>
+    <p>在完成上述核查后，召开<strong>立项委员会会议（Kick-off Approval Meeting）</strong>，对项目进行全面评估和决策。</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-label">材料预审</div>
+        <div class="step-desc">立项材料提前3个工作日发送给立项委员</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-label">团队汇报</div>
+        <div class="step-desc">项目负责人汇报（10-15分钟）</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-label">委员质询</div>
+        <div class="step-desc">委员提问、项目团队答辩</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-label">投票表决</div>
+        <div class="step-desc">2/3以上同意即为通过</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <div class="step-label">会后跟进</div>
+        <div class="step-desc">记录会议纪要，落实补充条件</div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">立项委员会组成（建议）</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li>投行部负责人或其授权代表</li>
+        <li>合规部代表</li>
+        <li>风险管理部代表</li>
+        <li>行业组负责人</li>
+        <li>法务部代表</li>
+      </ul>
+    </div>
+
+    <h3>2.6 保荐协议/委任函模板</h3>
+    <p>立项通过后，与客户正式签署<strong>保荐协议（Sponsor Agreement）</strong>或<strong>委任函（Engagement Letter）</strong>。核心条款通常包括：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>条款</th><th>核心内容</th><th>注意事项</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>服务范围</td>
+            <td>明确保荐人角色（独家/联席）、服务内容和交付物</td>
+            <td>明确是否包含全球协调人（GC）角色；如为联席保荐人，需明确分工</td>
+          </tr>
+          <tr>
+            <td>费用安排</td>
+            <td>保荐费（固定+分期）、承销佣金（成功费）、报销标准</td>
+            <td>明确各期付款节点；佣金结构建议分档（如按融资规模阶梯）</td>
+          </tr>
+          <tr>
+            <td>终止条款</td>
+            <td>双方终止条件、退出机制、"分手费"安排</td>
+            <td>确保终止后已完成工作的费用得到合理补偿</td>
+          </tr>
+          <tr>
+            <td>赔偿责任</td>
+            <td>保荐人的责任范围与责任上限</td>
+            <td>关注SFC纪律处罚相关的责任分担条款</td>
+          </tr>
+          <tr>
+            <td>保密义务</td>
+            <td>双方保密承诺及信息使用限制</td>
+            <td>注意与NDA的衔接</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>2.7 签署保荐协议流程</h3>
+    <p>立项通过并完成全部合规核查后，进入保荐协议签署阶段。签署流程如下：</p>
+
+    <div class="info-card">
+      <div class="card-title">保荐协议签署标准流程</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>起草协议：</strong>基于公司标准保荐协议模板起草，根据项目特点定制条款。重点关注：保荐人角色（独家/联席）、费用结构（保荐费及承销佣金）、责任条款、终止条款及赔偿安排。</li>
+        <li><strong>保荐人境外律师复核：</strong>协议草案交由保荐人境外律师复核，重点关注保荐人责任条款与香港法律及SFC监管要求的契合度。</li>
+        <li><strong>法务审核：</strong>协议草案提交法务部审核，法务重点关注责任上限条款、赔偿条款、终止条件和争议解决条款。任何对标准模板的实质性修改均须取得法务部书面同意。</li>
+        <li><strong>客户协商：</strong>将协议草案发送客户及其律师审阅。保荐人方面应就关键商业条款（费率、付款节点、角色分工）与客户充分沟通，法务条款方面的分歧由双方律师对接解决。</li>
+        <li><strong>内部审批：</strong>保荐人团队与客户团队商定无误后，发送给LG审批。LG审批通过后发起协议签署流程。</li>
+        <li><strong>签署生效：</strong>双方授权代表签署，协议生效。签署后，保荐人须在递交A1前至少已获委任2个月（《上市规则》第3A.02B条要求）。</li>
+      </ol>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">委任函（Engagement Letter, EL）的实际流转：投行主要是"转发"</div>
+      <p style="margin-top:8px;">保荐协议与委任函可以合并为一份文件，也可以分开签署。若客户倾向于单独签委任函，实际流转路径如下——理解这条路径很重要，因为<strong>投行在其中并不起草法律条款，主导权在律师手上</strong>：</p>
+      <ol style="padding-left:20px;margin-top:10px;color:var(--color-text-light);">
+        <li><strong>起草模板：</strong>由<strong>发行人境外律师</strong>起草委任函模板（投行不提供模板）。</li>
+        <li><strong>投行转递：</strong>发行人境外律师将模板交给保荐人项目组（即投行），由投行<strong>转发给保荐人境外律师和LC审核</strong>。</li>
+        <li><strong>多轮往返：</strong>保荐人境外律师与LC提出修改意见，经投行转回发行人境外律师；发行人律师修改后再转回——通常需要2-3轮甚至更多，双方在责任范围、赔偿与补偿（indemnity）、终止安排、费用报销上反复拉锯。</li>
+        <li><strong>定稿签署：</strong>条款谈定后由双方授权代表签署。投行在全流程中主要负责<strong>转发邮件、跟踪版本、确认商务条款（费率、服务范围、角色）</strong>，以及对法律条款的进度催办。</li>
+      </ol>
+      <p style="margin-top:10px;"><strong>常见卡点与应对：</strong>① 责任上限与赔偿条款——由保荐人境外律师与LC把关，投行不要自行同意；② 终止与"分手费"——须与承销协议的分手费安排保持一致，避免两份文件相互矛盾；③ 费用报销范围——明确哪些实报实销、哪些包含在保荐费内；④ 排他期与公告权——涉及客户关系，须由项目负责人确认。<strong>时间上通常需2-4周</strong>，应在A1时间表中单列，不要与保荐协议签署挤在同一周。</p>
+    </div>
+
+    <h3>2.8 立项报告重点关注事项（近期加强的IPO立项要求）</h3>
+    <p>以下四项是近期立项审核中被反复强调、且最容易在立项报告里写得含糊的地方。立项报告不是"把公司介绍一遍"，而是要让立项委员在有限篇幅内看清四件事：<strong>谁来表决、团队做不做得动、中介靠不靠得住、签字额度够不够</strong>。</p>
+
+    <div class="info-card">
+      <div class="card-title">2.8.1 立项表决</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li>立项表决环节，表决人中<strong>增加内核部门代表（IBI）</strong>。港股IPO保荐项目的表决名单中须包含IBI，不能只列业务条线委员。</li>
+        <li>立项表决发起前，需<strong>征求质控、内核代表意见</strong>：是否需要到客户现场沟通了解相关情况。若质控或内核提出需要现场沟通，应先安排现场访谈（或视频访谈并留痕），再发起表决。</li>
+        <li><strong>上市前估值在10亿美元以下的项目需要召开立项会讨论。</strong>立项材料中须列明估值测算依据（可比公司、最近一轮融资估值、财务预测），并由<strong>ECM委员从发行风险角度、行业组委员结合项目所属行业情况</strong>，对是否立项提供明确意见——不能只写"同意立项"四个字，须写明支持理由与保留意见。</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">2.8.2 项目组执行经验</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li>加强审核项目组港股项目的执行经验，特别是<strong>EB（Execution Banker，执行质量负责人）、LB（Lead Banker，项目主办人）、RB（Responsible Banker，项目牵头人）</strong>是否具备<strong>相关行业</strong>香港IPO项目的执行经验。</li>
+        <li>立项材料中应列示三位的港股项目履历：行业、担任角色、项目阶段（是否走完聆讯与发行）、时间。仅有A股经验或仅有其他行业港股经验，不等于满足要求。</li>
+        <li>若核心角色缺乏同类行业经验，须在立项报告中说明补位安排（如增配有同类经验的项目负责人、聘请有经验的顾问、或调整角色分工），由立项委员判断是否可接受。</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">2.8.3 中介机构筛选</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li>加强对中介机构的筛选：<strong>律所原则上应在公司白名单上，并经LG同意</strong>。非白名单律所须走例外审批，并在立项材料中说明理由。</li>
+        <li><strong>会计师事务所：</strong>除<strong>A+H类项目</strong>，或<strong>主营业务运营地位于中国境外、因而无需遵守中国证监会备案要求的发行人</strong>可以聘用非四大会计师事务所外，其他项目<strong>原则上要求选用四大</strong>。</li>
+        <li>立项报告中的中介机构部分，应写明拟聘机构、是否白名单、LG意见、以及（如适用）聘用非四大的具体理由与依据。</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">2.8.4 SP签字数量管理</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li>按周控制整体立项项目数量，参考三项指标：<strong>（1）已完成上市项目数量；（2）同时拿到港交所 Hearing bundle letter 和香港证监会 No comment letter 的数量；（3）新增签字保代人数带来的签字项目数量额度。</strong></li>
+        <li>目标是使<strong>新立项的项目数量与消化（完成上市）的项目数量相匹配</strong>——立项速度长期高于消化速度，签字额度就会被低质量项目占满，真正能卖出去的项目反而立不进来。</li>
+        <li>这一机制是2.1.2节"100+项目储备 vs 每名SP 5个活跃项目"约束的具体手段：立项阶段就必须回答"这个项目占用额度后，多久能释放"。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: 尽职调查 ==================== -->
+  <section class="section" id="sec3">
+    <h2><span class="sec-num">3</span>尽职调查</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>尽职调查总体框架与执行流程</li>
+        <li>业务尽调（含MDD、TPDD、经销商核查、实地考察、问卷）</li>
+        <li>财务尽调（含内控顾问范围、财务期间选择、FDD、重要子公司、穿行测试、问卷）</li>
+        <li>法律尽调（含背景调查、招股书验证、问卷）</li>
+        <li>常见问题与风险提示</li>
+      </ol>
+    </div>
+
+    <h3>3.1 尽职调查总体框架与执行流程</h3>
+    <p>保荐人的尽职调查是港股IPO最核心的执行工作。根据香港证监会（SFC）《操守准则》第17段及《保荐人指引》，保荐人须进行"合理的尽职调查"，以确保招股书中的信息披露真实、准确、完整。保荐人不得"依赖"其他专业人士的工作来替代自身的独立判断。</p>
+
+    <div class="highlight-box">
+      <strong>📌 香港特色：</strong>SFC近年对保荐人尽职调查的监管力度持续加强。近五年SFC对保荐人及其负责人员的纪律处分持续高发，<strong>尽调不足</strong>（底稿缺失、客户与供应商走访不到位、未核实关键陈述）是最主要的处分事由；具体个案数目与统计口径以SFC网站"纪律行动"栏目公示为准。尽调工作"走过场"是最大的职业风险。
+    </div>
+
+    <h4>3.1.1 尽调总体执行流程</h4>
+    <p>尽职调查按以下五个阶段系统推进，保荐人团队须全程主导、独立判断，不得简单采信其他中介的结论。下表以<strong>T＝保荐协议签署日（项目启动日）</strong>为基准，用<strong>T+30天、T+1个月</strong>这类时间刻度排布，并明确每一项工作的<strong>责任方</strong>——原表最大的问题是只写"做什么"，不写"谁来做"，导致项目组与律师之间反复推诿。</p>
+
+    <div class="info-card">
+      <div class="card-title">尽职调查五阶段执行流程图（含责任方）</div>
+      <table>
+        <thead><tr><th style="width:10%">阶段</th><th style="width:12%">时间节点</th><th>核心工作</th><th style="width:26%">责任方</th><th style="width:14%">关键输出物</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>第一阶段<br>尽调计划</strong></td>
+            <td>T+0 至 T+30天<br>（保荐协议签署后第1个月）</td>
+            <td>① 制定PN21尽调计划（涵盖所有重大风险领域）<br>② 向发行人发送首轮信息请求清单（IRL／RFL）<br>③ 确定尽调范围（合并报表范围内全部实体）</td>
+            <td><strong>保荐人境外律师</strong>（制作PN21计划书、发出IRL）<br>保荐人项目组（提出业务／财务关注点）<br>发行人（提供范围清单）</td>
+            <td>PN21尽调计划书<br>信息请求清单（IRL/RFL）</td>
+          </tr>
+          <tr>
+            <td><strong>第二阶段<br>文件审阅</strong></td>
+            <td>T+30天 至 T+1.5个月</td>
+            <td>① 审阅发行人提供的全部文件和资料<br>② 交叉比对财务数据、合同条款、公开信息的一致性<br>③ 标记信息缺口，发出补充文件清单<br>④ 确定重要子公司范围标准<br>⑤ 确定TPDD（第三方尽调）范围标准<br>⑥ 确定实地考察范围标准</td>
+            <td>保荐人项目组（业务／财务／法律条线分工）<br>保荐人境外律师（统稿与缺口追踪）<br>审计师、发行人律师（各自条线）</td>
+            <td>文件审阅记录表<br>信息缺口追踪表</td>
+          </tr>
+          <tr>
+            <td><strong>第三阶段<br>实地核查</strong></td>
+            <td>T+1个月 至 T+2.5个月</td>
+            <td>① 管理层及部门负责人深度访谈（每场1-2小时）<br>② 主要经营场所/生产基地实地考察<br>③ 客户/供应商/银行第三方现场走访<br>④ 工商、税务、社保、海关等政府部门调档/访谈</td>
+            <td>保荐人项目组（访谈与考察）<br><strong>保荐人境内律师</strong>（负责客户／供应商约访）<br>背景调查机构（背调报告）</td>
+            <td>访谈纪要（签字版）<br>走访报告<br>调档文件汇总</td>
+          </tr>
+          <tr>
+            <td><strong>第四阶段<br>专项核查</strong></td>
+            <td>T+1.5个月 至 T+3个月</td>
+            <td>① 针对尽调中发现的异常/疑点开展专项深入核查<br>② 内控顾问进场开展内控审查（最迟不晚于A1前3-4个月，见3.3节）<br>③ 行业顾问出具行业报告<br>④ 物业评估师出具物业估值报告（如需）</td>
+            <td>保荐人项目组（牵头专项）<br>内控顾问、行业顾问、物业评估师<br>审计师（FDD配合）</td>
+            <td>专项核查报告<br>内控报告<br>行业报告</td>
+          </tr>
+          <tr>
+            <td><strong>第五阶段<br>交叉验证<br>与总结</strong></td>
+            <td>T+2.5个月 至 T+4个月</td>
+            <td>① 将尽调发现与招股书草案逐条对照验证<br>② 确保招股书中每一重大陈述均有底稿支撑<br>③ 整理尽调问题汇总，逐条确认已解决或已充分披露<br>④ 准备质控内核材料</td>
+            <td><strong>保荐人境外律师</strong>（招股书验证）<br>审计师（财务数据圈数）<br>保荐人项目组（问题清单关闭、内核材料）</td>
+            <td>尽调总结报告<br>招股书验证底稿<br>内核申报材料</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 责任分工的三条铁律：</strong>① <strong>PN21尽调计划书由保荐人境外律师制作，首轮信息请求清单（IRL）也由其发出</strong>——项目组不能等律师"喂清单"，须在此之前把行业风险点、财务异常点、法律关注点交底给律师，否则清单一定是模板化的；② 全表时间可压缩，但<strong>顺序不可颠倒</strong>——没有文件审阅就做实地核查，走访必然低效；③ 责任方只有三类主体（保荐人及其境内外律师、其他中介、发行人），<strong>任何一项工作若找不到唯一责任人，即视为尚未安排</strong>，须在周会上重新指派。
+    </div>
+
+    <h4>3.1.2 尽调核心原则</h4>
+    <div class="info-card">
+      <div class="card-title">保荐人尽职调查基本原则</div>
+      <ul class="principles-list" style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>独立性原则：</strong>保荐人须基于自身获取的证据独立作出判断，不得简单采信发行人管理层的陈述或其他中介机构的工作成果。审计师出具的无保留意见审计报告不构成保荐人豁免独立核查义务的依据。</li>
+        <li><strong>全面性原则：</strong>尽调范围须覆盖合并财务报表范围内的全部实体、全部业务条线以及招股书所涉及的全部重大风险领域。拟将某一实体排除在尽调范围之外的，保荐人须就该等排除不会导致尽调范围出现重大遗漏出具书面论证。</li>
+        <li><strong>职业怀疑态度：</strong>对于各项尽调发现之间的明显不匹配、趋势突变或异常一致性，保荐人应保持职业怀疑并执行追加尽调程序。例如，发行人的收入增长显著优于行业平均水平而缺乏合理解释的，应视为需要追加核查的高风险信号。</li>
+        <li><strong>书面记录原则：</strong>所有尽调程序均须形成书面工作底稿。口头沟通的重要事项应通过后续书面确认（如邮件摘要确认）留存记录。未形成书面记录的尽调程序，在SFC审查中将被视为未执行。</li>
+        <li><strong>及时报告原则：</strong>尽调过程中发现的重大事项须即时记录、即时汇报至项目LB，不得迟延至后续审核阶段再行披露。</li>
+        <li><strong>信息保密原则：</strong>尽调过程中获取的发行人商业信息及未公开数据须严格保密，工作底稿的访问和使用权限应限于项目团队及相关审查部门。</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南 — 尽调执行中最容易犯的五个错误</div>
+      <p>① <strong>尽调计划过于宽泛：</strong>没有针对发行人的业务特点和风险特征"量身定制"尽调计划。标准模板不足以覆盖特定行业的特殊风险（如直播行业的虚拟道具收入确认、建筑行业的完工百分比法）。<br><br>
+      ② <strong>访谈流于形式：</strong>仅按提纲逐条问答，未追问矛盾之处或模糊回答。好的访谈应当像"剥洋葱"——从表面回答不断深入追问。<br><br>
+      ③ <strong>第三方走访走过场：</strong>未核实被访谈人的身份和权限（是否真的是客户公司的授权代表？）；未交叉验证对方提供的信息。<br><br>
+      ④ <strong>底稿"选择性留存"：</strong>仅保留正面证据，删除或忽略不利发现。这是SFC纪律处分中最常见也最严重的问题。<br><br>
+      ⑤ <strong>盲目相信发行人提供的数据：</strong>发行人提供的Excel表格未验证数据来源和计算逻辑就直接使用。每一组进入招股书的数据，保荐人都必须能说清楚"这组数从哪来的、怎么算的、是否合理"。</p>
+    </div>
+
+    <h3>3.2 业务尽调</h3>
+    <p>业务尽调是尽调工作的起点和基础，目的在于充分理解发行人的业务模式、行业地位和核心竞争力。</p>
+
+    <h4>3.2.1 制裁核查</h4>
+    <p>制裁是港股IPO中少有的"<strong>一票否决</strong>"型核查项：它不像收入确认那样可以解释、可以用替代程序弥补，一旦发行人业务构成一级制裁违规，基本不存在通过保荐人内部审核与监管审核的可能。因此本手册把制裁从"反洗钱"中拆出来单独成节，并放在业务尽调的最前面。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:18%">层级</th><th style="width:34%">含义</th><th style="width:22%">对项目的影响</th><th>处理原则</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>一级制裁<br>（Primary Sanctions）</strong></td>
+            <td>禁止"美国人"（US persons）、美国境内主体，以及涉及美元清算、美国原产货物或技术的交易，与受制裁对象开展业务。</td>
+            <td>港股项目中<strong>不允许存在</strong>。发行人业务若直接构成一级制裁违规，项目通常无法推进。</td>
+            <td>必须终止相关业务或完成彻底剥离，并取得律师就剥离有效性的意见；剥离前的历史交易须完整披露。</td>
+          </tr>
+          <tr>
+            <td><strong>二级制裁<br>（Secondary Sanctions）</strong></td>
+            <td>对<strong>非美国主体</strong>与受制裁对象（如伊朗、朝鲜、俄罗斯特定实体）进行"重大交易"时，美国可施加的惩罚（列入SDN名单、切断美元通道、限制融资等）。</td>
+            <td>要求低于一级制裁，但不可忽视：影响美元结算、海外融资、供应链稳定性与投资者信心。</td>
+            <td>量化评估交易规模与是否构成"重大"，设置缓释措施（合同终止权、客户筛查、业务退出计划），并在招股书中充分披露。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 美国长臂管辖：不在美国，也可能受美国管辖</div>
+      <p>判断是否受美国制裁规则约束，不能只看"发行人是不是中国企业""交易双方在不在美国"。只要交易链条中出现以下任一要素，就可能落入美国管辖：<strong>① 任何"美国人"参与</strong>（美国公民、绿卡持有人、美国设立的公司、美国分支机构）；<strong>② 美元清算</strong>（经CHIPS／Fedwire）；<strong>③ 美国原产货物或技术</strong>（含受EAR管制的软件、设备、零部件）；<strong>④ 美国金融机构</strong>参与融资或结算。执行中应把"美元结算占比"和"美国原产设备占比"作为固定核查项，而不是等律师提问才去找。</p>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">港交所与SFC的要求，以及具体核查方法</div>
+      <p style="margin-top:8px;"><strong>监管要求：</strong>《上市规则》要求发行人披露与制裁相关的重大风险；保荐人须核查发行人及其主要客户、供应商、股东是否受制裁，并评估其对<strong>业务持续性</strong>与<strong>上市适合性（suitability）</strong>的影响。SFC《操守准则》第17段要求尽调覆盖制裁风险。若发行人存在受制裁地区的业务敞口，还须说明其合规内控（筛查系统、合同制裁条款、退出机制）。</p>
+      <p style="margin-top:10px;"><strong>核查方法：</strong></p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>名单筛查：</strong>覆盖OFAC（SDN／SSI名单）、联合国、欧盟、英国、香港的制裁名单，筛查对象包括发行人、董监高、主要股东、前十大客户与供应商、以及重要经销商。</li>
+        <li><strong>股权穿透：</strong>对被筛查主体穿透至最终受益人，识别是否存在受制裁个人或实体间接持股。</li>
+        <li><strong>地域与币种分析：</strong>按国家／地区拆分收入与采购，标注受制裁地区敞口；统计美元结算比例。</li>
+        <li><strong>合同条款审阅：</strong>核查重大合同中是否含制裁终止条款、合规承诺与审计权条款。</li>
+        <li><strong>外部意见：</strong>涉及敏感地区或敏感行业时，取得具备资质的境外律师制裁专项意见，作为底稿留存。</li>
+      </ul>
+    </div>
+
+    <h4>3.2.2 行业发展与业务模式</h4>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>尽调领域</th><th>核心内容</th><th>常见尽调方法</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>行业发展</td>
+            <td>市场规模、增速、竞争格局、监管政策、技术趋势</td>
+            <td>行业报告、专家访谈、监管政策梳理</td>
+          </tr>
+          <tr>
+            <td>业务模式</td>
+            <td>收入结构、客户画像、供应商关系、关键资源</td>
+            <td>管理层访谈、客户/供应商走访、合同审阅</td>
+          </tr>
+          <tr>
+            <td>竞争优势</td>
+            <td>核心技术/品牌/牌照优势、护城河分析</td>
+            <td>竞品对比分析、专利检索</td>
+          </tr>
+          <tr>
+            <td>增长驱动</td>
+            <td>历史增长轨迹、未来增长策略、募资用途</td>
+            <td>财务模型分析、管理层讨论</td>
+          </tr>
+          <tr>
+            <td>风险因素</td>
+            <td>行业风险、经营风险、单一客户/供应商依赖、外汇风险</td>
+            <td>敏感性分析、压力测试</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示 — 客户/供应商走访</div>
+      <p>走访是业务尽调中容易出问题的环节。关键注意事项：①走访比例一般要求覆盖前十大客户/供应商（按金额）；②必须实地走访，电话/视频走访需在底稿中说明理由并取得合规豁免；③访谈记录需被访谈人签字确认；④关注关联方是否存在（如客户/供应商与发行人或其关联方存在股权关系）。</p>
+    </div>
+
+    <!-- 业务尽调问卷 -->
+    <div class="info-card">
+      <div class="card-title">业务尽调问卷：模块、核心问题与支撑文件</div>
+      <p style="margin-top:8px;">问卷按"先业务、后财务、再合规"的顺序组织，每个模块的答案都必须能落到具体文件上——<strong>没有支撑文件的回答，等同于没有回答</strong>。</p>
+      <table style="margin-top:10px;">
+        <thead><tr><th style="width:18%">模块</th><th style="width:44%">核心问题</th><th>需索取的支撑文件</th></tr></thead>
+        <tbody>
+          <tr><td><strong>① 主体与股权</strong></td><td>集团架构如何？各主体分别承担什么职能、是否持有牌照或核心资产？报告期内是否发生重组、股权转让或实际控制人变更？</td><td>股权结构图（穿透至最终受益人）、营业执照、公司章程、历次股权转让协议及付款凭证、重组方案</td></tr>
+          <tr><td><strong>② 行业与竞争</strong></td><td>行业规模与增速的依据是什么？主要竞争者是谁、公司排名依据何在？行业监管政策近期有何变化？</td><td>行业顾问报告、第三方数据源、招投标记录、行业协会证明、监管政策文件清单</td></tr>
+          <tr><td><strong>③ 业务模式与收入</strong></td><td>各业务线如何收费、收入确认时点与依据？定价机制是什么、报告期内价格变动原因？总额法/净额法如何判断？</td><td>主要合同模板、订单/验收单据、收入明细表、定价政策文件、与审计师沟通的收入确认备忘录</td></tr>
+          <tr><td><strong>④ 客户与供应商</strong></td><td>前十大客户/供应商是谁、合作年限与集中度？是否存在关联关系？是否存在单一客户重大依赖？</td><td>完整客户与供应商大表（全量，非仅前十大）、销售/采购合同、关联方清单、走访记录</td></tr>
+          <tr><td><strong>⑤ 生产与产能</strong></td><td>产能、产量、产能利用率如何计算？主要生产基地在哪里、是否取得环评与排污许可？是否存在外协加工？</td><td>产能计算表、生产记录、环评批复与排污许可证、外协加工合同、主要设备清单</td></tr>
+          <tr><td><strong>⑥ 渠道与销售</strong></td><td>直销与经销各占多少？经销商如何管理（准入、淘汰、返利）？是否存在压货、退换货或第三方回款？</td><td>经销商清单及协议、进销存数据、终端销售证明、退换货记录、第三方回款明细及说明</td></tr>
+          <tr><td><strong>⑦ 合规与风险</strong></td><td>报告期内是否受到行政处罚、是否存在重大诉讼？是否涉及数据合规、安全生产、环保处罚？</td><td>行政处罚决定书、诉讼清单、合规证明（工商/税务/社保/海关）、数据合规自查报告</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px;color:var(--color-text-light);"><em>说明：上表为问卷模块框架，具体问题清单由保荐人境外律师在PN21计划基础上生成，项目组按模块分工填写与追索文件。发行人提供的Excel数据须验证来源与计算逻辑后方可进入招股书。</em></p>
+    </div>
+
+    <h4>3.2.3 MDD（管理层尽职调查）</h4>
+    <p>MDD主要通过深度管理层访谈进行，目的在于全面了解发行人的业务实质和管理层诚信。覆盖的核心话题包括：监管环境和竞争格局、合作模式与定价策略、盈利模型与增长驱动、研发能力和策略、风险控制与管理、客户投诉处理机制、未来发展策略、人才管理机制、近期发展情况。</p>
+
+    <div class="highlight-box">
+      <strong>📌 为什么MDD不能"走过场"：</strong>MDD是撰写招股书<strong>OSS章节（Overview概览、Strategy策略、Strengths优势）</strong>的基础——招股书开篇三章几乎全部来自MDD访谈的成果，不是文案部门"写"出来的。同时，MDD材料会被<strong>后续路演复用</strong>：投资者演示文稿（Investor Presentation）的投资故事、管理层Q&amp;A手册的标准答案、分析师预路演（PDIE）材料的行业与估值框架，都以MDD纪要为主要素材。访谈问得浅，招股书就只能写套话，路演时管理层也答不深——三件事是同一个源头。
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:16%">模块</th><th style="width:13%">访谈对象</th><th style="width:26%">核心问题</th><th style="width:24%">追问要点</th><th>需索取的支撑文件</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>① 监管环境与竞争格局</strong></td>
+            <td>董事长／CEO、董秘</td>
+            <td>行业监管框架与近三年政策变化？主要竞争者及公司位次？</td>
+            <td>若政策收紧，哪个环节最先受影响、有无预案？位次依据是第三方数据还是公司自述？</td>
+            <td>行业报告、监管批文、竞争者名单与对比表</td>
+          </tr>
+          <tr>
+            <td><strong>② 业务模式与合作模式、定价</strong></td>
+            <td>CEO、销售负责人</td>
+            <td>各业务线如何赚钱？客户为何选你们而非竞品？价格如何形成？</td>
+            <td>前三大客户为何流失或新增？降价能否换来增量？账期为何长于同行？</td>
+            <td>合同模板、报价单、定价审批记录、前十大客户明细</td>
+          </tr>
+          <tr>
+            <td><strong>③ 盈利模型与增长驱动</strong></td>
+            <td>CFO</td>
+            <td>收入与毛利率变动的驱动因素如何拆解？未来三年增长来自哪里？</td>
+            <td>毛利率高于同行的原因能否量化（原料、良率、规模）？增长所依赖的客户是否已签约？</td>
+            <td>财务模型、月度管理报表、预算、在手订单</td>
+          </tr>
+          <tr>
+            <td><strong>④ 研发能力与技术策略</strong></td>
+            <td>CTO／研发负责人</td>
+            <td>核心技术是什么、专利布局如何？研发团队规模与稳定性？</td>
+            <td>核心技术是否依赖个人或外部授权？研发资本化的判断依据？</td>
+            <td>专利清单、研发项目立项书、研发人员名册、技术授权协议</td>
+          </tr>
+          <tr>
+            <td><strong>⑤ 风险控制与管理</strong></td>
+            <td>内控／审计负责人</td>
+            <td>主要经营风险有哪些？内控体系如何覆盖？</td>
+            <td>报告期内是否发生舞弊、重大差错或监管问询？整改是否完成并经验证？</td>
+            <td>内控制度汇编、内审报告、整改记录、事故台账</td>
+          </tr>
+          <tr>
+            <td><strong>⑥ 客户投诉与售后</strong></td>
+            <td>客服／质量负责人</td>
+            <td>投诉率与处理时效？是否存在群体性投诉或产品召回？</td>
+            <td>投诉集中在哪个产品／区域？是否已触发监管介入？</td>
+            <td>投诉台账、退换货记录、召回公告、质量检测报告</td>
+          </tr>
+          <tr>
+            <td><strong>⑦ 发展战略与募资用途</strong></td>
+            <td>董事长、CFO</td>
+            <td>未来三至五年战略？募资具体投向与预期效益？</td>
+            <td>募投项目的土地、环评、审批是否已落实？新增产能的消化依据？</td>
+            <td>战略规划、募投项目可行性研究、土地与环评文件</td>
+          </tr>
+          <tr>
+            <td><strong>⑧ 人才与管理机制</strong></td>
+            <td>HR负责人</td>
+            <td>核心团队构成与激励安排？对关键人的依赖程度？</td>
+            <td>股权激励是否已实施、是否存在纠纷？核心人员竞业限制如何约定？</td>
+            <td>组织架构图、劳动合同与激励协议、社保公积金缴纳明细</td>
+          </tr>
+          <tr>
+            <td><strong>⑨ 近期发展与期后事项</strong></td>
+            <td>CFO、董秘</td>
+            <td>报告期后至今经营情况？是否发生重大合同、诉讼、融资或人事变动？</td>
+            <td>期后数据与预算的偏差原因？是否存在尚未披露的重大事项？</td>
+            <td>期后财务报表、董事会决议、重大合同清单</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--color-text-light);"><em>使用说明：本表为MDD标准访谈提纲的执行版摘要。实际访谈须按上表逐模块准备，每场访谈形成<strong>签字版纪要</strong>，并将"需索取的支撑文件"作为独立清单跟踪至关闭。</em></p>
+
+    <h4>3.2.4 TPDD（第三方尽职调查）</h4>
+    <p>第三方尽职调查（TPDD）是验证发行人业务真实性和交易公允性的核心手段，主要包括客户/供应商走访和银行走访。客户走访范围涵盖各报告期前十大客户及异常交易对手；供应商走访涵盖前十大供应商及关联方供应商；银行走访范围需覆盖主要存款银行、贷款银行和理财银行，全部银行账户均须走访确认。<strong>客户与供应商的走访，是联交所最看重的第三方外部证据</strong>——因为它不经过发行人转述，是保荐人自己能拿到的独立材料。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:6%">步骤</th><th style="width:16%">环节</th><th style="width:14%">谁负责</th><th>具体做法</th><th style="width:16%">输出</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><strong>筛选范围（scope）</strong></td><td>保荐人（项目组＋境外律师）</td><td>结合收入／采购集中度、异常交易（新增大额、价格异常、非营业范围）、行业风险特征，确定需走访的客户／供应商类型与规模门槛，并在PN21计划中写明范围标准</td><td>TPDD范围备忘录</td></tr>
+          <tr><td>2</td><td><strong>取得全量大表</strong></td><td>发行人</td><td>向企业索取<strong>完整的客户／采购大表（全量，而非仅前十大）</strong>，含名称、金额、占比、区域、合作年限、结算方式</td><td>客户／供应商大表</td></tr>
+          <tr><td>3</td><td><strong>确定覆盖率</strong></td><td>保荐人</td><td>通常覆盖报告期各期前十大，并使累计金额覆盖率达到70%-80%；覆盖率不足的须说明理由并补访</td><td>覆盖率测算表</td></tr>
+          <tr><td>4</td><td><strong>约访</strong></td><td>企业或保荐人；<strong>通常由保荐人境内律师负责约访</strong></td><td>由保荐人境内律师直接联系被访方，确认访谈对象身份与时间，避免由发行人代为安排——否则容易访到"被安排好的客户"</td><td>约访记录（邮件留痕）</td></tr>
+          <tr><td>5</td><td><strong>现场访谈</strong></td><td>项目组＋保荐人境内律师</td><td>核验被访人身份与授权、按提纲访谈、就交易数据与合同交叉验证、拍照留痕、访谈纪要由被访人签字确认</td><td>走访报告、签字纪要</td></tr>
+          <tr><td>6</td><td><strong>结论与归档</strong></td><td>保荐人</td><td>形成走访结论；发现的异常事项转入专项核查；底稿按客户／供应商编号归档，与收入明细一一对应</td><td>走访报告、底稿</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 三个常见失误</div>
+      <p>① <strong>只访前十大，不看全量大表：</strong>前十大之外的"小而散"客户往往是收入真实性问题的高发区，必须先拿全量大表再定范围。② <strong>由发行人代约、全程陪同：</strong>访谈的独立性会立刻被打折，重要客户应坚持由保荐人律师直接约访。③ <strong>电话／视频走访不留痕：</strong>确有客观困难需以电话／视频替代的，须在底稿中说明理由并取得合规确认，否则在SFC审查中视为未执行。银行走访另须注意：<strong>全部银行账户（含零余额账户、已销户账户）均须函证并走访</strong>，不能只访有余额的账户。</p>
+    </div>
+
+    <h4>3.2.5 实地考察范围与注意事项</h4>
+    <p>保荐人须对主要经营场所进行独立实地考察——这是验证"业务是否真实存在"最直接的手段，也是招股书里"我们有X个生产基地"这类陈述的唯一硬证据来源。</p>
+
+    <ul style="padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);">
+      <li><strong>范围：</strong>覆盖<strong>重要子公司、主要生产基地、核心研发中心和主要仓库</strong>；其中<strong>与法律团队确认的重大子公司至少须全部覆盖</strong>——不能因为"财务占比低于5%"就跳过法律上重大的主体（如持有核心牌照、核心专利或主要土地房产的子公司）。</li>
+      <li><strong>安排：</strong>须在工作日进行，观察正常运营状态；<strong>不得仅由发行人安排路线，保荐人应独立选择拟考察场所</strong>，并保留选择理由。</li>
+      <li><strong>现场访谈：</strong>须现场访谈<strong>厂长或基地负责人</strong>，问清产能、产量、良率、员工人数、班次与加班情况、库存水平，并与财务数据、社保缴纳人数、用电量、出货单交叉验证——数据对不上，就是需要追问的信号。</li>
+      <li><strong>留痕：</strong>考察纪要、照片（含厂区全景、生产线、仓库、门牌）、定位记录一并归档；发现异常转入专项核查。</li>
+    </ul>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 只看展厅和样板车间，不算考察</div>
+      <p>发行人安排的"参观路线"通常只到展厅、样板线和新装修的车间。保荐人应主动要求查看<strong>满负荷生产线、成品仓库、原料堆场与危废暂存间</strong>，并在不被陪同人员引导的情况下随机走一段厂区。真实产能与订单情况，往往藏在仓库的库存标签和车间的排班表里。</p>
+    </div>
+
+    <h4>3.2.6 经销商核查</h4>
+    <p><strong>经销商的定义：</strong>从发行人处购入产品后<strong>不进行额外加工、直接转售</strong>的中间商（即 resale 模式）。须与两类主体区分：<strong>代理商</strong>不取得商品所有权、只撮合交易收取佣金；<strong>加工商</strong>采购后投入生产、改变产品形态。定义不清，后面的收入确认与走访对象都会错。</p>
+
+    <div class="info-card">
+      <div class="card-title">经销商核查的六个关注点</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>管理体系：</strong>准入标准、年度考核、淘汰机制、返利与折扣政策如何设计与执行，是否留有审批记录。</li>
+        <li><strong>终端销售实现：</strong>防"压货冲收入"——核查经销商库存天数、期后销售、退换货率，判断货是卖给了终端还是压在渠道里。</li>
+        <li><strong>关联关系：</strong>经销商股东、董监高与发行人及其关联方是否重合；是否存在前员工设立的经销商。</li>
+        <li><strong>集中度与变动：</strong>经销收入占比、前五大经销商、报告期内新增与退出的原因（新增大额经销商尤其要查）。</li>
+        <li><strong>价格与信用政策：</strong>经销价与直销价差异是否合理，账期与信用额度是否优于直销（可能构成变相压货）。</li>
+        <li><strong>次级经销商：</strong>若经销收入占比较高（如超过30%），须延伸核查<strong>二级经销商</strong>的终端销售与库存，否则无法证明终端真实性。</li>
+      </ol>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:22%">披露项</th><th style="width:46%">披露内容</th><th>数据来源</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>经销商数量及变动</strong></td><td>报告期各期末经销商数量、新增与退出数量及原因</td><td>经销商清单、协议、系统台账</td></tr>
+          <tr><td><strong>经销收入及占比</strong></td><td>经销模式收入金额、占营业收入比例、与直销模式的对比</td><td>收入明细表（按渠道拆分）、审计底稿</td></tr>
+          <tr><td><strong>前五大经销商</strong></td><td>名称、合作年限、销售金额及占比、是否关联方</td><td>销售明细、工商穿透、关联方清单</td></tr>
+          <tr><td><strong>经销商库存与终端销售</strong></td><td>主要经销商期末库存、库存周转天数、期后销售情况</td><td>经销商进销存报表、期后订单、走访记录</td></tr>
+          <tr><td><strong>退换货与返利</strong></td><td>退换货金额及比例、返利政策与计提依据</td><td>退换货台账、返利计算表</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--color-text-light);"><em>上表为招股书"业务"章节披露的骨架，实际撰写时按行业惯例调整，并由发行人境外律师统稿。核查结论与披露口径须一致——披露写"经销商库存维持正常水平"，底稿里就不能有库存天数翻倍的记录。</em></p>
+
+    <h4>3.2.7 第三方支付</h4>
+    <p>第三方支付与经销商是<strong>两个不同性质的问题</strong>：经销商讲的是"货怎么卖出去"，第三方支付讲的是"钱由谁付回来"。两者可以同时存在，也可能单独出现，因此必须分开核查、分开口径披露。</p>
+
+    <div class="info-card">
+      <div class="card-title">第三方支付：定义、关注点与披露方式</div>
+      <p style="margin-top:8px;"><strong>定义：</strong>由合同约定的付款方<strong>以外的第三方</strong>代为支付货款，例如客户关联方、客户员工、经销商的下游客户、供应链金融平台或第三方支付机构。</p>
+      <p style="margin-top:10px;"><strong>关注点：</strong></p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>商业合理性：</strong>为什么由第三方付款？是否有集团统一结算、供应链金融、代采代付等可解释的背景？</li>
+        <li><strong>关联关系：</strong>回款方与发行人、董监高、主要股东是否存在关联关系或资金往来（须穿透）。</li>
+        <li><strong>资金流向：</strong>是否存在资金回流发行人、体外循环或虚构回款的迹象（比对回款方、合同方、发票方三者是否一致）。</li>
+        <li><strong>占比与趋势：</strong>报告期内第三方回款金额、占比及变动原因；异常上升须重点解释。</li>
+        <li><strong>内控：</strong>是否有对账、授权与审批流程；回款核销能否逐笔对应到合同与发票。</li>
+      </ul>
+      <p style="margin-top:10px;"><strong>披露方式：</strong>参照经销商做法，在招股书"业务—销售与收款"部分披露第三方回款金额、占比、原因、主要回款方及整改措施，并由中介机构出具核查意见。示例骨架：<strong>① 第三方回款金额及占比表；② 主要回款方名单及与客户的关系说明；③ 回款路径图示（合同方→回款方→发行人账户）；④ 内控措施与整改情况。</strong></p>
+    </div>
+
+    <h4>3.2.8 反洗钱（AML）与最终受益人（UBO）穿透</h4>
+    <p><strong>客户与供应商的最终受益人（UBO）穿透，本身就是反洗钱工作的一部分</strong>，不是与反洗钱并列的独立事项。反洗钱在业务尽调阶段的落点是"交易对手层面"，即发行人<span style="text-decoration:underline;">的客户、供应商、经销商</span>是否构成洗钱或恐怖分子资金筹集风险。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:20%">工作项</th><th style="width:44%">具体内容</th><th>与立项阶段AML核查的分工</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>客户尽职调查（CDD）</strong></td>
+            <td>对主要客户与供应商做身份识别：注册地、实际经营地、股权结构、经营范围与交易内容是否匹配</td>
+            <td>立项阶段（2.2节）查的是<strong>发行人本身</strong>；此处查的是<strong>交易对手</strong></td>
+          </tr>
+          <tr>
+            <td><strong>UBO穿透</strong></td>
+            <td>对股东、主要客户与供应商穿透至最终自然人，识别是否涉及政治公众人物（PEP）或受制裁个人；多层离岸架构须逐层穿透，不得以"信托""代持"止步于某一层法人</td>
+            <td>属于反洗钱的核心程序，<strong>而非独立于反洗钱的另一项核查</strong></td>
+          </tr>
+          <tr>
+            <td><strong>业务模式风险评估</strong></td>
+            <td>判断业务模式是否属于高洗钱风险类型（跨境支付、虚拟资产、大宗商品贸易、博彩、现金密集型行业等）</td>
+            <td>影响后续核查的深度与抽样比例</td>
+          </tr>
+          <tr>
+            <td><strong>可疑交易与内控</strong></td>
+            <td>核查发行人是否建立客户身份识别、可疑交易监测与报告机制；报告期内是否发生过可疑交易报告</td>
+            <td>与内控顾问的PN21审查范围衔接</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--color-text-light);"><em>说明：制裁核查已单列为3.2.1节，本节不再重复。两者在实操中共用同一套名单筛查工具，但判断标准与后果完全不同——制裁是"能不能做"，反洗钱是"做得干不干净"。</em></p>
+
+    <h3>3.3 财务尽调</h3>
+    <p>财务尽调是尽调工作的重中之重，保荐人须对发行人财务报表的真实性和公允性形成独立判断。</p>
+
+    <div class="info-card">
+      <div class="card-title">财务尽调核心关注领域</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>收入确认：</strong>收入确认政策是否符合HKFRS 15，是否存在提前确认、总额法/净额法选择不当等问题</li>
+        <li><strong>应收账款质量：</strong>账龄分析、坏账计提充分性、前五大应收账款对手方核查</li>
+        <li><strong>关联交易：</strong>关联交易定价公允性、占比是否过高、是否存在利益输送迹象</li>
+        <li><strong>研发资本化：</strong>资本化条件是否满足、摊销政策合理性</li>
+        <li><strong>商誉减值：</strong>历史上收购形成的商誉是否已充分减值测试</li>
+        <li><strong>税务合规：</strong>历年税务稽查情况、税收优惠依赖度、转让定价合规</li>
+        <li><strong>现金流质量：</strong>经营现金流与净利润匹配度、自由现金流趋势</li>
+        <li><strong>表外事项：</strong>对外担保、未决诉讼、或有负债</li>
+      </ol>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南 — 财务尽调常见"雷区"</div>
+      <p>① <strong>收入"注水"：</strong>通过突击签订大额合同、放宽信用政策、渠道压货等方式在报告期末突击确认收入。对策：分析季节性波动、核查期后回款情况。<br><br>
+      ② <strong>成本费用跨期：</strong>将当期费用推迟至下一期间确认以美化利润。对策：对比分析费用率趋势、核查大额费用凭证日期。<br><br>
+      ③ <strong>研发支出资本化滥用：</strong>将不符合资本化条件的支出确认为无形资产。对策：核查研发项目的技术可行性证据、管理层批准文件。</p>
+    </div>
+
+    <!-- 财务尽调问卷 -->
+    <div class="info-card">
+      <div class="card-title">财务尽调问卷：模块与支撑文件</div>
+      <table style="margin-top:8px;">
+        <thead><tr><th style="width:18%">模块</th><th style="width:44%">核心问题</th><th>需索取的支撑文件</th></tr></thead>
+        <tbody>
+          <tr><td><strong>① 收入</strong></td><td>收入按产品／渠道／区域如何拆分？收入确认时点与依据是什么？总额法与净额法如何判断？</td><td>收入明细表、主要合同、验收单／签收单、审计调整分录</td></tr>
+          <tr><td><strong>② 毛利率</strong></td><td>毛利率变动的原因？与同行业可比公司差异如何解释？</td><td>分产品毛利表、成本还原表、同行可比公司数据</td></tr>
+          <tr><td><strong>③ 应收与存货</strong></td><td>应收账款账龄结构、坏账计提政策是否充分？存货跌价准备是否足额？</td><td>应收账龄表、坏账计提表、存货库龄表、期后回款记录</td></tr>
+          <tr><td><strong>④ 关联交易</strong></td><td>关联方识别是否完整？定价是否公允？收入／成本占比多少？</td><td>关联方清单、关联交易明细、定价依据与可比第三方价格</td></tr>
+          <tr><td><strong>⑤ 税务</strong></td><td>对税收优惠的依赖程度？是否存在补缴风险？转让定价是否合规？</td><td>纳税申报表、税务稽查与处罚记录、同期资料</td></tr>
+          <tr><td><strong>⑥ 现金流与表外</strong></td><td>经营现金流与净利润是否匹配？是否存在对外担保、未决诉讼、或有负债？</td><td>现金流量表、银行流水、担保合同、诉讼清单</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>内控顾问范围</h4>
+    <p>根据PN21及保荐人声明（<strong>附录E1</strong>）关于内部监控的要求，保荐人须就发行人内部控制系统完成合理尽职调查并形成独立结论；实务中通常另行聘任内控顾问出具内控检讨报告作为支撑文件。审查范围涵盖：财务报告内控、资金管理、销售与收款、采购与付款、人力资源与薪酬、关联交易管理、IT治理（如适用）。内控顾问应在A1递交前至少3-4个月进场，预留充足整改时间（对应3.1.1流程图第四阶段，该表中的T为保荐协议签署日）。</p>
+    <div class="tip-box">
+      <div class="tip-title">💡 实操惯例</div>
+      <p>内控顾问<strong>通常聘请与审计团队同一家事务所的内控团队</strong>。原因很实际：① 审计师已经掌握发行人的账务体系与控制缺陷，内控团队进场不需要重新摸底；② 两套口径一致，能避免"审计说没问题、内控说有问题"的重复问询；③ 排期与现场协调更容易。<strong>但须注意：</strong>内控报告应由内控团队单独出具，并在形式上保持独立性；同一事务所同时提供审计与内控服务时，须事先确认不违反独立性要求，并在立项材料中说明安排。</p>
+    </div>
+
+    <h4>招股书财务数据期间选择</h4>
+    <p>招股书须涵盖至少三个完整财政年度（18A生物科技公司为两个财政年度）。<strong>会计师报告所涵盖最后一个会计期间</strong>（可以是加做的中期／期末段）的结算日，距上市文件刊发日不得超过6个月（第8.06条）——约束对象是"最后一个会计期间"，不是"最后一个完整财政年度"。项目推进超过6个月未上市则须滚动更新。法律尽调的合规证明期间应与财务报告期保持一致。<strong>立项阶段如何选择报告期末、是否采用提前递表（early filing），见2.1.3节。</strong></p>
+
+    <h4>FDD（财务尽职调查）范围</h4>
+    <p>FDD核心目标是对发行人历史财务数据质量、趋势和可持续性形成独立判断。重点关注：收入确认政策合规性、毛利率变动分析、应收账款质量、存货计价与减值、研发支出资本化、关联交易定价、税务合规、或有负债。但须明确一点：<strong>港股的FDD主要由审计师完成，不是投行自己做</strong>——投行的角色是"看得懂、问得出、核得对"。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:20%">主体</th><th style="width:52%">在FDD中的实际工作</th><th>输出</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>审计师</strong></td><td>执行FDD程序：收入与成本验证、费用分析、资产质量、关联交易、税务合规、或有负债</td><td>FDD报告</td></tr>
+          <tr><td><strong>投行项目组</strong></td><td>通过<strong>大问卷访谈财务总监（CFO）及财务团队</strong>，就科目异常波动逐项取得解释；将FDD结论与招股书财务章节逐条核对，确认口径一致</td><td>访谈纪要、核对清单</td></tr>
+          <tr><td><strong>发行人境外律师</strong></td><td>基于FDD结果撰写招股书"财务资料"章节（会计政策、关键会计判断、期间比较）</td><td>招股书财务章节</td></tr>
+          <tr><td><strong>内控顾问</strong></td><td>与FDD衔接，评估财务报告相关内控的设计与执行</td><td>内控报告</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 FDD问卷（脱敏版）的标准模块：</strong>① 收入确认（含总额／净额、时点／时段）② 成本结构与毛利率 ③ 期间费用（销售、管理、研发）④ 资产减值（应收、存货、商誉）⑤ 关联交易与资金占用 ⑥ 税务与税收优惠 ⑦ 资金管理与银行账户 ⑧ 或有事项与承诺。每模块均须取得"数据＋解释＋支撑文件"三件套，只有解释没有文件的条目视为未完成。
+    </div>
+
+    <h4>重要子公司范围</h4>
+    <p>尽调覆盖范围须包含全部重要子公司。判定标准：财务重要性（收入/总资产/净利润占合并报表5%以上）、业务重要性（持有核心资质/IP/客户关系）、合规风险（存在重大合规瑕疵）。拟排除的子公司须出具书面论证并经质控部审阅。</p>
+
+    <h4>穿行测试注意事项</h4>
+    <p>穿行测试是验证内控制度执行有效性的手段。测试覆盖销售与收款、采购与付款、存货管理、资金管理、固定资产管理等关键流程。每个流程至少选取2-3笔代表性交易，从交易发起到入账全链条追踪。发现的内控缺陷须记录并评估是否构成重大缺陷。</p>
+    <p><strong>样本选择的三条覆盖要求：</strong></p>
+    <ul style="padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);">
+      <li><strong>覆盖每年前五大客户：</strong>报告期各年度的前五大客户，至少各选一笔交易走完穿行，确保主要收入来源的确认路径被验证过。</li>
+      <li><strong>覆盖主要业务流程：</strong>发行人若有多条业务线（不同产品、不同生产模式），每条业务线至少选一条流程穿行，不能只测最主要的一条。</li>
+      <li><strong>覆盖不同销售模式：</strong>直销、经销、线上、出口等模式的控制点差异很大（如经销涉及返利与压货、出口涉及报关与结汇），各模式均须纳入。</li>
+    </ul>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:14%">流程</th><th style="width:20%">控制点</th><th style="width:26%">控制描述</th><th style="width:10%">样本</th><th style="width:12%">执行人</th><th>证据与结论</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>销售与收款</td><td>订单审批／发货／开票／回款核销</td><td>订单须经信用审批；发货单与出库记录匹配；开票依据验收单；回款按合同号核销</td><td>3笔（含1笔前五大）</td><td>销售内勤／财务</td><td>审批单、出库单、发票、银行回单；结论：有效／缺陷</td></tr>
+          <tr><td>采购与付款</td><td>请购／比价／验收／付款</td><td>请购经部门负责人批准；三家比价；验收单与入库单一致；付款经双签</td><td>3笔</td><td>采购／财务</td><td>请购单、比价表、验收单、付款凭证</td></tr>
+          <tr><td>存货管理</td><td>入库／领用／盘点／跌价</td><td>月度循环盘点；差异经审批调整；库龄超期计提跌价</td><td>2个仓库</td><td>仓储／财务</td><td>盘点表、差异调整单、跌价计提表</td></tr>
+          <tr><td>资金管理</td><td>账户／网银／印鉴</td><td>账户开立经审批；网银与印鉴分离；大额支付双签</td><td>2个账户</td><td>财务经理</td><td>开户审批、网银权限表、支付审批单</td></tr>
+          <tr><td>固定资产</td><td>购置／验收／折旧／处置</td><td>资本化标准明确；验收后转固；处置经董事会批准</td><td>2笔</td><td>资产管理员</td><td>购置合同、验收单、转固凭证、处置决议</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--color-text-light);"><em>上表为穿行测试控制表的标准骨架，实际执行时按发行人的系统与单据名称调整；每一行都须有对应的底稿编号，"结论"栏不能空着。</em></p>
+
+    <h3>3.4 法律尽调</h3>
+    <p>法律尽调通常由<strong>发行人境外律师及中国律师主导</strong>；<strong>保荐人及其律师（保荐人境外律师、保荐人境内律师）独立核查并作出独立判断</strong>。</p>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 主体必须分清：发行人律师 ≠ 保荐人律师</div>
+      <p>这是新人最常写错的判断——把两组主体当成一组。正确关系是：<strong>发行人境外律师与发行人中国律师代表发行人</strong>，出具的是发行人层面的法律意见；<strong>保荐人境外律师与保荐人境内律师代表保荐人</strong>，职责是对发行人的法律事项及发行人律师的结论进行独立核查，并向保荐人出具独立意见。不能因为发行人律师出了无保留意见，就认为保荐人的核查义务已完成——保荐人不得依赖其他专业人士的工作替代自身独立判断。</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>尽调领域</th><th>核心内容</th><th>关键输出</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>公司治理</td><td>股权结构、组织架构、董事会构成、公司章程</td><td>法律意见书</td></tr>
+          <tr><td>历史沿革</td><td>历次股权变更、注册资本缴纳、股份制改制合规性</td><td>历史沿革法律意见</td></tr>
+          <tr><td>重大合同</td><td>贷款合同、担保合同、战略合作协议、JV协议</td><td>重大合同摘要表</td></tr>
+          <tr><td>知识产权</td><td>商标、专利、著作权、域名权属及有效性</td><td>知识产权清单</td></tr>
+          <tr><td>诉讼仲裁</td><td>发行人及关联方的诉讼、仲裁、行政处罚记录</td><td>诉讼/仲裁检索报告</td></tr>
+          <tr><td>劳动合规</td><td>劳动合同、社保公积金缴纳、劳务派遣比例</td><td>劳动合规核查表</td></tr>
+          <tr><td>环保合规</td><td>环保审批、排污许可、环保处罚记录</td><td>环保合规核查报告</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 法律尽调问卷 -->
+    <div class="info-card">
+      <div class="card-title">法律尽调问卷：模块与核心文件</div>
+      <p style="margin-top:8px;">完整的法律尽调清单由发行人律师出具，样式与深度因项目而异。下表为保荐人核查时应当逐项对照的模块框架，用于判断"发行人律师的清单是否覆盖了这些领域"。</p>
+      <table style="margin-top:10px;">
+        <thead><tr><th style="width:20%">模块</th><th style="width:42%">核查内容</th><th>核心文件</th></tr></thead>
+        <tbody>
+          <tr><td><strong>① 公司治理与股权</strong></td><td>股权结构、章程条款、董事会构成、三会运作是否规范</td><td>公司章程、股东名册、股东会／董事会决议</td></tr>
+          <tr><td><strong>② 历史沿革</strong></td><td>历次股权变更、出资是否到位、股份制改造合规性、股权转让税务处理</td><td>工商档案、验资报告、股权转让协议、完税凭证</td></tr>
+          <tr><td><strong>③ 重大合同</strong></td><td>贷款、担保、战略合作、合资协议（JV）的效力与履行情况</td><td>合同清单及文本、履行情况说明、违约记录</td></tr>
+          <tr><td><strong>④ 知识产权</strong></td><td>商标、专利、著作权、域名的权属、有效性与限制</td><td>权属证书、年费缴纳记录、许可／质押协议</td></tr>
+          <tr><td><strong>⑤ 诉讼仲裁</strong></td><td>诉讼、仲裁、行政处罚及其对持续经营的影响</td><td>裁判文书、处罚决定书、律师检索报告</td></tr>
+          <tr><td><strong>⑥ 劳动合规</strong></td><td>劳动合同签订率、社保公积金缴纳、劳务派遣比例</td><td>劳动合同样本、缴纳明细、派遣协议</td></tr>
+          <tr><td><strong>⑦ 环保与安全</strong></td><td>环评审批、排污许可、安全生产记录及处罚</td><td>环评批复、排污许可证、安全检查记录</td></tr>
+          <tr><td><strong>⑧ 外资准入／VIE</strong><br>（如适用）</td><td>是否触及外资准入负面清单、VIE合约安排的合法性与可执行性</td><td>负面清单比对说明、合约安排全套文件、中国律师专项意见</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>背景调查机构聘任</h4>
+    <p>保荐人应独立聘任背景调查机构，对发行人、实际控制人、控股股东（穿透至最终自然人）、全体董监高及持股5%以上主要股东进行独立背景调查。调查范围包括诉讼/仲裁检索、制裁名单筛查、负面舆情检索及工商信息核查。调查机构须由保荐人独立聘任。</p>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 背调报告出得慢，会直接压垮时间表</div>
+      <p>背调机构出具报告的速度普遍较慢（视对象数量与境外检索范围，通常需4-8周），且高峰期排队更久。<strong>背调必须在尽调启动时就同步启动</strong>，不能等到招股书验证阶段才想起来——很多项目的A1延误，最后卡在等一份背调报告上。</p>
+      <p style="margin-top:10px;"><strong>公司内部的两档背调要求：</strong>对董监高及主要股东设有 <strong>Level 1</strong> 与 <strong>Level 2</strong> 两档：Level 1 为公开信息检索（工商登记、诉讼与失信记录、制裁名单、负面舆情）；Level 2 在 Level 1 基础上增加关联企业穿透、境外数据库检索以及必要的实地／访谈核查。<strong>具体适用范围、核查项与出具时限以公司内部背调制度为准</strong>，立项时应将该制度要求作为附件一并贴入立项材料，并据以确定背调对象名单与预算。</p>
+    </div>
+
+    <h4>招股书验证</h4>
+    <p>招股书验证是确保每一项重大陈述均有充分底稿支撑的核心程序。须将招股书全文逐段拆分，对每项事实性陈述标注对应底稿来源，建立验证记录表（Verification Notes），由保荐人律师独立验证法律陈述。每轮修订后须更新验证记录。</p>
+
+    <div class="info-card">
+      <div class="card-title">验证的节奏、严格程度与冲突处理</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>谁来做、什么时候做完：</strong>由<strong>保荐人境外律师</strong>主导，发行人律师配合提供依据。<strong>申报（递交A1）前应基本完成，上市前必须全部完成</strong>；不能带着"待验证"的条目进入聆讯。</li>
+        <li><strong>严格到什么程度：</strong>招股书里<strong>每一句话都要有底稿支持</strong>，包括看似无害的描述性表述。典型例子：写"发行人为超过1万个客户提供服务"，就必须提供客户清单或系统导出，能证明"1万个"这个数字；写"行业领先"，就要有第三方数据或排名依据；写"主要客户包括某某集团"，就要有合同或订单。</li>
+        <li><strong>常与发行人产生矛盾：</strong>矛盾多集中在夸大表述（"最先进""唯一"）、模糊表述（"大幅增长"未界定幅度）、以及无法举证的排名。处理机制：① 书面记录分歧（谁提出、发行人如何回应）；② 要求发行人提供依据，提供不了就修改表述或删除；③ 涉及重大事实的分歧升级至项目负责人与保荐人负责人；④ 不得以"发行人不愿意改"为由保留无依据的陈述。</li>
+        <li><strong>会计师圈数（财务部分）：</strong>财务章节的数字（收入拆分、客户集中度、产能利用率、毛利率等）须由<strong>审计师"圈数"</strong>确认，即同意该数字与经审计报表或底层记录一致。投行不得直接引用未经圈数的数据，验证记录中应标注<strong>圈数人与圈数日期</strong>。财务部分的验证由保荐人境外律师牵头、审计师圈数、投行核对，三方都要留痕。</li>
+      </ul>
+    </div>
+
+    <h3>3.5 常见问题与风险提示</h3>
+    <ul class="checklist">
+      <li><strong>尽调时间不足：</strong>客户催促上市进度导致尽调时间被压缩 → 向客户明确尽调是监管要求，时间不可压缩，可考虑增加人力资源投入。编制一份详细的"尽调进度甘特图"，与客户对齐每项尽调的预计时间。</li>
+      <li><strong>客户不配合：</strong>关键信息或文件迟迟无法提供 → ①发送书面催促函（邮件留痕）；②逐项记录拖延事项和影响，形成"客户配合情况追踪表"；③必要时升级至保荐人负责人与客户高层沟通。</li>
+      <li><strong>发现重大瑕疵：</strong>尽调过程中发现影响上市的实质性问题 → ①立即书面记录问题发现的时间、内容和初步判断；②24小时内向项目负责人汇报；③不得自行消化、不得与客户私下协商解决方案。</li>
+      <li><strong>尽调范围遗漏：</strong>部分业务线/子公司未被纳入尽调范围 → 尽调启动前与律师确认尽调范围。保荐人须对所有"非重要"排除给出书面论证。</li>
+      <li><strong>中介机构意见不一致：</strong>律师、审计师、行业顾问之间的意见存在冲突 → 保荐人须召开中介协调会，记录各方意见和依据，形成保荐人独立判断。</li>
+    </ul>
+  </section>
+
+  <!-- ==================== SECTION 4: 质控内核 ==================== -->
+  <section class="section" id="sec4">
+    <h2><span class="sec-num">4</span>质控审核</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>Legal Call</li>
+        <li>ESC Meeting</li>
+        <li>CC Meeting（资本承诺委员会）</li>
+      </ol>
+    </div>
+
+    <h4>三个会议与递交A1的先后关系</h4>
+    <p>质控内核流程是<strong>Legal Call → ESC Meeting → CC Meeting → 递交A1</strong>，四个节点顺序不可颠倒。最容易排错的是ESC与CC之间的间隔：<strong>CC Meeting必须在ESC Meeting后一天召开，开完CC Meeting当天即可申报</strong>。部分内部文件将ESC Meeting写作"ESA Meeting"，本手册统一使用ESC Meeting。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:20%">节点</th><th style="width:22%">时点</th><th style="width:34%">关键事项</th><th>与A1的关系</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Legal Call</strong></td>
+            <td>尽调基本完成、招股书草案基本定稿后<br>（A1前约4-6周）</td>
+            <td>保荐人境内、境外律师分别汇报重大法律问题；LG、CP审核员确认处理方案</td>
+            <td>通过后方可推进至ESC</td>
+          </tr>
+          <tr>
+            <td><strong>ESC Meeting</strong><br>（申请全面审核会议）</td>
+            <td>Legal Call通过后<br>（A1前约2-4周）</td>
+            <td>质控部门独立审核底稿与招股书；委员质询；宣布决议（无条件通过／有条件通过／退回补充尽调／不予通过）</td>
+            <td>通过后方可召开CC</td>
+          </tr>
+          <tr>
+            <td><strong>CC Meeting</strong><br>（资本承诺委员会）</td>
+            <td><strong>ESC Meeting后一天</strong><br>（须晚于ESC至少一个工作日）</td>
+            <td>就市场风险、估值合理性、投资者需求、监管不确定性及承销规模作出内部决议</td>
+            <td><strong>开完当天即可申报</strong></td>
+          </tr>
+          <tr>
+            <td><strong>递交A1</strong></td>
+            <td>CC Meeting当日或次日</td>
+            <td>印刷商经ESS提交A1全套装档文件；同步刊发申请版本（或按非公开方式递交）</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 为什么CC必须排在ESC后一天：</strong>CC的表决以ESC的质控结论为前提——委员要判断"这个项目能不能承销"，首先要看到"质控认为这个项目可以报"。若两会同日召开，CC委员在尚未看到ESC决议的情况下判断承销风险，等于把两个独立判断合并成一次，既不满足内部治理要求，也无法在底稿中留下两个独立的决策记录。因此排期时应<strong>先锁ESC日期，再倒排CC（ESC＋1个工作日）</strong>，并把"A1递交日"直接挂在CC当日。
+    </div>
+
+    <h3>4.1 Legal Call</h3>
+    <p>在尽调工作基本完成、招股书草案基本定稿后，公司流程首先召开<strong>Legal Call</strong>。Legal Call的主要目的是由保荐人境内律师和境外律师分别就尽调过程中发现的重要法律问题进行系统性梳理和风险评估。</p>
+
+    <div class="info-card">
+      <div class="card-title">Legal Call标准流程</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>参会人员：</strong>全体LG（法律）、CP（合规）审核员上线，保荐人境内律师、保荐人境外律师上线。</li>
+        <li><strong>境内律师汇报：</strong>保荐人中国律师就境内法律尽调中发现的重要问题进行汇报，包括但不限于历史沿革瑕疵、重大诉讼/仲裁、社保公积金欠缴、经营资质有效性、行政处罚记录等，并对各项问题的严重程度和法律后果发表专业意见。</li>
+        <li><strong>境外律师汇报：</strong>保荐人境外律师就香港法律层面的问题发表意见，包括公司治理结构合规性、关连交易安排、招股书披露的充分性等。</li>
+        <li><strong>风险评估与讨论：</strong>全体参会人员就律师提出的问题进行讨论，逐项评估各项法律问题对上市条件、招股书披露和上市时间表的潜在影响，形成初步意见。</li>
+        <li><strong>Legal Call通过标准：</strong>各项重大法律问题均已充分识别，处理方案已明确，且不会构成对上市条件的实质性障碍。LG、CP确认通过后（或有条件通过后），方可推进至下一阶段。</li>
+      </ol>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">风险提示</div>
+      <p>Legal Call中律师发表的意见是后续招股书披露和风险因素章节的重要基础。保荐人项目团队须在Legal Call前将尽调过程中自身发现的法律合规问题整理汇总，与律师的意见进行交叉验证。</p>
+    </div>
+
+    <h3>4.2 ESC Meeting</h3>
+    <p>Legal Call通过后，召开<strong>ESC Meeting</strong>，对项目进行全面质控评审。ESC Meeting是项目申报前的重要审批关口。</p>
+
+    <div class="info-card">
+      <div class="card-title">ESC Meeting标准流程</div>
+      <p style="margin-top:8px;">
+        <strong>会前审核（ESC Meeting前1-2周）：</strong><br>
+        项目团队提交全套评审材料，质控部门独立进行底稿审核和招股书审核。质控重点关注以下事项：<br>
+        ① 尽调计划是否覆盖了所有重大风险领域<br>
+        ② 关键尽调程序的执行是否达到合理标准（如客户走访比例是否充分、第三方访谈是否按照要求完成）<br>
+        ③ 尽调工作底稿是否能够支撑招股书中的每一项重大陈述<br>
+        ④ 招股书披露是否存在误导性陈述或重大遗漏<br>
+        ⑤ 利益冲突、关联交易等敏感事项是否已充分识别和披露<br>
+        ⑥ 财务预测及估值模型的关键假设是否具有商业合理性<br>
+        ⑦ Legal Call中提出的各项法律问题是否已落实处理方案<br><br>
+        <strong>ESC Meeting议程：</strong><br>
+        ① 项目负责人汇报：项目概况、关键进展、Legal Call结论、重大风险及缓释措施<br>
+        ② 质控部汇报（10分钟）：质控审核中发现的问题及整改落实情况<br>
+        ③ ESC委员提问与讨论（30分钟）：重点围绕重大风险事项、信息披露充分性、保荐人履职的适当性<br>
+        ④ 宣布ESC决议<br><br>
+       
+        <strong>ESC决议类型：</strong>无条件通过 / 有条件通过（须在特定时限内满足特定条件后方可推进申报）/ 退回补充尽调 / 不予通过
+      </p>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">风险提示</div>
+      <p>ESC Meeting中，项目团队应确保对所有重大事项进行充分且坦诚的披露。ESC委员通常具有丰富的项目审查经验，能够识别信息披露中的不完整或模糊之处。与其在委员追问时被动回应，不如在汇报材料中主动、全面地呈现所有重大风险及缓释措施。</p>
+    </div>
+
+    <h3>4.3 CC Meeting（资本承诺委员会）</h3>
+    <p>CC Meeting（资本承诺委员会）是发行相关的重要内部会议，主要用于公司领导层对项目的发行风险作出判断和决策，是保荐人就承销风险向内部最高决策层进行汇报的关键节点。</p>
+    <div class="info-card">
+      <div class="card-title">CC Meeting核心要点</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>会议性质：</strong>发行相关会议，聚焦项目承销与发行风险，供公司领导层判断是否具备推进发行的条件。</li>
+        <li><strong>风险研判：</strong>就项目的市场风险、估值合理性、投资者需求、监管不确定性及潜在声誉风险进行综合评估，作为承销承诺决策的依据。</li>
+        <li><strong>研究员参与：</strong>会议通常邀请研究部分析师（研究员）上线分享对发行人的行业研究与估值观点，为决策提供独立的研究支持。</li>
+        <li><strong>决策输出：</strong>形成是否推进发行、承销规模建议及风险缓释要求的内部决议，作为后续路演与定价工作的前置决策依据。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: 申报审核 ==================== -->
+  <section class="section" id="sec5">
+    <h2><span class="sec-num">5</span>申报审核</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>A1申请文件准备</li>
+        <li>递交A1申请</li>
+        <li>港交所审核与反馈</li>
+        <li>聆讯前准备</li>
+        <li>中国证监会境外上市备案流程</li>
+        <li>H股全流通（同步备案）</li>
+        <li>招股书有效期与重新递交（Refile）</li>
+      </ol>
+    </div>
+
+    <p>本章覆盖从A1申请文件准备到再递表（Refile）的全过程。申报审核阶段的节奏受<strong>三个外部变量</strong>约束：港交所的受理与反馈时限、中国证监会备案进度、以及A股（如适用）的信息披露窗口。三者中任何一个卡住，都会把挂牌时间往后推，因此立项阶段就应按三者中<strong>最长的一条</strong>倒排时间表。</p>
+
+    <div class="highlight-box">
+      <strong>📌 递交的日期与时间窗口</strong>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>当日截点：</strong>A1经港交所电子提交系统（ESS）递交，系统以当日<strong>23:59</strong>为截点。实操中印刷商通常要求在当晚<strong>20:00-21:00前</strong>完成上传与确认，建议在此基础上再预留2小时缓冲，避免因文件版本替换而跨日。</li>
+        <li><strong>节假日递交：</strong>周六、周日可以递交，但须提前与印刷商确认<strong>披露系统在非工作日的刊发时间与显示方式</strong>，以及申请有效期的起算口径——非工作日递交在系统上"收到了"，不等于当天就能在披露易看到。</li>
+        <li><strong>A+H（A to H）：</strong>须<strong>提前与A股上市公司专管员沟通</strong>，A1公告须在<strong>A股收盘后提交</strong>（通常当日<strong>19:00前</strong>完成公告上传），避免与A股信息披露时点冲突；A股停牌或存在未披露重大事项期间不得递交。</li>
+        <li><strong>当天是团队作业日：</strong>董事签字页、文件版本锁定、上市费缴费凭证、中英文翻译定稿，都必须在递交日之前完成。递交当天只剩"上传—确认—盯回执"三件事。</li>
+      </ul>
+    </div>
+
+    <h3>5.1 A1申请文件准备</h3>
+    <p>内核通过后，进入港交所A1申报阶段。A1申请是向港交所上市科正式提交上市申请的起点，全套申请文件（A1 Pack）通常包含以下文件：</p>
+
+    <div class="table-wrapper">
+      <table class="a1-table">
+        <thead>
+          <tr><th style="width:44%">文件名称</th><th>内容说明</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>01.A1 application cover letter.docx</code></td><td>致港交所的A1申请函（Cover Letter），概述申请事项并随附文件清单索引。</td></tr>
+          <tr><td><code>02.Form M103.pdf</code></td><td>上市申请表格Form M103（即A1表格），载明发行人基本资料、上市股本及申请类别等。</td></tr>
+          <tr><td><code>03.MB Rule 9.03(1)(b) Initial listing fee.jpg</code></td><td>首次上市费缴费凭证，依据主板规则9.03(1)(b)缴纳（按上市时市值计，不可退还）。</td></tr>
+          <tr><td><code>04.Application Proof(MMDD2026).txt</code></td><td>申请版本（Application Proof, AP）招股书；公开递交的于递交时同步在"披露易"刊发，非公开（保密）递交的延至PHIP刊发日。</td></tr>
+          <tr><td><code>05.AP publication and OC announcement confirmation.docx</code></td><td>AP公示及海外监管公告（OC Announcement）确认函，确认已按要求完成公示安排。</td></tr>
+          <tr><td><code>06.Form M104.doc</code></td><td>随A1提交的补充资料（Additional information to be submitted together with Form A1），按M104(1)—M104(12)分项提交。<strong>并非A1表格本身（A1＝M103）</strong>。</td></tr>
+          <tr><td><code>07.Attachment M104(1)Form M111.docx</code></td><td>附件M104(1)：Form M111，<strong>市场估值／可比公司分析</strong>（Market comparable analysis）。声明类文件另见表内M401（Form E 保荐人声明）、FFD004M（Form F 声明）。</td></tr>
+          <tr><td><code>08.Attachment M104(2)Trade receivables analysis.pdf</code></td><td>附件M104(2)：应收账款分析。</td></tr>
+          <tr><td><code>09.Attachment M104(3)Trade payables analysis.pdf</code></td><td>附件M104(3)：应付账款分析。</td></tr>
+          <tr><td><code>10.Attachment M104(4)Advanced draft PRC Legal Opinion.pdf</code></td><td>附件M104(4)：中国法律意见书草稿（Advanced draft）。</td></tr>
+          <tr><td><code>11.Attachment M104(5)Reporting Accountant's confirmation.doc</code></td><td>附件M104(5)：申报会计师确认函。</td></tr>
+          <tr><td><code>12.Attachment M104(6)Form M119 Working parties list.pdf</code></td><td>附件M104(6)：Form M119，随A1提交的补充资料（Additional Information to be submitted with Form A1），含中介工作小组名单等。</td></tr>
+          <tr><td><code>13.Attachment M104(7)Listing expenses breakdown.pdf</code></td><td>附件M104(7)：上市费用明细（Listing expenses breakdown）。</td></tr>
+          <tr><td><code>14.Attachment M104(8)Memorandum on management continuity analysis.docx</code></td><td>附件M104(8)：管理层延续性分析备忘录。</td></tr>
+          <tr><td><code>15.Attachment M104(9)Memorandum on ownership continuity analysis.docx</code></td><td>附件M104(9)：股权延续性分析备忘录。</td></tr>
+          <tr><td><code>16.Attachment M104(10)Summary of material findings.docx</code></td><td>附件M104(10)：重大发现摘要（Summary of material findings）。</td></tr>
+          <tr><td><code>17.Attachment M104(11)Form M112.pdf</code></td><td>附件M104(11)：Form M112，<strong>豁免申请</strong>（Application for waiver from strict compliance）。与第18项为同一份文件，实操中合并处理。</td></tr>
+          <tr><td><code>18.Waiver and exemption application.docx</code></td><td>豁免／宽免申请（即M112 e-Form），如适用；与第17项为同一份文件。</td></tr>
+          <tr><td><code>19.Attachment M104(12)Additional information.docx</code></td><td>附件M104(12)：补充信息（Additional information）。</td></tr>
+          <tr><td><code>20.MB Rule 9.11(17d)e-Form FF004(1).pdf</code></td><td>主板规则9.11(17d) e-Form FF004（第1部分）。</td></tr>
+          <tr><td><code>20.MB Rule 9.11(17d)e-Form FF004(2).pdf</code></td><td>主板规则9.11(17d) e-Form FF004（第2部分）。</td></tr>
+          <tr><td><code>21.MB Rule 9.11(10)Profit and working capital forecast memorandum.txt</code></td><td>主板规则9.11(10) 盈利及营运资金预测备忘录。</td></tr>
+          <tr><td><code>22.MB Rule 9.11(17b)Joint Sponsors confirmation.docx</code></td><td>主板规则9.11(17b) 联席保荐人确认函。</td></tr>
+          <tr><td><code>23.Prospectus cover.txt</code></td><td>招股书封面（Prospectus cover）。</td></tr>
+          <tr><td><code>24.OC Announcement CN.pdf</code></td><td>海外监管公告（中文版）。</td></tr>
+          <tr><td><code>24.OC Announcement EN.pdf</code></td><td>海外监管公告（英文版）。</td></tr>
+          <tr><td><code>25.Reporting accountants' confirmation on no significant adjustment.pdf</code></td><td>申报会计师关于无重大调整确认函（确认财务报表在报告期后无重大调整）。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 关键变化：</strong>自<strong>2013年10月1日</strong>起（第22项应用指引；主板规则9.03(3)），港交所要求申请版本（AP）须于递交A1时同步在港交所网站登载，2014年4月1日起全面执行；<strong>2026年7月24日</strong>起，选择非公开（保密）递交的申请人，其申请版本及申请公告延至刊发PHIP当日一并公开。这意味着市场（包括媒体、竞争对手、投资者）将在早期阶段就能看到发行人的招股书草案。项目团队需提前做好舆情管理预案。
+    </div>
+
+    <h3>5.2 递交A1申请</h3>
+    <p>A1申请通过港交所的<strong>电子提交系统（ESS）</strong>递交。具体操作流程：</p>
+
+    <div class="info-card">
+      <div class="card-title">A1申请递交操作步骤</div>
+      <p style="margin-top:8px;color:var(--color-text-light);">A1申请实际由<strong>印刷商（Printer）</strong>通过港交所电子提交系统（ESS）代为递交，包括A1表格（<strong>Form M103</strong>）及M104项下全套附件、AP版招股书等全部申请文件。保荐人及发行人董事完成签字确认后，由印刷商在ESS上传并正式提交。</p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>缴纳首次上市费：</strong>根据上市时市值规模缴纳相应的首次上市费（不可退还）。</li>
+        <li><strong>AP公示：</strong>港交所在收到申请后，在"披露易"网站公布AP版招股书。</li>
+      </ul>
+    </div>
+
+    <h4>递交时点与节假日规则</h4>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:18%">事项</th><th style="width:30%">规则</th><th>操作提示</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>当日截点</strong></td><td>ESS以当日23:59为截点</td><td>印刷商实操要求当晚20:00-21:00前完成上传与确认；建议提前一天锁定文件版本，递交日只做替换与确认</td></tr>
+          <tr><td><strong>建议递交日</strong></td><td>无强制限制</td><td>优先选周二至周四，便于次一工作日跟进受理、刊发与系统回执问题</td></tr>
+          <tr><td><strong>周六、周日递交</strong></td><td>可以递交</td><td>须提前与印刷商书面确认<strong>披露系统在非工作日的刊发时间与显示方式</strong>，以及有效期起算口径；不要假设"交了就等于当天刊发"</td></tr>
+          <tr><td><strong>公众假期递交</strong></td><td>系统可接收，刊发可能顺延</td><td>提前确认港交所假期期间的安排；如非必要，避开长假前最后一个工作日</td></tr>
+          <tr><td><strong>递交后核对</strong></td><td>递交当日或次日</td><td>核对披露易上的申请版本（或申请公告）是否已刊发、文件名与版本是否与提交一致、附件是否齐全</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>A+H（A to H）特别安排</h4>
+    <ul style="padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);">
+      <li><strong>提前与A股上市公司专管员沟通：</strong>说明拟递交时间、发行规模、是否构成重大事项，取得对信息披露安排的口径确认。这一步不做，后面公告时点一定出问题。</li>
+      <li><strong>A1公告时点：</strong>须在<strong>A股收盘后提交</strong>，通常<strong>当日19:00前</strong>完成公告上传，确保A股投资者在收市后、次日开盘前获得信息，避免盘中信息不对称。</li>
+      <li><strong>与A股公告衔接：</strong>若同日还涉及董事会决议、募投项目、关联交易等A股公告，须与A股公告<strong>同日或按交易所要求排序</strong>，内容口径必须一致（同一事项不能在两份公告里写出两个数字）。</li>
+      <li><strong>停牌限制：</strong>A股停牌期间，或存在尚未披露的重大事项时，<strong>不得递交A1</strong>。</li>
+      <li><strong>对整体时间表的影响：</strong>A股信息披露窗口 + 中国证监会备案（周期见5.5节）+ 港交所审核需并行排布，A+H项目整体周期通常比纯H股项目<strong>多3-6个月</strong>。立项阶段排时间表时，不能简单套用纯H股的经验值。</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示</div>
+      <p>A1递交是项目的关键里程碑节点。递交前需完成一个重要的"签字页"流程——请所有发行人董事签署A1表格及一系列确认函。由于董事通常分散各地、日程繁忙，建议提前至少一周开始协调签字安排。</p>
+    </div>
+
+    <h3>5.3 港交所审核与反馈</h3>
+    <p>A1递交后，港交所上市科进入审核反馈阶段。<strong>两者的差异不在"轮次多少"，而在A+H可适用加速通道</strong>——能否享受取决于市值规模与合规记录，排时间表时不能想当然。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:16%">维度</th><th style="width:42%">单纯H股（首次上市）</th><th>A+H（A股已上市）</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>适用流程</strong></td>
+            <td>联交所常规审核流程</td>
+            <td>可适用《优化新上市申请审批流程时间表》下的<strong>合资格A股公司加速通道</strong>（联交所与SFC 2024年10月18日《联合声明》）：合资格者只经<strong>1轮</strong>意见，两家监管机构各<strong>不超过30个工作日</strong>完成监管评估</td>
+          </tr>
+          <tr>
+            <td><strong>审核轮次</strong></td>
+            <td>按《优化审批流程时间表》：材料"完全符合要求"的，监管评估<strong>最多2轮</strong>、两家机构<strong>各不超过40个工作日</strong>；材料不完备或出现重大新事项的，轮次与时程均会突破</td>
+            <td>符合加速通道条件的只经<strong>1轮</strong>意见（各≤30个工作日）；一旦监管提出重大关注，即回到"≤2轮／各≤40个工作日"的常规轨道</td>
+          </tr>
+          <tr>
+            <td><strong>首轮意见</strong></td>
+            <td>递交后约15个工作日发出</td>
+            <td>按加速通道时限完成监管评估（各≤30个工作日，自"完全符合要求"的申请起算）</td>
+          </tr>
+          <tr>
+            <td><strong>适用条件</strong></td>
+            <td>—</td>
+            <td><strong>预期市值≥100亿港元</strong>（A股市值按申请前5个交易日收盘均价、加H股上市时预期市值计算）；由律师意见确认其<strong>紧接申请前两个完整财政年度</strong>一直遵守A股适用的法律法规；申请材料完全符合要求、无重大未决事项</td>
+          </tr>
+          <tr>
+            <td><strong>主要风险点</strong></td>
+            <td>业务模式、收入确认与关联交易的问询通常较深</td>
+            <td>A股与H股披露口径不一致；A股未披露的事项首次在港股出现；CSRC备案进度滞后于港交所审核</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:12px;">单纯H股的标准流程如下：</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-label">首轮反馈</div>
+        <div class="step-desc">递交后约15个工作日发出首轮问题</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-label">首轮回复</div>
+        <div class="step-desc">项目团队在15个工作日内提交回复</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-label">第二轮反馈</div>
+        <div class="step-desc">上市科约10个工作日发出第二轮问题</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-label">最终回复</div>
+        <div class="step-desc">在10个工作日内提交最终回复</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">5</div>
+        <div class="step-label">聆讯推荐</div>
+        <div class="step-desc">上市科推荐/不推荐上市委员会聆讯</div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 快速通道不是"免审核"</div>
+      <p>快速审批时间表压缩的是<strong>审核时限与轮次</strong>，不是审核标准。相反，轮次少意味着<strong>首轮回复必须一次到位</strong>——标准流程中"第二轮再补充"的余地，在快速通道下往往不存在。若首轮回复不充分被要求补充多轮，反而会丧失时间优势，最终慢于常规流程。另外，快速通道的适用须在递交前与联交所沟通确认，不能由项目组自行假设适用；A+H项目还应同步关注中国证监会备案进度，避免"港交所已过会、备案未落地"的空转（见5.5节）。</p>
+    </div>
+
+    <div class="info-card">
+      <div class="card-title">港交所常见反馈问题类型</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>业务模式：</strong>要求进一步解释收入模式、客户集中度、行业地位等</li>
+        <li><strong>财务数据：</strong>要求解释财务指标异常波动、关联交易定价、会计准则适用</li>
+        <li><strong>法律合规：</strong>要求补充外资准入限制分析</li>
+        <li><strong>历史沿革：</strong>要求补充历次股权变更的合规性说明</li>
+        <li><strong>信息披露：</strong>要求补充风险因素披露、管理层讨论与分析的深度</li>
+        <li><strong>保荐人独立性：</strong>核查保荐人与发行人之间的独立性</li>
+      </ul>
+    </div>
+
+    <h3>5.4 聆讯前准备</h3>
+    <p>港交所上市科的反馈问题全部解决后，将推荐项目至<strong>上市委员会</strong>进行聆讯（Hearing）。聆讯前需完成：</p>
+
+    <ul class="checklist">
+      <li><strong>更新招股书至聆讯前版本：</strong>即接近定稿的招股书（Pre-Hearing draft），须已将港交所前几轮反馈意见全部落实，供上市委员会审阅。注意：<strong>该版本不是PHIP</strong>。</li>
+      <li>内部模拟聆讯（Mock Hearing）</li>
+      <li>发行人与保荐人共同准备聆讯Q&amp;A预案</li>
+      <li>安排聆讯当日参会人员（通常为发行人CEO/CFO及保荐人负责人）</li>
+    </ul>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 概念区分：PHIP是"聆讯后"资料集，不是聆讯前版本</div>
+      <p>AP、聆讯前版本与PHIP分属三个时点，最容易混淆的是把PHIP当成"聆讯前的定稿"。四份文件的时间顺序如下：</p>
+      <table style="margin-top:10px;">
+        <thead><tr><th style="width:24%">文件</th><th style="width:20%">时点</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AP（申请版本）</strong></td><td>递交A1时</td><td>在披露易刊发；以非公开方式递交的申请人，则延至刊发PHIP当日一并刊发申请公告</td></tr>
+          <tr><td><strong>聆讯前版本</strong></td><td>聆讯前</td><td>接近定稿的招股书草案，仅供上市委员会与中介内部使用，<strong>不对外刊发</strong></td></tr>
+          <tr><td><strong>PHIP（聆讯后资料集）</strong></td><td><strong>聆讯通过后</strong></td><td>Post-Hearing Information Pack，聆讯通过后刊发，是第一个完整披露的公开文件</td></tr>
+          <tr><td><strong>正式招股章程</strong></td><td>招股期开始</td><td>载明发行价、发行规模等发行条款，香港公开发售同步启动</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:10px;">记忆方法：<strong>AP在"进门"时（A1），PHIP在"过会"后（Hearing）</strong>。聆讯前要准备的是"接近定稿的招股书"，不是PHIP。</p>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南 — 聆讯当日</div>
+      <p>聆讯当日，上市委员会提出的问题往往不会太难，但如果发行人管理层在回答时表现出对自身业务或招股书内容的不熟悉，将给委员留下极差的印象。务必确保参加聆讯的管理层对招股书内容了如指掌，特别是财务数据、风险因素和业务数据部分。</p>
+    </div>
+
+    <h3>5.5 中国证监会境外上市备案流程（补充）</h3>
+    <p>2023年3月31日起，境内企业境外上市全面实施<strong>备案制</strong>（替代此前的核准制）。备案而非审核——中国证监会不实质审查企业是否符合境外上市条件，主要关注合规性（外资准入、数据安全、反垄断等）。</p>
+
+    <div class="info-card">
+      <div class="card-title">备案关键时间节点</div>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="step-num">1</div>
+          <div class="step-label">递交A1后<br>3个工作日内</div>
+          <div class="step-desc">向中国证监会提交备案材料</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">2</div>
+          <div class="step-label">收到材料后<br>5个工作日内</div>
+          <div class="step-desc">中国证监会告知需补充材料（如需要）</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">3</div>
+          <div class="step-label">发行人30个<br>工作日内</div>
+          <div class="step-desc">补充材料（补充材料时间和征求意见时间不计入备案时限）</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">4</div>
+          <div class="step-label">收到材料后<br>20个工作日内</div>
+          <div class="step-desc">办结备案并公示（材料完备的情况下）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 备案实际周期已明显缩短，但仍可能是整条时间表上最慢的一环</div>
+      <p>上图的"20个工作日内办结"是<strong>法定时限</strong>，前提是材料完备、且无需征求其他部门意见。实践中备案周期<strong>差异很大</strong>（2023—2024年个案常达一年以上；2025年以来多数项目缩短至数月，但涉及多部门会签的项目仍可能接近或超过一年；落地排期应以近12个月同类项目的中位数为准，不要套用单一经验值）：备案过程需征求<strong>商务部、国家发改委、工信部</strong>等行业主管部门意见（会签），视发行人所处行业还可能涉及网信、市场监管等部门，每一轮征求意见都会把时间往后推。这也意味着，港交所审核通过、甚至聆讯通过，都不代表可以发行——备案未落地，项目只能停在原地。</p>
+      <p style="margin-top:10px;"><strong>时间表影响与应对：</strong></p>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>把备案设为关键路径：</strong>在立项时间表中按近12个月同类项目中位数排布，与港交所审核<strong>并行</strong>而非串行；不要写成"聆讯通过后启动备案"。</li>
+        <li><strong>立项即做合规自查：</strong>重点排查外资准入（负面清单）、数据出境、行业许可与反垄断申报义务——这些正是会签部门关注的核心，越早整改代价越小。</li>
+        <li><strong>备案材料与A1同步准备：</strong>两套材料的事实描述、股权结构、业务数据必须完全一致，口径不一致是反馈的高发点。</li>
+        <li><strong>对客户如实提示：</strong>A+H与涉及敏感行业（电信、数据、能源、金融）的项目，应把备案周期作为发行时间表的前置条件向客户说明，避免做出无法兑现的时间承诺。</li>
+      </ul>
+    </div>
+
+    <h4>H股全流通（同步备案）</h4>
+    <p>对于H股发行人，内资股股东可申请将其持有的境内未上市股份转换为H股在香港市场流通，即"全流通"。全流通须向中国证监会备案，且可在IPO时与境外上市备案同步申请，因此归入本章而非发行环节。主要操作要点如下：</p>
+
+    <div class="info-card">
+      <div class="card-title">H股全流通操作要点</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>申请时点：</strong>可在IPO时同步申请（在向中国证监会提交境外上市备案材料时一并提交全流通申请），也可在上市后单独申请。</li>
+        <li><strong>适用股份：</strong>上市前境内股东持有的全部内资股（包括发起人股、Pre-IPO轮投资股等）。</li>
+        <li><strong>备案程序：</strong>全流通须向中国证监会备案，备案为前置流程。</li>
+        <li><strong>减持限制（注意：这不是"全流通"的规则）：</strong>全流通股份本身<strong>不设监管锁定期</strong>，转换后即可流通（仍受股东原有承诺约束）。控股股东的禁售来自《主板规则》<strong>10.07</strong>，与全流通无关：首个禁售期自上市文件披露持股当日起至上市后<strong>6个月</strong>，其后6个月内减持不得导致其失去控股股东地位（<strong>18C发行人为12+12</strong>）。</li>
+        <li><strong>外汇管理：</strong>减持资金回流须符合外汇管理规定。内资股东在港交所减持以港币结算，减持资金进入股东在境内银行开立的外币账户。</li>
+      </ul>
+    </div>
+
+    <h3>5.6 招股书有效期与重新递交（Refile）</h3>
+    <p>先区分两个容易混淆的"有效期"：一是<strong>上市申请本身的有效期</strong>（自递交A1之日起计），二是<strong>招股书财务数据的新鲜度</strong>（报告期末距招股书日期不得超过6个月）。前者已由<strong>6个月延长至12个月</strong>，后者没有变化——两者不能混为一谈。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:22%">项目</th><th style="width:26%">原规定</th><th style="width:28%">现规定</th><th>说明</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>新上市申请有效期</strong></td>
+            <td>自递交申请表格之日起<strong>6个月</strong>，届满后处理期限即告已过，须重新递交</td>
+            <td>自<strong>2026年8月21日</strong>起，合资格新上市申请的有效期<strong>延长至12个月</strong>（短期豁免）</td>
+            <td>适用于公告日仍然有效、以及公告日或之后提交／重新提交的申请；实施期三年，即<strong>2026年8月21日至2029年8月20日</strong></td>
+          </tr>
+          <tr>
+            <td><strong>财务数据新鲜度</strong></td>
+            <td>报告期末距招股书日期不超过6个月</td>
+            <td><strong>未变化</strong></td>
+            <td>有效期延长不等于可以不更新数据，加期（Update）仍须照做</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 12个月有效期不是自动获得：</strong>该延长属<strong>短期豁免</strong>，须同时符合公告所载<strong>两项条件</strong>：① 联交所并未在其意见函中表示已暂停审批该申请；② 联交所与SFC均未发出<strong>直接质询函（SMLR Letter）或重大关注函（MCL）</strong>——若该等函件所载问题在首个6个月有效期届满前已获解决，仍可获豁免。另须注意：<strong>有效期内更换保荐人</strong>并因此触发重新递交的，申请即时失效。申请人持续提交完整及最新信息、保荐人提交<strong>切实可行的时间表</strong>，属监管期望，<strong>不是豁免条件</strong>。</div>
+
+    <p>在实践中，港股IPO项目从A1递交至最终完成上市往往耗时较长（特别是涉及多轮反馈、A+H备案或市场窗口不理想的情况）。若有效期届满仍未完成，发行人须进行<strong>加期（Update）</strong>并<strong>重新递交（Refile）</strong>更新后的申请与招股书。</p>
+
+    <div class="info-card">
+      <div class="card-title">Refile注意事项</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>加期要求：</strong>Refile时须将财务数据滚动更新至最近一期（如最近财政年度已结束，则补充整年审计数据；如中期已超过6个月，则补充中期审阅数据）。</li>
+        <li><strong>尽调更新：</strong>Refile前须将尽调覆盖期间同步延伸至加期后的最新报告期。第三方走访、工商调档、法律尽调等程序可能需要补充执行。</li>
+        <li><strong>A1 Pack同步更新：</strong>Refile时A1 Pack中的M104/M111/M113等财务分析文件须同步更新至最新期间数据。</li>
+        <li><strong>审核延续：</strong>Refile后上市科的审核意见继续有效，但上市科可能就新补充的财务数据提出额外问题。</li>
+        <li><strong>多次Refile：</strong>实践中一个项目可能进行2-3次Refile。每次Refile均须重新经过ESC Meeting审批（视公司内部规定）。</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ A1 Pack常见错误</div>
+      <p>① A1表格与招股书中的同一数据不一致（如股本结构、发行前股数等）；② M104/M111/M113中的数据与招股书中披露的数据口径不一致；③ 盈利及现金流预测的假设与行业报告或管理层访谈中的表述自相矛盾；④ Listing Expenses遗漏某项中介费用；⑤ A1 Pack中的文件版本与招股书AP版本不匹配（如招股书已更新但A1 Pack未同步更新）。递交前须安排专人逐项交叉核对。</p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 6: 发行上市 ==================== -->
+  <section class="section" id="sec6">
+    <h2><span class="sec-num">6</span>发行上市</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>路演材料制作</li>
+        <li>路演与簿记建档</li>
+        <li>定价与配售</li>
+        <li>挂牌交易</li>
+        <li>FINI系统应用</li>
+        <li>Settlement流程</li>
+      </ol>
+    </div>
+    <h3>6.1 路演材料制作</h3>
+    <p>路演材料是发行上市阶段最重要的准备工作之一，其制作质量和呈现效果直接影响机构投资者的认购意愿和定价结果。保荐人项目团队应在<strong>递交A1前开始构思</strong>路演材料的框架和核心信息，并在<strong>A1递交后立即启动制作</strong>，以确保在聆讯通过后可以第一时间进入路演阶段，不因材料准备延迟而错失市场窗口。路演材料准备工作通常由保荐人ECM团队主导，项目执行团队配合。</p>
+
+    <div class="info-card">
+      <div class="card-title">路演材料制作要点</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>投资者演示文稿（Investor Presentation）：</strong>内容涵盖公司概览、行业机遇、业务模式、财务亮点、增长策略、募资用途。通常控制在20-30页。须经发行人管理层、保荐人和律师三方审阅确认。</li>
+        <li><strong>管理层Q&amp;A手册：</strong>针对投资者可能提出的高频问题准备标准答案，涵盖财务细节、行业竞争、风险因素、估值逻辑等。手册仅供管理层路演前内部准备使用，不得对外分发。</li>
+        <li><strong>分析师预路演材料（PDIE Materials）：</strong>承销商研究分析师在PDIE阶段向机构投资者展示的材料，内容侧重行业分析和估值框架，不得包含招股书中未披露的重大信息。</li>
+        <li><strong>合规红线：</strong>路演材料中的所有信息和数据须已在招股书中披露或可从中推导，不得在路演中首次披露重大信息。路演材料须在正式使用前经保荐人律师审阅确认合规。</li>
+      </ul>
+    </div>
+
+    <h3>6.2 路演与簿记建档</h3>
+    <p>路演（Roadshow）和簿记建档（Bookbuilding）是发行过程中最关键的市场营销环节：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:20%">阶段</th><th style="width:22%">时间（以挂牌日T为锚点；定价日为T-2）</th><th>核心工作</th><th style="width:20%">关键参与者</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>分析师预路演（PDIE）</td>
+            <td>T-16 至 T-14<br>（正式路演前1-2周）</td>
+            <td>承销商研究分析师向机构投资者介绍公司投资亮点，建立估值预期</td>
+            <td>承销商研究部、机构投资者</td>
+          </tr>
+          <tr>
+            <td>管理层路演</td>
+            <td>T-12 至 T-4<br>（约1-2周）</td>
+            <td>发行人管理层与机构投资者一对一／小组会议</td>
+            <td>发行人管理层、保荐人、承销团</td>
+          </tr>
+          <tr>
+            <td>簿记建档</td>
+            <td>T-12 至 T-2<br>（与路演同步）</td>
+            <td>收集投资者订单（价格／数量）、动态调整价格区间</td>
+            <td>账簿管理人、机构投资者</td>
+          </tr>
+          <tr>
+            <td>香港公开发售</td>
+            <td>T-6 至 T-3<br>（3.5个交易日，T-3中午截止）</td>
+            <td>面向零售投资者开放认购申请</td>
+            <td>收款银行、零售投资者</td>
+          </tr>
+          <tr>
+            <td>簿记结束与定价</td>
+            <td>T-2<br>（即定价日，公开发售截止次日）</td>
+            <td>根据机构订单和零售认购情况确定最终发行价</td>
+            <td>发行人与保荐人协商</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight-box">
+      <strong>📌 时间表的使用方法：</strong>上表以挂牌日为锚点倒排，实际项目中各阶段可压缩或重叠，但<strong>顺序与依赖关系不能变</strong>——PDIE不完成，路演就缺少估值基础；簿记不启动，定价就没有订单支撑。另需注意：FINI机制下从定价到挂牌仅<strong>T+2</strong>（见6.5、6.6节），因此T-2定价之后的结算准备必须在路演期间就已完成，不能等到定价后才动手。
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示</div>
+      <p>路演期间，作为项目团队成员的主要工作是：①实时跟踪簿记数据（各机构下单情况、价格敏感度）；②每日更新簿记摘要（Book Summary）；③协调承销团成员之间的信息同步（保持承销团电话/每日通讯）；④协助准备管理层次日路演材料中的投资者关注点。</p>
+    </div>
+
+    <h3>6.3 定价与配售</h3>
+    <p>簿记结束后，进入定价与配售环节。此环节涉及多方利益的博弈。需要特别提示：<strong>港股的发售结构与回拨机制已于2025年8月4日整体改写</strong>，此前流传的"90%国际配售＋10%公开发售""超额50-100倍回拨至40%"等说法均已失效，下文按现行规则重写。</p>
+
+    <div class="highlight-box">
+      <strong>📌 定价决策框架：</strong>最终发行价由发行人与保荐人协商确定，主要参考因素包括：簿记建档中的投资者需求（在什么价位有多少需求）、可比公司估值水平、近期港股IPO市场表现、发行人自身的融资需求和估值预期。
+    </div>
+
+    <h4>6.3.1 发售结构：机制A与机制B二选一</h4>
+    <p>自<strong>2025年8月4日</strong>起，新上市申请人须在<strong>机制A</strong>与<strong>机制B</strong>中择一作为公开发售的分配机制。两者最大的区别是"<strong>有没有回拨</strong>"：机制A保留回拨但初始比例低（5%），机制B没有回拨但初始比例由发行人自行选定（10%-60%）。</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:30%">项目</th><th style="width:30%">机制A</th><th>机制B</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>公开认购初始分配比例</strong></td>
+            <td>发售股份的<strong>5%</strong></td>
+            <td>发行人事先选定，<strong>下限10%、上限60%</strong></td>
+          </tr>
+          <tr>
+            <td><strong>回拨机制</strong></td>
+            <td><strong>有</strong>。按公开发售超额认购倍数递增（见下表）</td>
+            <td><strong>无回拨</strong>。选定比例后不再因超额认购而调整</td>
+          </tr>
+          <tr>
+            <td><strong>超额认购 ≥15倍且&lt;50倍</strong></td>
+            <td>公开发售增至<strong>15%</strong></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>超额认购 ≥50倍且&lt;100倍</strong></td>
+            <td>公开发售增至<strong>25%</strong></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>超额认购 ≥100倍</strong></td>
+            <td>公开发售增至<strong>35%</strong></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>适用考虑</strong></td>
+            <td>预期散户需求较强、希望保留"需求驱动"的价格发现弹性；但超额倍数高时须向公开发售让出较多份额</td>
+            <td>希望锁定公开发售比例、减少发行结构不确定性；适合机构需求为主、或希望控制零售占比的项目</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:34%">建簿配售（Bookbuilding Placing Tranche）</th><th>规定</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>最低分配比例</strong></td><td>初次发售股份的<strong>至少40%</strong>须分配予<strong>配售部分的投资者（基石投资者除外）</strong>——基石额度<strong>不占用</strong>这40%，基石占比越高，须另行落实的非基石配售需求越大</td></tr>
+          <tr><td><strong>与其他部分的关系</strong></td><td>配售部分（建簿）＋公开认购部分＝全部发售股份（基石投资者在配售部分内安排，<strong>不构成独立部分</strong>）；公开认购的初始比例依所选机制确定</td></tr>
+          <tr><td><strong>生效日与适用范围</strong></td><td><strong>2025年8月4日</strong>起生效，适用于<strong>所有发行人</strong>及<strong>所有在该日或之后刊发上市文件的新申请人</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 两个容易误用的旧规口径</div>
+      <p>① <strong>"初始分配比例为90%国际配售＋10%公开发售"已不成立。</strong>现行规则要求至少40%发售股份分配予配售部分的投资者（<strong>基石投资者除外</strong>），公开认购的初始比例取决于所选机制：机制A固定5%，机制B由发行人在10%-60%之间事先选定。<br><br>
+      ② <strong>"超额15-50倍→30%、50-100倍→40%、100倍以上→50%"是旧规回拨表，已失效。</strong>现行机制A的回拨比例为<strong>15%／25%／35%</strong>（对应≥15倍且&lt;50倍、≥50倍且&lt;100倍、≥100倍）；机制B<strong>不设回拨</strong>。<br><br>
+      另需注意：<strong>基石投资的6个月禁售期被明确保留</strong>（联交所2025年8月结论中未采纳分档锁定期的方案），以及原提议的"上调定价灵活性机制"（可在指示价基础上上调10%）<strong>最终未实施</strong>。</p>
+    </div>
+
+    <h4>6.3.2 基石投资者（Cornerstone Investors）</h4>
+    <p>基石投资者是在定价前承诺按<strong>最终发行价</strong>认购一定金额或股数、并接受<strong>锁定期</strong>的投资者。对项目而言，基石的作用不是"凑钱"，而是<strong>为发行提供确定性与定价锚</strong>。</p>
+
+    <div class="info-card">
+      <div class="card-title">基石的六个关键点</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>通常的发行比例：</strong>基石认购份额通常占发售股份的<strong>20%-40%</strong>；大型项目或市场环境较弱时可更高，但占比过高会挤压其他机构与零售投资者的获配空间，也容易在上市后形成抛压预期。</li>
+        <li><strong>签约流程：</strong>路演前后开始接触并确定意向 → 签署<strong>基石投资协议（CIA, Cornerstone Investment Agreement）</strong> → 在招股章程中披露基石名单、认购金额、锁定期及独立性 → 定价后按最终发行价完成认购。</li>
+        <li><strong>谁参与：</strong>由<strong>投行项目组与ECM（股本市场部）共同参与</strong>——ECM负责投资者覆盖与额度安排，项目组负责与发行人沟通、协调披露口径与协议条款。</li>
+        <li><strong>价格接受者：</strong>基石投资者<strong>不参与定价</strong>，须无条件接受最终发行价。这一点必须在协议与披露中写清，否则容易被质疑为"变相定价安排"。</li>
+        <li><strong>锁定期：</strong>基石股份自上市起<strong>锁定6个月</strong>（监管要求，2025年8月的规则修订已明确保留）。</li>
+        <li><strong>积极意义：</strong>① 提高发行的确定性，降低承销风险；② 向市场传递专业机构认可的信号，有助于引导其他投资者下单；③ 为定价提供参照锚；④ 上市初期稳定股东结构。但须注意：基石名单的"质量"比"数量"重要，纯粹凑数的基石对定价帮助有限，反而可能引起监管对独立性的问询。</li>
+      </ul>
+    </div>
+
+    <h4>6.3.3 锚定投资者（Anchor Investors）</h4>
+    <p>锚定投资者是在簿记建档初期下达<strong>大额订单</strong>、用于引导其他投资者预期的机构投资者。它的特点是"<strong>灵活但不确定</strong>"：没有锁定期，也没有份额保证。</p>
+
+    <div class="info-card">
+      <div class="card-title">锚定的三个特征</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>无锁定期：</strong>上市后即可交易，灵活度高，因此对要求流动性的基金更有吸引力。</li>
+        <li><strong>份额不确定：</strong>最终获配取决于定价水平与簿记超额倍数，锚定投资者只是"表达大额意向"，不是"锁定额度"。</li>
+        <li><strong>通常为口头约定：</strong>多数情况下以<strong>君子协定</strong>方式确认意向，不签署有约束力的协议、不对外披露。这也意味着——<strong>订单可能随时撤回</strong>，不能把锚定量当作已实现的订单计入簿记。</li>
+      </ul>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th style="width:18%">维度</th><th style="width:41%">基石投资者</th><th>锚定投资者</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>约束力</strong></td><td>签署CIA，<strong>有法律约束力</strong></td><td>通常为口头约定（君子协定），<strong>约束力弱</strong></td></tr>
+          <tr><td><strong>锁定期</strong></td><td><strong>6个月</strong>锁定期</td><td><strong>无锁定期</strong></td></tr>
+          <tr><td><strong>份额确定性</strong></td><td>认购金额／股数在协议中确定，<strong>确定性高</strong></td><td>仅为意向，<strong>份额不确定</strong></td></tr>
+          <tr><td><strong>是否披露</strong></td><td>须在招股章程中<strong>逐名披露</strong></td><td><strong>不披露</strong></td></tr>
+          <tr><td><strong>对定价的作用</strong></td><td>提供定价锚与发行确定性，但<strong>不参与定价</strong></td><td>在簿记早期引导市场预期，<strong>影响价格区间形成</strong></td></tr>
+          <tr><td><strong>主要风险</strong></td><td>占比过高挤压其他投资者、上市后解禁抛压、独立性被质疑</td><td>口头订单可能撤回，导致簿记"虚高"、定价后需求不足</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>6.3.4 分配原则</h4>
+    <div class="info-card">
+      <div class="card-title">配售（Allocation）的核心原则</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>优先长期、高质量投资者：</strong>优先分配给高质量长期投资者，避免过度集中于短期交易型投资者（对冲基金快进快出会放大首日波动）。</li>
+        <li><strong>兼顾地域与类型分散：</strong>在国际长线、区域基金、中资机构之间保持合理分布，避免单一类型投资者占比过高。</li>
+        <li><strong>与基石／锚定协调：</strong>基石与锚定已占用的额度须在分配前扣除，避免同一投资者在两个口径下重复获配。</li>
+        <li><strong>留痕：</strong>分配决策的依据（订单质量、历史合作、持有期限预期）须形成书面记录，作为承销过程底稿。</li>
+      </ul>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 避坑指南</div>
+      <p>定价环节最容易出问题的是<strong>发行人管理层与市场估值预期之间的巨大差距</strong>。在路演前就应与发行人充分沟通合理估值区间，避免在定价时出现"发行人坚持高点定价、市场只能接受低点"的僵局。必要时可以请第三方估值机构出具独立估值意见作为参考。</p>
+    </div>
+
+    <h3>6.4 挂牌交易</h3>
+    <p>定价完成后，项目进入最后冲刺——挂牌交易：</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <div class="step-label">定价日</div>
+        <div class="step-desc">确定发行价并完成款项结算（T）</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <div class="step-label">配发结果公告</div>
+        <div class="step-desc">刊发配发结果公告（T+1）</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <div class="step-label">股份交收</div>
+        <div class="step-desc">股份登记并入账（T+1至T+2）</div>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">4</div>
+        <div class="step-label">挂牌日</div>
+        <div class="step-desc">09:00开始交易（T+2）</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示 — 上市仪式</div>
+      <p>挂牌当日通常在香港交易所金融大会堂举行上市仪式。项目团队需提前准备：上市仪式发言稿、纪念品、媒体通稿、当日股价监控方案。另需确保发行人管理层和主要股东已开通港股交易账户（如需参与后市交易）。</p>
+    </div>
+
+    <h3>6.5 FINI系统应用</h3>
+    <p><strong>FINI（Fast Interface for New Issuance）</strong>是港交所于2023年11月推出的数字化新股结算平台，将新股从定价到挂牌的时间从原来的T+5缩短至T+2。</p>
+
+    <div class="info-card">
+      <div class="card-title">FINI系统核心变化</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>结算周期缩短：</strong>定价至挂牌从T+5缩短至T+2（<strong>T为定价日</strong>，T+2为开始交易）。公开发售于T-1中午截止，经T日定价、T+1配发结果公告，于<strong>T+2开市交易</strong>——即公开招股截止后的<strong>第三个</strong>交易日挂牌。</li>
+        <li><strong>电子化招股：</strong>全面取消纸本招股申请表和纸本支票，投资者通过电子渠道认购。</li>
+        <li><strong>资金预锁：</strong>投资者认购时资金即被锁定，减少资金占用期间的利息成本。</li>
+        <li><strong>对项目执行的影响：</strong>定价日至挂牌日之间仅有两日用于完成配售确认、资金交割和股份登记。项目团队须在定价前充分准备settlement流程的各项工作，确保无延迟。</li>
+        <li><strong>角色分工：</strong>FINI系统涉及的角色包括：发行人、保荐人、收款银行、股份登记处、结算参与者（银行/券商）和投资者。保荐人须在FINI系统中协调各方完成线上操作。</li>
+      </ul>
+    </div>
+
+    <h3>6.6 Settlement流程</h3>
+    <p>新股结算（Settlement）是发行上市的最后操作环节，涉及资金和股份的最终交割。按照FINI机制下的T+2结算节奏：</p>
+
+    <div class="info-card">
+      <div class="card-title">Settlement操作流程</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>定价日（T日，中午12:00前）：</strong>确定最终发行价并签署定价协议；当日完成公开发售款项结算与配售结果确认。</li>
+        <li><strong>配发结果公告（T+1日）：</strong>10:00前提交承配人名单，17:00前完成监管审批，23:00前刊发配发结果公告；公开发售股份于17:30前存入中央结算系统，退款同步安排。</li>
+        <li><strong>股份交收（T+1至T+2）：</strong>股份登记处完成登记；国际配售股份于T+2开市前存入中央结算系统；发售资金按承销协议节点划付发行人。</li>
+        <li><strong>挂牌日（T+2日）：</strong>09:00开始交易；上市仪式通常于9:00-9:30在香港金融大会堂举行。</li>
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- ==================== SECTION 7: 底稿归档 ==================== -->
+  <section class="section" id="sec7">
+    <h2><span class="sec-num">7</span>底稿归档</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>底稿归档的意义与监管要求</li>
+        <li>底稿整理与上传的时点要求</li>
+        <li>底稿归档时限要求（按项目类型）</li>
+        <li>底稿质量要求</li>
+        <li>配套事项与责任主体</li>
+        <li>底稿管理的操作细则</li>
+      </ol>
+    </div>
+
+    <h3>7.1 底稿归档的意义与监管要求</h3>
+    <p>底稿归档是港股IPO项目的最后一个执行环节，但却是<strong>保荐人法律责任持续存在</strong>的起点。根据SFC《保荐人指引》，保荐人须将全部尽调工作底稿保存至少<strong>7年</strong>（自上市日期起算）。如在日后出现任何SFC调查、投资者诉讼或民事索赔，这些底稿将是保荐人证明自身"已进行合理尽职调查"的关键证据。</p>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 严重警告</div>
+      <p>底稿归档不是"可有可无"的收尾工作。SFC近年多次因保荐人底稿保存不完整或无法提供底稿而对保荐人及其负责人作出纪律处分。底稿缺失的后果可能包括：罚款（个人最高可达100万港元）、吊销牌照、被禁止担任保荐人负责人等。</p>
+    </div>
+
+    <h3>7.2 底稿整理与上传的时点要求</h3>
+
+    <h4>四节点底稿上传要求（保荐人香港上市项目）</h4>
+    <p>鉴于内部仍存在底稿归档逾期问题，ESC Overseas 制定《担任保荐人的香港上市项目完成终止前重要节点的底稿整理及上传要求》，要求项目组在以下 <strong>四个节点分阶段完成底稿上传</strong>：</p>
+    <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+      <li>① 申请全面审核会议前；</li>
+      <li>② 提交 A1 申请后 1 个月内；</li>
+      <li>③ 收到聆讯通知前；</li>
+      <li>④ 项目上市后 2 个月内。</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>注意事项：</strong>2026-06-01 起，申请全面审核会议的项目须在会议召开前完成相应底稿的上传与确认。已提交 A1 申请的项目，在触发下一节点时，须一并补传该节点及之前所有应提交的底稿。底稿管理人作为第一责任人，须督促各项工作落实，并通过邮件进行确认。
+    </div>
+
+    <h3>7.3 底稿归档时限要求（按项目类型）</h3>
+    <p>已完成／终止的保荐或承销类、及非保荐承销类项目的归档时限如下：</p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>项目类型</th><th>提交底稿资料</th><th>完成底稿归档</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>保荐或承销类（已完成／终止）</strong></td><td>完成／终止后 2 个月内</td><td>完成／终止后 3 个月内</td></tr>
+          <tr><td><strong>非保荐或承销类（已完成／终止）</strong></td><td colspan="2">完成／终止后 3 个月内提交底稿并完成归档</td></tr>
+          <tr><td><strong>财务顾问项目</strong></td><td colspan="2">项目完结之日起 3 个月内完成全部归档程序，并根据底稿审核意见补充相应归档文件</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">
+      <div class="tip-title">💡 提示</div>
+      <p>上述所有底稿上传／归档均通过 IBS 底稿系统执行；境外股本及财务顾问项目在分配 ESC 审核员后，IBS 会自动创建审核邮件组（含 ESC、CP、LG 审核人员），项目组与审核员沟通须抄送该组。</p>
+    </div>
+
+    <h3>7.4 底稿质量要求</h3>
+    <p>底稿归档除满足及时性要求外，须高度重视质量：</p>
+    <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+      <li>重视归档底稿的<strong>内容完整性与数据准确性</strong>；</li>
+      <li>归档工作的<strong>正式完成</strong>，以项目组根据底稿审核员的反馈意见切实改进底稿质量问题为前提；</li>
+    </ul>
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 质量问题后果</div>
+      <p>若底稿存在重要内容缺漏或归档文件整体规范性较差等明显质量问题，不仅会导致归档进度延迟，也将对项目质量评估产生不利影响。</p>
+    </div>
+
+    <h3>7.5 配套事项与责任主体</h3>
+    <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+      <li><strong>系统平台：</strong>IBS 底稿系统（record keeping、底稿上传、归档、审核邮件组均依托该系统）。</li>
+      <li><strong>第一责任人：</strong>底稿管理人（须督促落实并邮件确认）。</li>
+      <li><strong>自查确认：</strong>项目组自查 + EB/LB 邮件确认（证监会《通函》专项）。</li>
+      <li><strong>SP 记录：</strong>SP 参与及指导项目的全部书面记录须重新核查并上传。</li>
+    </ul>
+
+    <h3>7.6 底稿管理的操作细则</h3>
+    <p>底稿管理是一套贯穿尽调到归档的规则：尽调阶段产生的每一份底稿，都按本节口径实时归档、命名与索引，再按7.2—7.4节的要求上传。尽调阶段的底稿管理与项目收尾的底稿归档，本质上是同一件事的两个阶段——<strong>把钱（时间）花在平时，还是花在补做上</strong>。</p>
+
+    <div class="info-card">
+      <div class="card-title">底稿管理的操作细则</div>
+      <ol style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>实时归档：</strong>每完成一项尽调程序，立即将产生的底稿归入对应的文件夹。不得等到项目收尾阶段集中补底稿。建议使用项目共享文件夹，按"大类-中类-小类"三级目录组织。</li>
+        <li><strong>命名规范：</strong>底稿文件统一按"编号-内容描述-日期-版本"格式命名。例如："B-C02-前五大客户走访报告-20261105-v2.docx"。</li>
+        <li><strong>索引管理：</strong>维护一份统一的底稿索引表（Excel），包含：编号、文件名称、文件类型、对应尽调领域、创建日期、创建人、复核人、复核状态。</li>
+        <li><strong>版本控制：</strong>重要文件（如招股书草稿、财务模型）须保留所有历史版本，不得以"最终版""最终版2"覆盖前稿。</li>
+        <li><strong>与四节点上传衔接：</strong>尽调底稿的归档进度须能直接对应7.2节的四个上传节点——申请全面审核会议前、提交A1后1个月内、收到聆讯通知前、上市后2个月内。平时不归档，节点到来时必然逾期。</li>
+      </ol>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">💡 新人提示 — 底稿管理的基本要求</div>
+      <p>① <strong>实时归档，切忌事后补：</strong>尽调完成后立即整理归档，不得等到项目结束再集中补底稿。<br>
+      ② <strong>每份底稿注明日期和来源：</strong>包括文件名称、获取日期、来源（如来自发行人/律师/公开渠道）。<br>
+      ③ <strong>建立底稿索引：</strong>按尽调领域分类编号，建立统一索引表，方便后续检索和核查。<br>
+      ④ <strong>电子邮件也属于底稿：</strong>与发行人、律师、审计师之间的重要沟通邮件（特别是涉及尽调发现、数据确认、异常解释的邮件）须导出并纳入底稿归档。</p>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 8: 规则汇编 ==================== -->
+  <section class="section" id="sec8">
+    <h2><span class="sec-num">8</span>规则汇编</h2>
+
+    <div class="section-toc">
+      <div class="toc-title">本节内容</div>
+      <ol>
+        <li>香港联交所核心规则</li>
+        <li>香港证监会相关规则</li>
+        <li>中国证监会监管要求</li>
+        <li>其他相关法规及指引</li>
+        <li>官方参考链接</li>
+      </ol>
+    </div>
+
+    <h3>8.1 香港联交所核心规则</h3>
+
+    <div class="info-card">
+      <div class="card-title">📌 近年规则修订时间轴（2023-2026）</div>
+      <p style="margin-top:8px;">港股上市规则在过去三年经历了两次重大修订和多项制度性调整。查规则时先看生效日，再看条文——网上流传的很多"经验值"仍停留在旧规上。</p>
+      <table style="margin-top:10px;">
+        <thead>
+          <tr><th style="width:18%">生效日期</th><th>规则变化</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>2023-03-31</strong></td><td>境内企业境外上市<strong>备案制</strong>生效（替代核准制）；《主板上市规则》第18C章（特专科技公司）生效；1994年《国务院关于股份有限公司境外募集股份及上市的特别规定》同日废止</td></tr>
+          <tr><td><strong>2023-11</strong></td><td>FINI（新股结算平台）上线，定价至挂牌由T+5缩短至<strong>T+2</strong></td></tr>
+          <tr><td><strong>2024-09-01</strong></td><td>18C章<strong>临时修订</strong>：已商业化公司市值门槛60亿→<strong>40亿港元</strong>，未商业化100亿→<strong>80亿港元</strong>；适用至<strong>2027-08-31</strong></td></tr>
+          <tr><td><strong>2024-10-18</strong></td><td>联交所与SFC发布《有关优化新上市申请审批流程时间表的联合声明》，其后形成<strong>合资格A股公司快速审批时间表</strong></td></tr>
+          <tr><td><strong>2025-08-04</strong></td><td><strong>IPO定价与公开市场新规</strong>：建簿配售至少<strong>40%</strong>；公开发售可选<strong>机制A／机制B</strong>；初始公众持股量改为<strong>分层结构</strong>（10%-25%）；新增<strong>初始自由流通量</strong>要求；基石6个月禁售期保留</td></tr>
+          <tr><td><strong>2026-01-01</strong></td><td><strong>持续公众持股量新规</strong>生效，适用于<strong>全体上市发行人</strong>：新增<strong>替代门槛</strong>（公众持股≥已上市类别股份10%且市值&gt;10亿港元）；A+H发行人为H股≥A+H股份总数<strong>5%</strong>或市值&gt;10亿港元；新增月度及年度披露；公众持股严重不足者以<strong>"-PF"标记</strong>替代停牌，18个月内未恢复即除牌（同日生效HKEX-GL121-26）</td></tr>
+          <tr><td><strong>2026-07-24</strong></td><td><strong>提升上市机制竞争力（第一阶段）</strong>：所有新申请人可<strong>非公开（保密）递交</strong>；WVR市值门槛400亿→<strong>200亿港元</strong>（或60亿港元市值＋6亿港元收入）；退回申请须公开<strong>全部中介机构名称、角色及原因</strong>；同批下调第二上市门槛（同权：30亿或60亿港元）、放宽WVR配套（市值≥400亿时比率可至20:1，经济利益≥40亿时持股可降至5%）</td></tr>
+          <tr><td><strong>2026-08-21</strong></td><td>合资格新上市申请有效期由<strong>6个月延长至12个月</strong>（短期豁免，实施三年至2029-08-20）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>规则/指引</th><th>核心内容</th><th>适用范围</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>《主板上市规则》第八章</td>
+            <td>上市基本条件：财务测试（8.05）、营业记录（8.05）与较短营业记录期（8.05A）、市值要求（8.09）、公众持股量与自由流通量（8.08／8.08A；中国发行人为19A.13A／19A.13C）</td>
+            <td>所有主板新股申请人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第九章</td>
+            <td>申请程序及规定：A1表格、申请版本披露、上市委员会聆讯</td>
+            <td>所有主板新股申请人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第十八章</td>
+            <td>矿业公司上市特别规定</td>
+            <td>矿业公司发行人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第十八A章</td>
+            <td>生物科技公司上市特别规定（允许未盈利生物科技公司上市）</td>
+            <td>生物科技公司发行人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第十八B章</td>
+            <td>特殊目的收购公司（SPAC）上市制度</td>
+            <td>SPAC 及其发起人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第十八C章</td>
+            <td>特专科技公司上市制度（2023年3月31日生效）。<br><strong>临时修订（2024年9月1日至2027年8月31日）：</strong>已商业化公司上市时最低市值由<strong>60亿港元降至40亿港元</strong>；未商业化公司由<strong>100亿港元降至80亿港元</strong>。该修订在三年期内暂时适用，联交所将于2027年8月31日前按需检讨并咨询市场</td>
+            <td>特专科技公司发行人</td>
+          </tr>
+          <tr>
+            <td>《主板上市规则》第十九C章</td>
+            <td>第二上市制度</td>
+            <td>已在合资格交易所上市的发行人</td>
+          </tr>
+          <tr>
+            <td>HKEX-GL系列指引信</td>
+            <td>上市科对特定问题的解释性指引（如分拆上市、关联交易等）</td>
+            <td>涉及特定架构/情形的项目</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>8.2 香港证监会（SFC）相关规则</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>规则/指引</th><th>核心内容</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>《证券及期货事务监察委员会持牌人或注册人操守准则》</td>
+            <td>第17段：保荐人尽职审查义务和行为标准</td>
+          </tr>
+          <tr>
+            <td>《适用于保荐人的指引》（Sponsor Guidelines）</td>
+            <td>保荐人尽职调查的具体要求和操作指引</td>
+          </tr>
+          <tr>
+            <td>《打击洗钱及恐怖分子资金筹集指引》</td>
+            <td>客户尽职调查（CDD）、持续监察、可疑交易报告义务</td>
+          </tr>
+          <tr>
+            <td>《证券及期货条例》（第571章）</td>
+            <td>市场失当行为（内幕交易、虚假交易、操纵市场、披露虚假或误导性信息）的法律责任</td>
+          </tr>
+          <tr>
+            <td>SFC纪律处分案例汇编</td>
+            <td>历年对保荐人尽调不足的纪律处分案例，是理解SFC监管期望的重要参考</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>8.3 中国证监会监管要求</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>法规</th><th>核心内容</th><th>生效日期</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>《境内企业境外发行证券和上市管理试行办法》</td>
+            <td>确立境外上市备案制：境内企业境外直接或间接发行上市须向中国证监会备案（不进行实质性审核）</td>
+            <td>2023年3月31日</td>
+          </tr>
+          <tr>
+            <td>《关于加强境内企业境外发行证券和上市相关保密和档案管理工作的规定》</td>
+            <td>境外上市企业的保密和档案管理要求；现场检查合作机制</td>
+            <td>2023年3月31日</td>
+          </tr>
+          <tr>
+            <td>《关于境内企业境外发行上市备案管理安排的通知》</td>
+            <td>存量企业过渡安排：已获中证监受理的企业适用原核准制</td>
+            <td>2023年3月31日</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="warning-box">
+      <div class="warn-title">⚠️ 已废止法规：《国务院关于股份有限公司境外募集股份及上市的特别规定》不再现行有效</div>
+      <p>1994年8月4日以<strong>国务院令第160号</strong>发布的《国务院关于股份有限公司境外募集股份及上市的特别规定》，已被《国务院关于废止部分行政法规和文件的决定》（<strong>国令第758号</strong>，2023年2月14日公布）<strong>自2023年3月31日起废止</strong>；同批废止的还有《国务院关于进一步加强在境外发行股票和上市管理的通知》（国发〔1997〕21号）。</p>
+      <p style="margin-top:10px;">该规定已<strong>整体失效</strong>，不存在"部分条款仍在执行"的情形，因此未列入上表现行法规。H股发行的法律框架现由《公司法》《证券法》《境内企业境外发行证券和上市管理试行办法》及中国证监会配套规则构成。此处的说明供查证历史文件时参考——查阅2023年3月31日之前的项目文件，仍可能遇到引用该规定的情形。</p>
+    </div>
+
+    <div class="highlight-box">
+      <strong>🔑 关键变化 — 备案制 vs 核准制：</strong>2023年3月31日前，中国企业境外上市须取得中国证监会"核准"。2023年3月31日后改为"备案制"——中国证监会不再进行实质性审核，主要关注合规性（外资准入、数据安全、反垄断等）。备案材料须在递交A1后3个工作日内提交，中国证监会在20个工作日内完成备案（材料完备的情况下）。
+    </div>
+
+    <h3>8.4 其他相关法规及指引</h3>
+    <ul style="padding-left:20px;color:var(--color-text-light);">
+      <li><strong>行业监管法规：</strong>根据发行人所处行业，需关注相关行业主管部门的监管要求（如金融行业需关注人民银行/金融监管总局的规定，医疗行业需关注药监局的规定等）</li>
+      <li><strong>外资准入负面清单：</strong>国家发改委和商务部联合发布的《外商投资准入特别管理措施（负面清单）》，明确限制或禁止外资进入的领域，是境内法律尽调需重点核查的事项</li>
+      <li><strong>数据安全法规：</strong>《网络安全法》《数据安全法》《个人信息保护法》——对持有大量用户数据的发行人影响重大</li>
+      <li><strong>香港《公司条例》（第622章）：</strong>招股书登记相关的公司法律程序</li>
+    </ul>
+
+    <h3>8.5 官方参考链接</h3>
+    <p>以下为本指南制作过程中参考的主要官方来源，建议在实际项目执行中直接查阅最新版本：</p>
+
+    <div class="info-card">
+      <div class="card-title">核心官方链接</div>
+      <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
+        <li><strong>香港上市规则（主板）：</strong><br><a href="https://sc.hkex.com.hk/TuniS/cn-rules.hkex.com.hk/%E8%A6%8F%E5%89%87%E6%89%8B%E5%86%8A/%E4%B8%BB%E6%9D%BF%E4%B8%8A%E5%B8%82%E8%A6%8F%E5%89%87" target="_blank">https://sc.hkex.com.hk/TuniS/cn-rules.hkex.com.hk/规则手册/主板上市规则</a></li>
+        <li><strong>香港联交所上市指引（有关上市发行人的指引文件）：</strong><br><a href="https://sc.hkex.com.hk/TuniS/cn-rules.hkex.com.hk/%E8%A6%8F%E5%89%87%E6%89%8B%E5%86%8A/%E6%9C%89%E9%97%9C%E4%B8%8A%E5%B8%82%E7%99%BC%E8%A1%8C%E4%BA%BA%E7%9A%84%E6%8C%87%E5%BC%95%E6%96%87%E4%BB%B6" target="_blank">https://sc.hkex.com.hk/TuniS/cn-rules.hkex.com.hk/规则手册/有关上市发行人的指引文件</a></li>
+        <li><strong>香港证监会（SFC）— 保荐人相关指引：</strong><br><a href="https://www.sfc.hk" target="_blank">https://www.sfc.hk</a>（查阅《操守准则》第17段、《保荐人指引》及纪律处分案例）</li>
+        <li><strong>港交所披露易 — 新上市（申请版本／聆讯后资料集）：</strong><br><a href="https://www1.hkexnews.hk/app/appindex.html" target="_blank">https://www1.hkexnews.hk/app/appindex.html</a><br>路径：披露易首页 → 新上市 → 申请版本及聆讯后资料集（首页 <a href="https://www.hkexnews.hk" target="_blank">https://www.hkexnews.hk</a> 仅为公告检索入口，无法直达该专区）</li>
+        <li><strong>中国证监会 — 境外上市备案：</strong><br><a href="http://www.csrc.gov.cn" target="_blank">http://www.csrc.gov.cn</a>（查阅《境内企业境外发行证券和上市管理试行办法》及配套指引）</li>
+        <li><strong>中国证监会 — 境内企业境外发行上市备案管理（相关规则一）：</strong><br><a href="https://www.csrc.gov.cn/csrc/c101954/c7124478/content.shtml" target="_blank">https://www.csrc.gov.cn/csrc/c101954/c7124478/content.shtml</a></li>
+        <li><strong>中国证监会 — 境内企业境外发行上市备案管理（相关规则二）：</strong><br><a href="https://www.csrc.gov.cn/csrc/c101954/c7162474/content.shtml" target="_blank">https://www.csrc.gov.cn/csrc/c101954/c7162474/content.shtml</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <div style="margin-top:60px;padding-top:30px;border-top:2px solid var(--color-border);text-align:center;color:var(--color-text-light);font-size:13px;">
+    <p><strong>港股IPO业务操作指南——金牌银行家Guidebook · V2.2</strong></p>
+    <p>投行分会执行小组 · Guidebook 大赛</p>
+    <p style="margin-top:12px;">
+      <span class="tag tag-gray">本指南仅供内部培训使用</span>
+      <span class="tag tag-gray">更新时间：2026年11月9日</span>
+    </p>
+    <p style="margin-top:16px;font-size:11px;opacity:0.6;">
+      Disclaimer：本指南旨在为投行新员工提供港股IPO业务的实操指引，不构成任何法律意见或监管合规建议。<br>
+      具体项目执行中，请以最新法规及公司内部政策为准，必要时咨询法律及合规部门。
+    </p>
+  </div>
+
+  <!-- ==================== PAGE NAV (上一章 / 下一章) ==================== -->
+  <nav class="page-nav" id="pageNav" aria-label="章节导航">
+    <button type="button" class="prev" id="prevBtn" disabled="">
+      <span class="nav-label">← 上一章</span>
+      <span class="nav-title" id="prevTitle"></span>
+    </button>
+    <div class="page-indicator" id="pageIndicator">第 1 / 11 页</div>
+    <button type="button" class="next" id="nextBtn">
+      <span class="nav-label">下一章 →</span>
+      <span class="nav-title" id="nextTitle">手册概览与使用说明</span>
+    </button>
+  </nav>
+
+</main>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" title="返回顶部">↑</button>
+
+<script>
+  // ==================== PAGINATION CONTROLLER ====================
+  // 首页(cover) 为封面；「港股IPO相关基础知识」自成一章(sec-intro)，已在目录中呈现，
+  // 点击目录可直接回到该章节。阅读顺序见 pageOrder。
+  const redirect = {};                              // 无重定向：每个章节均为独立分页
+  const navHighlight = {};                          // 首页(#cover)已进目录，按 href 直接高亮
+  const pageOrder = ['cover', 'sec0', 'sec-intro', 'sec1', 'sec2', 'sec3', 'sec4', 'sec5', 'sec6', 'sec7', 'sec8'];
+  const pageTitles = {
+    'cover': '指南首页',
+    'sec-intro': '港股IPO相关基础知识',
+    'sec0': '手册概览与使用说明',
+    'sec1': '项目承揽',
+    'sec2': '项目立项',
+    'sec3': '尽职调查',
+    'sec4': '质控内核',
+    'sec5': '申报审核',
+    'sec6': '发行上市',
+    'sec7': '底稿归档',
+    'sec8': '规则汇编'
+  };
+
+  const navLinks = Array.from(document.querySelectorAll('.sidebar-nav a'));
+  const pages = pageOrder.map(id => document.getElementById(id)).filter(Boolean);
+  let currentIndex = 0;
+
+  function goToId(rawId) {
+    const id = redirect[rawId] || rawId;
+    let idx = pageOrder.indexOf(id);
+    if (idx < 0) {
+      const el = document.getElementById(rawId);
+      if (el) {
+        const sec = el.closest('.section');
+        if (sec) {
+          const pid = redirect[sec.id] || sec.id;
+          idx = pageOrder.indexOf(pid);
+        } else if (el.id === 'cover' || el.closest('#cover')) idx = 0;
+      }
+    }
+    if (idx >= 0) { currentIndex = idx; render(); }
+  }
+
+  function render() {
+    // Show only the active page; hide the rest
+    pages.forEach((p, i) => p.classList.toggle('active', i === currentIndex));
+
+    // Highlight the matching sidebar item（首页高亮「港股IPO简介」）
+    const currentId = pageOrder[currentIndex];
+    const hlId = navHighlight[currentId] || currentId;
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + hlId);
+    });
+
+    // Prev / Next buttons + target titles
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevTitle = document.getElementById('prevTitle');
+    const nextTitle = document.getElementById('nextTitle');
+    const indicator = document.getElementById('pageIndicator');
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === pages.length - 1;
+    prevTitle.textContent = currentIndex > 0 ? pageTitles[pageOrder[currentIndex - 1]] : '';
+    nextTitle.textContent = currentIndex < pages.length - 1 ? pageTitles[pageOrder[currentIndex + 1]] : '';
+    indicator.textContent = '第 ' + (currentIndex + 1) + ' / ' + pages.length + ' 页';
+
+    syncHash();
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  function syncHash() {
+    const id = pageOrder[currentIndex];
+    if (('#' + id) !== location.hash) {
+      history.replaceState(null, '', '#' + id);
+    }
+  }
+
+  // Sidebar click → jump to chapter
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToId(link.getAttribute('href').substring(1));
+    });
+  });
+
+  // Clickable table rows → jump to their target page
+  document.querySelectorAll('.clickable-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const href = row.getAttribute('data-href');
+      if (href && href.startsWith('#')) goToId(href.substring(1));
+    });
+  });
+
+  // Footer prev / next
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndex > 0) { currentIndex--; render(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndex < pages.length - 1) { currentIndex++; render(); }
+  });
+
+  // Keyboard navigation: ← / →
+  document.addEventListener('keydown', (e) => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+    if (e.key === 'ArrowLeft' && currentIndex > 0) { currentIndex--; render(); }
+    if (e.key === 'ArrowRight' && currentIndex < pages.length - 1) { currentIndex++; render(); }
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  function toggleBackToTop() {
+    if (window.scrollY > 400) backToTop.classList.add('visible');
+    else backToTop.classList.remove('visible');
+  }
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', toggleBackToTop);
+  toggleBackToTop();
+
+  // Open from hash on load (deep link support)
+  const initialHash = location.hash.replace('#', '');
+  if (initialHash && pageOrder.indexOf(initialHash) >= 0) {
+    currentIndex = pageOrder.indexOf(initialHash);
+  }
+  render();
+
+  // ---------- 封面：贡献邀请按钮 ----------
+  const contribPanel = document.getElementById('contribPanel');
+  const contribToggle = document.getElementById('contribToggle');
+
+  if (contribToggle && contribPanel) {
+    contribToggle.addEventListener('click', () => {
+      const open = contribPanel.hasAttribute('hidden');
+      if (open) {
+        contribPanel.removeAttribute('hidden');
+        contribToggle.textContent = '📖 收起说明';
+      } else {
+        contribPanel.setAttribute('hidden', '');
+        contribToggle.textContent = '📖 怎么贡献';
+      }
+    });
+  }
+
+  const templates = {
+    feedback: [
+      '【Guidebook 修订建议】',
+      '· 涉及章节：第X章 X.X 节（或“手册概览·第X节”）',
+      '· 现行表述：（原文摘录；建议新增的写“暂无此内容”）',
+      '· 建议改为：（改写后的文字；新增内容请注明插入位置）',
+      '· 依据：（《上市规则》条文号／指引信编号／项目实例；经验判断请注明）',
+      '· 建议人：（姓名·部门，用于修订记录署名）'
+    ].join('\n'),
+    claim: [
+      '【Guidebook 章节认领】',
+      '· 认领章节：第X章 X.X 节',
+      '· 可投入时间：（预计初稿交付时间）',
+      '· 计划补充内容：（案例／规则更新／操作步骤等）',
+      '· 是否需要编写组提供材料：（需要哪些背景资料）',
+      '· 认领人：（姓名·部门）'
+    ].join('\n')
+  };
+
+  function flash(btn, text) {
+    const original = btn.textContent;
+    btn.textContent = text;
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  }
+
+  function copyText(text, btn) {
+    const ok = () => flash(btn, '✓ 已复制，可直接粘贴');
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      let done = false;
+      try { done = document.execCommand('copy'); } catch (e) { done = false; }
+      document.body.removeChild(ta);
+      if (done) { ok(); } else { flash(btn, '复制失败，请手动选择文本'); }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  const btnFeedbackTpl = document.getElementById('btnFeedbackTpl');
+  const btnClaimTpl = document.getElementById('btnClaimTpl');
+  if (btnFeedbackTpl) btnFeedbackTpl.addEventListener('click', () => copyText(templates.feedback, btnFeedbackTpl));
+  if (btnClaimTpl) btnClaimTpl.addEventListener('click', () => copyText(templates.claim, btnClaimTpl));
+</script>
+
+
+
+</body></html>
