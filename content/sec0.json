@@ -1,0 +1,256 @@
+{
+  "id": "sec0",
+  "num": "✦",
+  "title": "手册概览与使用说明",
+  "nav_title": "手册概览与使用说明",
+  "nav_icon": "✦",
+  "nav_style": "muted",
+  "nav_group": null,
+  "blocks": [
+    {
+      "type": "h3",
+      "id": "sec0-1",
+      "text": "一、本手册能帮你解决什么"
+    },
+    {
+      "type": "p",
+      "md": "本手册面向**投行新员工及首次参与港股IPO项目人员**编写，目的是帮助你在最短时间内了解港股IPO全流程，并拿到可以直接使用的操作指引。具体而言，本手册将帮你："
+    },
+    {
+      "type": "card",
+      "title": "本手册的用途",
+      "items": [
+        {
+          "kind": "table",
+          "wrap": false,
+          "table": {
+            "cls": null,
+            "head": [
+              {
+                "md": "解决的问题",
+                "attrs": {
+                  "style": "width:30%"
+                }
+              },
+              "具体内容"
+            ],
+            "rows": [
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**了解港股IPO整体流程**",
+                  "从项目承揽到挂牌交易的七个阶段，每个阶段的里程碑节点、参与方角色、关键输出物和时间节奏"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**熟悉关键尽调事项**",
+                  "业务、财务、法律三大尽职调查模块的核心关注点与核查方法"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**理解审核与监管要求**",
+                  "联交所反馈问询流程及中国证监会备案要求"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**知道该找谁、什么时候找**",
+                  "各阶段关键对接方及协作节点提示"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec0-2",
+      "text": "二、港股IPO全流程（七阶段）"
+    },
+    {
+      "type": "p",
+      "md": "港股IPO项目从启动到完成挂牌交易，通常需要**8-12个月**视CSRC备案进度、项目复杂度和市场窗口而定。以下为标准流程的七个阶段："
+    },
+    {
+      "type": "pipeline",
+      "steps": [
+        {
+          "num": "1",
+          "title": "项目承揽",
+          "detail": "客户开发 · 初步评估<br>签署NDA"
+        },
+        {
+          "num": "2",
+          "title": "项目立项",
+          "detail": "AML核查 · 冲突排查<br>签署保荐协议"
+        },
+        {
+          "num": "3",
+          "title": "尽职调查",
+          "detail": "业务·财务·法律尽调<br>第三方走访·调档"
+        },
+        {
+          "num": "4",
+          "title": "质控内核",
+          "detail": "底稿审核 · 招股书验证<br>内核会议"
+        },
+        {
+          "num": "5",
+          "title": "申报审核",
+          "detail": "递交A1 · 3轮反馈<br>聆讯 · CSRC备案"
+        },
+        {
+          "num": "6",
+          "title": "发行上市",
+          "detail": "路演·簿记·定价<br>配售·挂牌"
+        },
+        {
+          "num": "7",
+          "title": "底稿归档",
+          "detail": "底稿整理 · 电子化<br>质控终审封存"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec0-3",
+      "text": "三、章节导航"
+    },
+    {
+      "type": "p",
+      "md": "本手册依次为**本章使用说明 → 第0章基础知识 → 第1-8章正文**，共**1个基础章＋8个正文章**，分为\"基础知识\"（第0章）、\"执行层面\"（第1-7章）和\"其他资料\"（第8章）三部分："
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": null,
+        "head": [
+          {
+            "md": "章节",
+            "attrs": {
+              "style": "width:8%"
+            }
+          },
+          {
+            "md": "标题",
+            "attrs": {
+              "style": "width:22%"
+            }
+          },
+          "核心内容"
+        ],
+        "rows": [
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec-intro"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">基础</span>",
+              "**第0章 · 港股IPO相关基础知识**",
+              "什么是港股IPO、企业为何赴港上市、主要中介机构、红筹/VIE/第二上市/双重主要上市/SPAC/De-SPAC/18A/18B/18C概念定义、缩略语与术语表"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec1"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第1章 · 项目承揽**",
+              "客户开发路径、非公开（保密）递交下的项目跟踪、项目评估五维度、香港主板上市条件（三大财务测试、分层公众持股量与初始自由流通量）、商务谈判与保密协议、港股投资者偏好"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec2"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第2章 · 项目立项**",
+              "立项整体流程（前置流程／IBS发起／审批流程）、立项申请材料清单、内部立项口径与SP签字额度约束、财务期间选择与提前递表、AML反洗钱核查、利益冲突排查（A1前三周）、观察名单入单管理、立项会与立项表决、保荐协议与委任函签署、立项报告重点复核事项"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec3"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第3章 · 尽职调查**",
+              "业务/财务/法律三大尽调模块详解、尽调问卷模板、客户供应商走访要求、财务尽调\"雷区\""
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec4"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第4章 · 质控内核**",
+              "Legal Call、ESC Meeting、CC Meeting标准流程及注意事项"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec5"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第5章 · 申报审核**",
+              "A1申请文件清单、电子递交流程、港交所三轮反馈时间线、中国证监会备案制全流程、聆讯准备"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec6"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第6章 · 发行上市**",
+              "路演与簿记建档全流程、回拨机制、定价决策框架、挂牌交易操作"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec7"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-blue\">执行</span>",
+              "**第7章 · 底稿归档**",
+              "底稿归档意义与监管要求、四节点上传时点、按项目类型的归档时限、底稿质量要求、配套事项与责任主体、底稿管理操作细则"
+            ]
+          },
+          {
+            "cls": "clickable-row",
+            "attrs": {
+              "data-href": "#sec8"
+            },
+            "cells": [
+              "html:<span class=\"tag tag-green\">资料</span>",
+              "**第8章 · 规则汇编**",
+              "近年规则修订时间轴、港交所上市规则、SFC保荐人指引、中国证监会备案要求、官方参考链接"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
