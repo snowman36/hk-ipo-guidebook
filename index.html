@@ -150,6 +150,102 @@
     line-height: 1.6;
   }
 
+  /* ---------- 二级目录（章节内小节） ---------- */
+  .sidebar-nav .nav-item {
+    position: relative;
+  }
+
+  /* 给右侧箭头留出位置，避免长标题压到箭头 */
+  .sidebar-nav .nav-item.has-children > a.nav-link {
+    padding-right: 34px;
+  }
+
+  .sidebar-nav .nav-caret {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: rgba(255,255,255,0.42);
+    font-size: 11px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .sidebar-nav .nav-caret span {
+    display: block;
+    transition: transform 0.22s ease;
+  }
+
+  .sidebar-nav .nav-caret:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.10);
+  }
+
+  .sidebar-nav .nav-caret.open {
+    color: var(--color-accent);
+  }
+
+  .sidebar-nav .nav-caret.open span {
+    transform: rotate(90deg);
+  }
+
+  .sidebar-nav .nav-children {
+    display: none;
+    padding: 1px 0 7px;
+  }
+
+  .sidebar-nav .nav-children.open {
+    display: block;
+  }
+
+  /* 小节链接：左侧竖线与一级条目同一条线，缩进体现层级 */
+  .sidebar-nav a.nav-sub {
+    display: block;
+    padding: 5px 14px 5px 34px;
+    border-left: 3px solid transparent;
+    color: rgba(255,255,255,0.55);
+    font-size: 12.5px;
+    line-height: 1.55;
+    text-decoration: none;
+    transition: color 0.18s, background 0.18s, border-color 0.18s;
+  }
+
+  .sidebar-nav a.nav-sub:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .sidebar-nav a.nav-sub.active {
+    color: var(--color-accent);
+    background: rgba(201,168,76,0.08);
+    border-left-color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .sidebar-nav a.nav-sub .sub-num {
+    margin-right: 5px;
+    color: rgba(255,255,255,0.30);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sidebar-nav a.nav-sub:hover .sub-num {
+    color: rgba(255,255,255,0.60);
+  }
+
+  .sidebar-nav a.nav-sub.active .sub-num {
+    color: var(--color-accent);
+  }
+
   /* ==================== MAIN CONTENT ==================== */
   .main-content {
     margin-left: var(--sidebar-width);
@@ -730,6 +826,10 @@
     .sidebar-nav { display: flex; flex-wrap: wrap; padding: 8px; }
     .sidebar-nav .nav-section-title { display: none; }
     .sidebar-nav a { padding: 6px 12px; font-size: 12px; border-left: none; }
+    /* 窄屏下侧栏变成横排标签条，二级目录改为不展开 */
+    .sidebar-nav .nav-caret { display: none; }
+    .sidebar-nav .nav-children { display: none !important; }
+    .sidebar-nav .nav-item.has-children > a.nav-link { padding-right: 12px; }
     body { flex-direction: column; }
     .main-content { margin-left: 0; padding: 24px 16px 60px; }
     .hero h1 { font-size: 24px; }
@@ -848,19 +948,124 @@
     <div class="subtitle">金牌银行家 · 执行组</div>
   </div>
   <nav class="sidebar-nav">
-    <a href="#cover"><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">⌂</span>指南首页</a>
-    <a href="#sec0" class=""><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">✦</span>手册概览与使用说明</a>
-    <a href="#sec-intro"><span class="nav-num" style="background:var(--color-accent);color:var(--color-primary);">0</span>港股IPO相关基础知识</a>
+    <div class="nav-item">
+      <a href="#cover" class="nav-link"><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">⌂</span>指南首页</a>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec0" class="nav-link"><span class="nav-num" style="background:rgba(255,255,255,0.18);color:#fff;">✦</span>手册概览与使用说明</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「✦手册概览与使用说明」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec0-1" class="nav-sub">一、本手册能帮你解决什么</a>
+        <a href="#sec0-2" class="nav-sub">二、港股IPO全流程（七阶段）</a>
+        <a href="#sec0-3" class="nav-sub">三、章节导航</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec-intro" class="nav-link"><span class="nav-num" style="background:var(--color-accent);color:var(--color-primary);">0</span>港股IPO相关基础知识</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「0港股IPO相关基础知识」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec-intro-1" class="nav-sub"><span class="sub-num">0.1</span>什么是港股IPO</a>
+        <a href="#sec-intro-2" class="nav-sub"><span class="sub-num">0.2</span>企业为何选择赴港上市</a>
+        <a href="#sec-intro-3" class="nav-sub"><span class="sub-num">0.3</span>港股IPO主要中介机构</a>
+        <a href="#sec-intro-4" class="nav-sub"><span class="sub-num">0.4</span>常见上市架构与特殊上市制度</a>
+        <a href="#sec-intro-5" class="nav-sub"><span class="sub-num">0.5</span>不同上市规则下的尽调方法是否不同</a>
+        <a href="#sec-intro-6" class="nav-sub"><span class="sub-num">0.6</span>缩略语与术语表</a>
+      </div>
+    </div>
     <div class="nav-section-title">执行层面</div>
-    <a href="#sec1"><span class="nav-num">1</span>项目承揽</a>
-    <a href="#sec2"><span class="nav-num">2</span>项目立项</a>
-    <a href="#sec3"><span class="nav-num">3</span>尽职调查</a>
-    <a href="#sec4"><span class="nav-num">4</span>质控内核</a>
-    <a href="#sec5"><span class="nav-num">5</span>申报审核</a>
-    <a href="#sec6"><span class="nav-num">6</span>发行上市</a>
-    <a href="#sec7"><span class="nav-num">7</span>底稿归档</a>
+    <div class="nav-item has-children">
+      <a href="#sec1" class="nav-link"><span class="nav-num">1</span>项目承揽</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「1项目承揽」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec1-1" class="nav-sub"><span class="sub-num">1.1</span>客户开发与项目来源</a>
+        <a href="#sec1-2" class="nav-sub"><span class="sub-num">1.2</span>项目初步评估</a>
+        <a href="#sec1-3" class="nav-sub"><span class="sub-num">1.3</span>香港主板基础上市条件</a>
+        <a href="#sec1-4" class="nav-sub"><span class="sub-num">1.4</span>商务谈判与保密协议</a>
+        <a href="#sec1-5" class="nav-sub"><span class="sub-num">1.5</span>港股投资者偏好</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec2" class="nav-link"><span class="nav-num">2</span>项目立项</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「2项目立项」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec2-1" class="nav-sub"><span class="sub-num">2.1</span>立项申请与材料准备</a>
+        <a href="#sec2-2" class="nav-sub"><span class="sub-num">2.2</span>反洗钱（AML）核查</a>
+        <a href="#sec2-3" class="nav-sub"><span class="sub-num">2.3</span>利益冲突核查</a>
+        <a href="#sec2-4" class="nav-sub"><span class="sub-num">2.4</span>观察名单入单管理</a>
+        <a href="#sec2-5" class="nav-sub"><span class="sub-num">2.5</span>立项会流程</a>
+        <a href="#sec2-6" class="nav-sub"><span class="sub-num">2.6</span>保荐协议/委任函模板</a>
+        <a href="#sec2-7" class="nav-sub"><span class="sub-num">2.7</span>签署保荐协议流程</a>
+        <a href="#sec2-8" class="nav-sub"><span class="sub-num">2.8</span>立项报告重点关注事项（近期加强的IPO立项要求）</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec3" class="nav-link"><span class="nav-num">3</span>尽职调查</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「3尽职调查」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec3-1" class="nav-sub"><span class="sub-num">3.1</span>尽职调查总体框架与执行流程</a>
+        <a href="#sec3-2" class="nav-sub"><span class="sub-num">3.2</span>业务尽调</a>
+        <a href="#sec3-3" class="nav-sub"><span class="sub-num">3.3</span>财务尽调</a>
+        <a href="#sec3-4" class="nav-sub"><span class="sub-num">3.4</span>法律尽调</a>
+        <a href="#sec3-5" class="nav-sub"><span class="sub-num">3.5</span>常见问题与风险提示</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec4" class="nav-link"><span class="nav-num">4</span>质控内核</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「4质控内核」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec4-1" class="nav-sub"><span class="sub-num">4.1</span>Legal Call</a>
+        <a href="#sec4-2" class="nav-sub"><span class="sub-num">4.2</span>ESC Meeting</a>
+        <a href="#sec4-3" class="nav-sub"><span class="sub-num">4.3</span>CC Meeting（资本承诺委员会）</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec5" class="nav-link"><span class="nav-num">5</span>申报审核</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「5申报审核」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec5-1" class="nav-sub"><span class="sub-num">5.1</span>A1申请文件准备</a>
+        <a href="#sec5-2" class="nav-sub"><span class="sub-num">5.2</span>递交A1申请</a>
+        <a href="#sec5-3" class="nav-sub"><span class="sub-num">5.3</span>港交所审核与反馈</a>
+        <a href="#sec5-4" class="nav-sub"><span class="sub-num">5.4</span>聆讯前准备</a>
+        <a href="#sec5-5" class="nav-sub"><span class="sub-num">5.5</span>中国证监会境外上市备案流程（补充）</a>
+        <a href="#sec5-6" class="nav-sub"><span class="sub-num">5.6</span>招股书有效期与重新递交（Refile）</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec6" class="nav-link"><span class="nav-num">6</span>发行上市</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「6发行上市」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec6-1" class="nav-sub"><span class="sub-num">6.1</span>路演材料制作</a>
+        <a href="#sec6-2" class="nav-sub"><span class="sub-num">6.2</span>路演与簿记建档</a>
+        <a href="#sec6-3" class="nav-sub"><span class="sub-num">6.3</span>定价与配售</a>
+        <a href="#sec6-4" class="nav-sub"><span class="sub-num">6.4</span>挂牌交易</a>
+        <a href="#sec6-5" class="nav-sub"><span class="sub-num">6.5</span>FINI系统应用</a>
+        <a href="#sec6-6" class="nav-sub"><span class="sub-num">6.6</span>Settlement流程</a>
+      </div>
+    </div>
+    <div class="nav-item has-children">
+      <a href="#sec7" class="nav-link"><span class="nav-num">7</span>底稿归档</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「7底稿归档」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec7-1" class="nav-sub"><span class="sub-num">7.1</span>底稿归档的意义与监管要求</a>
+        <a href="#sec7-2" class="nav-sub"><span class="sub-num">7.2</span>底稿整理与上传的时点要求</a>
+        <a href="#sec7-3" class="nav-sub"><span class="sub-num">7.3</span>底稿归档时限要求（按项目类型）</a>
+        <a href="#sec7-4" class="nav-sub"><span class="sub-num">7.4</span>底稿质量要求</a>
+        <a href="#sec7-5" class="nav-sub"><span class="sub-num">7.5</span>配套事项与责任主体</a>
+        <a href="#sec7-6" class="nav-sub"><span class="sub-num">7.6</span>底稿管理的操作细则</a>
+      </div>
+    </div>
     <div class="nav-section-title">其他资料</div>
-    <a href="#sec8"><span class="nav-num">8</span>规则汇编</a>
+    <div class="nav-item has-children">
+      <a href="#sec8" class="nav-link"><span class="nav-num">8</span>规则汇编</a>
+      <button type="button" class="nav-caret" aria-expanded="false" aria-label="展开/收起「8规则汇编」的二级目录"><span>▸</span></button>
+      <div class="nav-children">
+        <a href="#sec8-1" class="nav-sub"><span class="sub-num">8.1</span>香港联交所核心规则</a>
+        <a href="#sec8-2" class="nav-sub"><span class="sub-num">8.2</span>香港证监会（SFC）相关规则</a>
+        <a href="#sec8-3" class="nav-sub"><span class="sub-num">8.3</span>中国证监会监管要求</a>
+        <a href="#sec8-4" class="nav-sub"><span class="sub-num">8.4</span>其他相关法规及指引</a>
+        <a href="#sec8-5" class="nav-sub"><span class="sub-num">8.5</span>官方参考链接</a>
+      </div>
+    </div>
   </nav>
   <div class="sidebar-footer">
     版本 V2.2 · 2026年11月<br>
@@ -917,7 +1122,7 @@
   <section class="section" id="sec0">
     <h2><span class="sec-num">✦</span>手册概览与使用说明</h2>
 
-    <h3>一、本手册能帮你解决什么</h3>
+    <h3 id="sec0-1">一、本手册能帮你解决什么</h3>
     <p>本手册面向<strong>投行新员工及首次参与港股IPO项目人员</strong>编写，目的是帮助你在最短时间内了解港股IPO全流程，并拿到可以直接使用的操作指引。具体而言，本手册将帮你：</p>
 
     <div class="info-card">
@@ -933,7 +1138,7 @@
       </table>
     </div>
 
-    <h3>二、港股IPO全流程（七阶段）</h3>
+    <h3 id="sec0-2">二、港股IPO全流程（七阶段）</h3>
     <p>港股IPO项目从启动到完成挂牌交易，通常需要<strong>8-12个月</strong>视CSRC备案进度、项目复杂度和市场窗口而定。以下为标准流程的七个阶段：</p>
 
     <div class="pipeline">
@@ -994,7 +1199,7 @@
       </div>
     </div>
 
-    <h3>三、章节导航</h3>
+    <h3 id="sec0-3">三、章节导航</h3>
     <p>本手册依次为<strong>本章使用说明 → 第0章基础知识 → 第1-8章正文</strong>，共<strong>1个基础章＋8个正文章</strong>，分为"基础知识"（第0章）、"执行层面"（第1-7章）和"其他资料"（第8章）三部分：</p>
 
     <div class="table-wrapper">
@@ -1021,10 +1226,10 @@
 
     <p>本章介绍全书的基础概念。在进入"项目承揽—立项—尽调—审核—发行"的执行流程之前，需要先弄清三组基本问题：<strong>港股IPO是什么、企业为什么要来、谁来一起做</strong>（0.1—0.3 节）；<strong>市场上常见的上市架构与特殊上市制度分别指什么</strong>（0.4 节）；以及<strong>不同上市规则下工作方法是否要跟着变</strong>（0.5 节）。最后在 0.6 节提供全书统一的缩略语与术语表，避免后文反复解释。</p>
 
-    <h3>0.1 什么是港股IPO</h3>
+    <h3 id="sec-intro-1">0.1 什么是港股IPO</h3>
     <p>港股首次公开发行（Initial Public Offering，简称IPO）是指企业首次在香港联合交易所有限公司（"港交所"）向公众投资者发售股票并挂牌交易的过程。港股IPO是境内企业对接国际资本市场的主要通道之一，也是亚洲最活跃的新股融资市场之一。</p>
 
-    <h3>0.2 企业为何选择赴港上市</h3>
+    <h3 id="sec-intro-2">0.2 企业为何选择赴港上市</h3>
     <p>企业选择在香港上市主要基于以下考量：</p>
     <ul style="padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);">
       <li><strong>上市时间可控：</strong>港股IPO监管审核和发行阶段相对市场化，时间节奏可预期，企业可较快实现上市目标，有效把控上市时间窗口。</li>
@@ -1035,7 +1240,7 @@
       <li><strong>上市制度包容性强：</strong>港交所允许未盈利的生物科技公司（18A章）、特专科技公司（18C章）等新经济企业上市，对不同发展阶段的企业具有较高的接纳度。</li>
     </ul>
 
-    <h3>0.3 港股IPO主要中介机构</h3>
+    <h3 id="sec-intro-3">0.3 港股IPO主要中介机构</h3>
     <p>港股IPO项目涉及众多中介机构，各方在项目中扮演不同的角色并承担相应的法律责任。新员工在项目执行中需要与各方频繁协作，了解各方的角色定位、职责边界和工作节奏是执行项目的基础。以下为港股IPO项目中主要中介机构的角色与职责概述：</p>
 
     <div class="table-wrapper">
@@ -1138,7 +1343,7 @@
       </ul>
     </div>
 
-    <h3>0.4 常见上市架构与特殊上市制度</h3>
+    <h3 id="sec-intro-4">0.4 常见上市架构与特殊上市制度</h3>
     <p>同一个"港股IPO"，背后可能是完全不同的架构与规则章节。执行中最常见的误解，是把红筹项目当成H股项目准备材料，或把18C项目套用第八章的财务测试。下表先统一概念。</p>
 
     <div class="table-wrapper">
@@ -1191,7 +1396,7 @@
       </table>
     </div>
 
-    <h3>0.5 不同上市规则下的尽调方法是否不同</h3>
+    <h3 id="sec-intro-5">0.5 不同上市规则下的尽调方法是否不同</h3>
     <div class="highlight-box">
       <strong>📌 结论：</strong>无论项目适用第八章、第18A章、第18B章、第18C章还是第19C章，<strong>保荐人的尽职调查方法基本相同</strong>——都是"PN21尽调计划 → 业务／财务／法律三条线 → 第三方走访 → 招股书验证 → 底稿归档"这套动作。<strong>差异只集中在两处：上市条件，以及部分法律事项。</strong>
     </div>
@@ -1208,7 +1413,7 @@
     </div>
     <p>因此本手册第3章（尽职调查）的做法可直接套用于适用各章的项目，只需在上表的"上市条件"与"法律事项"两处作针对性调整，不必另设一套流程。</p>
 
-    <h3>0.6 缩略语与术语表</h3>
+    <h3 id="sec-intro-6">0.6 缩略语与术语表</h3>
     <p>下表为全书统一口径。后文首次出现处已加注中文全称，重复出现时直接使用缩略语。内部部门代号（LG、CP、ESC、BDC、IBI、LC、IBS、RM）以公司内部组织架构为准。</p>
 
     <div class="table-wrapper">
@@ -1272,7 +1477,7 @@
       </ol>
     </div>
 
-    <h3>1.1 客户开发与项目来源</h3>
+    <h3 id="sec1-1">1.1 客户开发与项目来源</h3>
     <p>港股IPO项目的客户开发是投行业务的起点。项目来源通常包括以下几个方面：</p>
 
     <div class="flow-steps">
@@ -1314,7 +1519,7 @@
       </ul>
     </div>
 
-    <h3>1.2 项目初步评估</h3>
+    <h3 id="sec1-2">1.2 项目初步评估</h3>
     <p>在接触潜在客户前，需要进行项目初步评估，主要包括以下维度：</p>
 
     <div class="info-card">
@@ -1338,7 +1543,7 @@
       <p>切勿仅凭公司管理层口头描述做判断。务必交叉验证财务数据，重点关注：收入确认政策是否合规、关联交易比例是否过高、历史股权变动是否存在税务瑕疵。曾经有项目因未发现公司存在大额表外担保，导致尽调阶段被迫终止。</p>
     </div>
 
-    <h3>1.3 香港主板基础上市条件</h3>
+    <h3 id="sec1-3">1.3 香港主板基础上市条件</h3>
     <p>根据《香港联合交易所有限公司证券上市规则》（"上市规则"）第八章，主板上市申请人需满足以下基本条件（注：本指南不考虑GEM创业板）：</p>
 
     <div class="table-wrapper">
@@ -1422,7 +1627,7 @@
       <strong>🔑 特别提示：</strong>对于中国内地注册成立的发行人（H股），还需同步满足中国证监会《境内企业境外发行证券和上市管理试行办法》（2023年3月31日生效）的备案要求。备案材料须在向港交所递交A1申请后3个工作日内提交中国证监会，取得备案通知书后方可完成上市。详见本指南第8章"规则汇编"。
     </div>
 
-    <h3>1.4 商务谈判与保密协议</h3>
+    <h3 id="sec1-4">1.4 商务谈判与保密协议</h3>
     <p>初步评估通过后，进入商务谈判阶段。关键流程如下：</p>
 
     <ul class="checklist">
@@ -1437,7 +1642,7 @@
       <p>商务谈判阶段切忌"过度承诺"。例如：不要过度承诺估值范围或上市时间表。建议在Pitch Book中给出合理区间，并注明"受市场条件影响"。</p>
     </div>
 
-    <h3>1.5 港股投资者偏好</h3>
+    <h3 id="sec1-5">1.5 港股投资者偏好</h3>
     <p>港股是一个由<strong>国际机构投资者定价</strong>的市场。同一个行业、同一梯队的公司，在港股能拿到的估值可能显著低于A股，也可能因为"稀缺性"而获得超额认购——差别不在财务报表，而在<strong>这批买家认不认这个故事</strong>。理解投资者偏好，不只是发行阶段（第6章）的事，它直接决定承揽阶段该不该投入资源、立项阶段这个项目"卖不卖得出去"。</p>
 
     <div class="table-wrapper">
@@ -1514,7 +1719,7 @@
       </ol>
     </div>
 
-    <h3>2.1 立项申请与材料准备</h3>
+    <h3 id="sec2-1">2.1 立项申请与材料准备</h3>
     <p>当项目升级为正式项目后，项目团队需首先提交<strong>立项申请</strong>。立项申请是内部审批的第一道关卡，旨在确保公司资源投入于符合风险偏好的项目。立项是决定公司调配资源、控制项目风险的重要环节。</p>
 
     <div class="info-card">
@@ -1631,7 +1836,7 @@
       <p>参与保荐项目的员工，<strong>必须先通过 Paper 1 及 Paper 16 考试，并取得相应牌照后，方可开展项目工作</strong>。未取得牌照的人员不得独立执行保荐相关工作。团队配置时须核实每位拟参与成员的持牌状态，确保项目组符合监管的持牌要求。</p>
     </div>
 
-    <h3>2.2 反洗钱（AML）核查</h3>
+    <h3 id="sec2-2">2.2 反洗钱（AML）核查</h3>
     <p>根据香港证监会（SFC）《打击洗钱及恐怖分子资金筹集指引》，保荐人须在接纳客户前完成反洗钱核查。此环节为强制性合规要求，<strong>不得跳过或事后补做</strong>。</p>
 
     <div class="table-wrapper">
@@ -1674,7 +1879,7 @@
       <p>AML核查中最容易被忽视的是<strong>最终受益人（UBO）穿透</strong>。对于多层离岸架构的发行人，必须穿透至最终自然人，不得以"离岸信托""代持"等名义止步于某一层法人。如无法穿透至最终自然人，需向合规部专项报备。</p>
     </div>
 
-    <h3>2.3 利益冲突核查</h3>
+    <h3 id="sec2-3">2.3 利益冲突核查</h3>
     <p>利益冲突核查（Conflict Check）是保荐人内部风险控制的核心环节之一，须在立项前完成。主要排查以下冲突类型：</p>
 
     <ul class="checklist">
@@ -1696,7 +1901,7 @@
       <p style="margin-top:10px;"><strong>实操建议：</strong>把"A1前第3周"作为申报时间表上的一个固定里程碑，与内核材料准备同步排期。若此时才发现冲突，轻则启动回避与信息隔离墙安排，重则须退出项目——此时已投入的尽调成本无法收回，且会影响发行人与其他中介的安排。</p>
     </div>
 
-    <h3>2.4 观察名单入单管理</h3>
+    <h3 id="sec2-4">2.4 观察名单入单管理</h3>
     <p>对于已建立初步联系但尚未正式签署委任协议的项目，应纳入团队的<strong>观察名单（Watch List）</strong>进行系统化管理：</p>
 
     <div class="info-card">
@@ -1706,7 +1911,7 @@
       <p><strong>Step 3 — 定期跟踪：</strong>指定专人定期跟踪观察名单项目进展，更新状态。</p>
     </div>
 
-    <h3>2.5 立项会流程</h3>
+    <h3 id="sec2-5">2.5 立项会流程</h3>
     <p>在完成上述核查后，召开<strong>立项委员会会议（Kick-off Approval Meeting）</strong>，对项目进行全面评估和决策。</p>
 
     <div class="flow-steps">
@@ -1748,7 +1953,7 @@
       </ul>
     </div>
 
-    <h3>2.6 保荐协议/委任函模板</h3>
+    <h3 id="sec2-6">2.6 保荐协议/委任函模板</h3>
     <p>立项通过后，与客户正式签署<strong>保荐协议（Sponsor Agreement）</strong>或<strong>委任函（Engagement Letter）</strong>。核心条款通常包括：</p>
 
     <div class="table-wrapper">
@@ -1786,7 +1991,7 @@
       </table>
     </div>
 
-    <h3>2.7 签署保荐协议流程</h3>
+    <h3 id="sec2-7">2.7 签署保荐协议流程</h3>
     <p>立项通过并完成全部合规核查后，进入保荐协议签署阶段。签署流程如下：</p>
 
     <div class="info-card">
@@ -1813,7 +2018,7 @@
       <p style="margin-top:10px;"><strong>常见卡点与应对：</strong>① 责任上限与赔偿条款——由保荐人境外律师与LC把关，投行不要自行同意；② 终止与"分手费"——须与承销协议的分手费安排保持一致，避免两份文件相互矛盾；③ 费用报销范围——明确哪些实报实销、哪些包含在保荐费内；④ 排他期与公告权——涉及客户关系，须由项目负责人确认。<strong>时间上通常需2-4周</strong>，应在A1时间表中单列，不要与保荐协议签署挤在同一周。</p>
     </div>
 
-    <h3>2.8 立项报告重点关注事项（近期加强的IPO立项要求）</h3>
+    <h3 id="sec2-8">2.8 立项报告重点关注事项（近期加强的IPO立项要求）</h3>
     <p>以下四项是近期立项审核中被反复强调、且最容易在立项报告里写得含糊的地方。立项报告不是"把公司介绍一遍"，而是要让立项委员在有限篇幅内看清四件事：<strong>谁来表决、团队做不做得动、中介靠不靠得住、签字额度够不够</strong>。</p>
 
     <div class="info-card">
@@ -1868,7 +2073,7 @@
       </ol>
     </div>
 
-    <h3>3.1 尽职调查总体框架与执行流程</h3>
+    <h3 id="sec3-1">3.1 尽职调查总体框架与执行流程</h3>
     <p>保荐人的尽职调查是港股IPO最核心的执行工作。根据香港证监会（SFC）《操守准则》第17段及《保荐人指引》，保荐人须进行"合理的尽职调查"，以确保招股书中的信息披露真实、准确、完整。保荐人不得"依赖"其他专业人士的工作来替代自身的独立判断。</p>
 
     <div class="highlight-box">
@@ -1948,7 +2153,7 @@
       ⑤ <strong>盲目相信发行人提供的数据：</strong>发行人提供的Excel表格未验证数据来源和计算逻辑就直接使用。每一组进入招股书的数据，保荐人都必须能说清楚"这组数从哪来的、怎么算的、是否合理"。</p>
     </div>
 
-    <h3>3.2 业务尽调</h3>
+    <h3 id="sec3-2">3.2 业务尽调</h3>
     <p>业务尽调是尽调工作的起点和基础，目的在于充分理解发行人的业务模式、行业地位和核心竞争力。</p>
 
     <h4>3.2.1 制裁核查</h4>
@@ -2256,7 +2461,7 @@
     </div>
     <p style="color:var(--color-text-light);"><em>说明：制裁核查已单列为3.2.1节，本节不再重复。两者在实操中共用同一套名单筛查工具，但判断标准与后果完全不同——制裁是"能不能做"，反洗钱是"做得干不干净"。</em></p>
 
-    <h3>3.3 财务尽调</h3>
+    <h3 id="sec3-3">3.3 财务尽调</h3>
     <p>财务尽调是尽调工作的重中之重，保荐人须对发行人财务报表的真实性和公允性形成独立判断。</p>
 
     <div class="info-card">
@@ -2355,7 +2560,7 @@
     </div>
     <p style="color:var(--color-text-light);"><em>上表为穿行测试控制表的标准骨架，实际执行时按发行人的系统与单据名称调整；每一行都须有对应的底稿编号，"结论"栏不能空着。</em></p>
 
-    <h3>3.4 法律尽调</h3>
+    <h3 id="sec3-4">3.4 法律尽调</h3>
     <p>法律尽调通常由<strong>发行人境外律师及中国律师主导</strong>；<strong>保荐人及其律师（保荐人境外律师、保荐人境内律师）独立核查并作出独立判断</strong>。</p>
 
     <div class="warning-box">
@@ -2421,7 +2626,7 @@
       </ul>
     </div>
 
-    <h3>3.5 常见问题与风险提示</h3>
+    <h3 id="sec3-5">3.5 常见问题与风险提示</h3>
     <ul class="checklist">
       <li><strong>尽调时间不足：</strong>客户催促上市进度导致尽调时间被压缩 → 向客户明确尽调是监管要求，时间不可压缩，可考虑增加人力资源投入。编制一份详细的"尽调进度甘特图"，与客户对齐每项尽调的预计时间。</li>
       <li><strong>客户不配合：</strong>关键信息或文件迟迟无法提供 → ①发送书面催促函（邮件留痕）；②逐项记录拖延事项和影响，形成"客户配合情况追踪表"；③必要时升级至保荐人负责人与客户高层沟通。</li>
@@ -2485,7 +2690,7 @@
       <strong>📌 为什么CC必须排在ESC后一天：</strong>CC的表决以ESC的质控结论为前提——委员要判断"这个项目能不能承销"，首先要看到"质控认为这个项目可以报"。若两会同日召开，CC委员在尚未看到ESC决议的情况下判断承销风险，等于把两个独立判断合并成一次，既不满足内部治理要求，也无法在底稿中留下两个独立的决策记录。因此排期时应<strong>先锁ESC日期，再倒排CC（ESC＋1个工作日）</strong>，并把"A1递交日"直接挂在CC当日。
     </div>
 
-    <h3>4.1 Legal Call</h3>
+    <h3 id="sec4-1">4.1 Legal Call</h3>
     <p>在尽调工作基本完成、招股书草案基本定稿后，公司流程首先召开<strong>Legal Call</strong>。Legal Call的主要目的是由保荐人境内律师和境外律师分别就尽调过程中发现的重要法律问题进行系统性梳理和风险评估。</p>
 
     <div class="info-card">
@@ -2504,7 +2709,7 @@
       <p>Legal Call中律师发表的意见是后续招股书披露和风险因素章节的重要基础。保荐人项目团队须在Legal Call前将尽调过程中自身发现的法律合规问题整理汇总，与律师的意见进行交叉验证。</p>
     </div>
 
-    <h3>4.2 ESC Meeting</h3>
+    <h3 id="sec4-2">4.2 ESC Meeting</h3>
     <p>Legal Call通过后，召开<strong>ESC Meeting</strong>，对项目进行全面质控评审。ESC Meeting是项目申报前的重要审批关口。</p>
 
     <div class="info-card">
@@ -2534,7 +2739,7 @@
       <p>ESC Meeting中，项目团队应确保对所有重大事项进行充分且坦诚的披露。ESC委员通常具有丰富的项目审查经验，能够识别信息披露中的不完整或模糊之处。与其在委员追问时被动回应，不如在汇报材料中主动、全面地呈现所有重大风险及缓释措施。</p>
     </div>
 
-    <h3>4.3 CC Meeting（资本承诺委员会）</h3>
+    <h3 id="sec4-3">4.3 CC Meeting（资本承诺委员会）</h3>
     <p>CC Meeting（资本承诺委员会）是发行相关的重要内部会议，主要用于公司领导层对项目的发行风险作出判断和决策，是保荐人就承销风险向内部最高决策层进行汇报的关键节点。</p>
     <div class="info-card">
       <div class="card-title">CC Meeting核心要点</div>
@@ -2576,7 +2781,7 @@
       </ul>
     </div>
 
-    <h3>5.1 A1申请文件准备</h3>
+    <h3 id="sec5-1">5.1 A1申请文件准备</h3>
     <p>内核通过后，进入港交所A1申报阶段。A1申请是向港交所上市科正式提交上市申请的起点，全套申请文件（A1 Pack）通常包含以下文件：</p>
 
     <div class="table-wrapper">
@@ -2620,7 +2825,7 @@
       <strong>📌 关键变化：</strong>自<strong>2013年10月1日</strong>起（第22项应用指引；主板规则9.03(3)），港交所要求申请版本（AP）须于递交A1时同步在港交所网站登载，2014年4月1日起全面执行；<strong>2026年7月24日</strong>起，选择非公开（保密）递交的申请人，其申请版本及申请公告延至刊发PHIP当日一并公开。这意味着市场（包括媒体、竞争对手、投资者）将在早期阶段就能看到发行人的招股书草案。项目团队需提前做好舆情管理预案。
     </div>
 
-    <h3>5.2 递交A1申请</h3>
+    <h3 id="sec5-2">5.2 递交A1申请</h3>
     <p>A1申请通过港交所的<strong>电子提交系统（ESS）</strong>递交。具体操作流程：</p>
 
     <div class="info-card">
@@ -2662,7 +2867,7 @@
       <p>A1递交是项目的关键里程碑节点。递交前需完成一个重要的"签字页"流程——请所有发行人董事签署A1表格及一系列确认函。由于董事通常分散各地、日程繁忙，建议提前至少一周开始协调签字安排。</p>
     </div>
 
-    <h3>5.3 港交所审核与反馈</h3>
+    <h3 id="sec5-3">5.3 港交所审核与反馈</h3>
     <p>A1递交后，港交所上市科进入审核反馈阶段。<strong>两者的差异不在"轮次多少"，而在A+H可适用加速通道</strong>——能否享受取决于市值规模与合规记录，排时间表时不能想当然。</p>
 
     <div class="table-wrapper">
@@ -2747,7 +2952,7 @@
       </ul>
     </div>
 
-    <h3>5.4 聆讯前准备</h3>
+    <h3 id="sec5-4">5.4 聆讯前准备</h3>
     <p>港交所上市科的反馈问题全部解决后，将推荐项目至<strong>上市委员会</strong>进行聆讯（Hearing）。聆讯前需完成：</p>
 
     <ul class="checklist">
@@ -2777,7 +2982,7 @@
       <p>聆讯当日，上市委员会提出的问题往往不会太难，但如果发行人管理层在回答时表现出对自身业务或招股书内容的不熟悉，将给委员留下极差的印象。务必确保参加聆讯的管理层对招股书内容了如指掌，特别是财务数据、风险因素和业务数据部分。</p>
     </div>
 
-    <h3>5.5 中国证监会境外上市备案流程（补充）</h3>
+    <h3 id="sec5-5">5.5 中国证监会境外上市备案流程（补充）</h3>
     <p>2023年3月31日起，境内企业境外上市全面实施<strong>备案制</strong>（替代此前的核准制）。备案而非审核——中国证监会不实质审查企业是否符合境外上市条件，主要关注合规性（外资准入、数据安全、反垄断等）。</p>
 
     <div class="info-card">
@@ -2832,7 +3037,7 @@
       </ul>
     </div>
 
-    <h3>5.6 招股书有效期与重新递交（Refile）</h3>
+    <h3 id="sec5-6">5.6 招股书有效期与重新递交（Refile）</h3>
     <p>先区分两个容易混淆的"有效期"：一是<strong>上市申请本身的有效期</strong>（自递交A1之日起计），二是<strong>招股书财务数据的新鲜度</strong>（报告期末距招股书日期不得超过6个月）。前者已由<strong>6个月延长至12个月</strong>，后者没有变化——两者不能混为一谈。</p>
 
     <div class="table-wrapper">
@@ -2894,7 +3099,7 @@
         <li>Settlement流程</li>
       </ol>
     </div>
-    <h3>6.1 路演材料制作</h3>
+    <h3 id="sec6-1">6.1 路演材料制作</h3>
     <p>路演材料是发行上市阶段最重要的准备工作之一，其制作质量和呈现效果直接影响机构投资者的认购意愿和定价结果。保荐人项目团队应在<strong>递交A1前开始构思</strong>路演材料的框架和核心信息，并在<strong>A1递交后立即启动制作</strong>，以确保在聆讯通过后可以第一时间进入路演阶段，不因材料准备延迟而错失市场窗口。路演材料准备工作通常由保荐人ECM团队主导，项目执行团队配合。</p>
 
     <div class="info-card">
@@ -2907,7 +3112,7 @@
       </ul>
     </div>
 
-    <h3>6.2 路演与簿记建档</h3>
+    <h3 id="sec6-2">6.2 路演与簿记建档</h3>
     <p>路演（Roadshow）和簿记建档（Bookbuilding）是发行过程中最关键的市场营销环节：</p>
 
     <div class="table-wrapper">
@@ -2959,7 +3164,7 @@
       <p>路演期间，作为项目团队成员的主要工作是：①实时跟踪簿记数据（各机构下单情况、价格敏感度）；②每日更新簿记摘要（Book Summary）；③协调承销团成员之间的信息同步（保持承销团电话/每日通讯）；④协助准备管理层次日路演材料中的投资者关注点。</p>
     </div>
 
-    <h3>6.3 定价与配售</h3>
+    <h3 id="sec6-3">6.3 定价与配售</h3>
     <p>簿记结束后，进入定价与配售环节。此环节涉及多方利益的博弈。需要特别提示：<strong>港股的发售结构与回拨机制已于2025年8月4日整体改写</strong>，此前流传的"90%国际配售＋10%公开发售""超额50-100倍回拨至40%"等说法均已失效，下文按现行规则重写。</p>
 
     <div class="highlight-box">
@@ -3088,7 +3293,7 @@
       <p>定价环节最容易出问题的是<strong>发行人管理层与市场估值预期之间的巨大差距</strong>。在路演前就应与发行人充分沟通合理估值区间，避免在定价时出现"发行人坚持高点定价、市场只能接受低点"的僵局。必要时可以请第三方估值机构出具独立估值意见作为参考。</p>
     </div>
 
-    <h3>6.4 挂牌交易</h3>
+    <h3 id="sec6-4">6.4 挂牌交易</h3>
     <p>定价完成后，项目进入最后冲刺——挂牌交易：</p>
 
     <div class="flow-steps">
@@ -3119,7 +3324,7 @@
       <p>挂牌当日通常在香港交易所金融大会堂举行上市仪式。项目团队需提前准备：上市仪式发言稿、纪念品、媒体通稿、当日股价监控方案。另需确保发行人管理层和主要股东已开通港股交易账户（如需参与后市交易）。</p>
     </div>
 
-    <h3>6.5 FINI系统应用</h3>
+    <h3 id="sec6-5">6.5 FINI系统应用</h3>
     <p><strong>FINI（Fast Interface for New Issuance）</strong>是港交所于2023年11月推出的数字化新股结算平台，将新股从定价到挂牌的时间从原来的T+5缩短至T+2。</p>
 
     <div class="info-card">
@@ -3133,7 +3338,7 @@
       </ul>
     </div>
 
-    <h3>6.6 Settlement流程</h3>
+    <h3 id="sec6-6">6.6 Settlement流程</h3>
     <p>新股结算（Settlement）是发行上市的最后操作环节，涉及资金和股份的最终交割。按照FINI机制下的T+2结算节奏：</p>
 
     <div class="info-card">
@@ -3164,7 +3369,7 @@
       </ol>
     </div>
 
-    <h3>7.1 底稿归档的意义与监管要求</h3>
+    <h3 id="sec7-1">7.1 底稿归档的意义与监管要求</h3>
     <p>底稿归档是港股IPO项目的最后一个执行环节，但却是<strong>保荐人法律责任持续存在</strong>的起点。根据SFC《保荐人指引》，保荐人须将全部尽调工作底稿保存至少<strong>7年</strong>（自上市日期起算）。如在日后出现任何SFC调查、投资者诉讼或民事索赔，这些底稿将是保荐人证明自身"已进行合理尽职调查"的关键证据。</p>
 
     <div class="warning-box">
@@ -3172,7 +3377,7 @@
       <p>底稿归档不是"可有可无"的收尾工作。SFC近年多次因保荐人底稿保存不完整或无法提供底稿而对保荐人及其负责人作出纪律处分。底稿缺失的后果可能包括：罚款（个人最高可达100万港元）、吊销牌照、被禁止担任保荐人负责人等。</p>
     </div>
 
-    <h3>7.2 底稿整理与上传的时点要求</h3>
+    <h3 id="sec7-2">7.2 底稿整理与上传的时点要求</h3>
 
     <h4>四节点底稿上传要求（保荐人香港上市项目）</h4>
     <p>鉴于内部仍存在底稿归档逾期问题，ESC Overseas 制定《担任保荐人的香港上市项目完成终止前重要节点的底稿整理及上传要求》，要求项目组在以下 <strong>四个节点分阶段完成底稿上传</strong>：</p>
@@ -3186,7 +3391,7 @@
       <strong>注意事项：</strong>2026-06-01 起，申请全面审核会议的项目须在会议召开前完成相应底稿的上传与确认。已提交 A1 申请的项目，在触发下一节点时，须一并补传该节点及之前所有应提交的底稿。底稿管理人作为第一责任人，须督促各项工作落实，并通过邮件进行确认。
     </div>
 
-    <h3>7.3 底稿归档时限要求（按项目类型）</h3>
+    <h3 id="sec7-3">7.3 底稿归档时限要求（按项目类型）</h3>
     <p>已完成／终止的保荐或承销类、及非保荐承销类项目的归档时限如下：</p>
     <div class="table-wrapper">
       <table>
@@ -3205,7 +3410,7 @@
       <p>上述所有底稿上传／归档均通过 IBS 底稿系统执行；境外股本及财务顾问项目在分配 ESC 审核员后，IBS 会自动创建审核邮件组（含 ESC、CP、LG 审核人员），项目组与审核员沟通须抄送该组。</p>
     </div>
 
-    <h3>7.4 底稿质量要求</h3>
+    <h3 id="sec7-4">7.4 底稿质量要求</h3>
     <p>底稿归档除满足及时性要求外，须高度重视质量：</p>
     <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
       <li>重视归档底稿的<strong>内容完整性与数据准确性</strong>；</li>
@@ -3216,7 +3421,7 @@
       <p>若底稿存在重要内容缺漏或归档文件整体规范性较差等明显质量问题，不仅会导致归档进度延迟，也将对项目质量评估产生不利影响。</p>
     </div>
 
-    <h3>7.5 配套事项与责任主体</h3>
+    <h3 id="sec7-5">7.5 配套事项与责任主体</h3>
     <ul style="padding-left:20px;margin-top:8px;color:var(--color-text-light);">
       <li><strong>系统平台：</strong>IBS 底稿系统（record keeping、底稿上传、归档、审核邮件组均依托该系统）。</li>
       <li><strong>第一责任人：</strong>底稿管理人（须督促落实并邮件确认）。</li>
@@ -3224,7 +3429,7 @@
       <li><strong>SP 记录：</strong>SP 参与及指导项目的全部书面记录须重新核查并上传。</li>
     </ul>
 
-    <h3>7.6 底稿管理的操作细则</h3>
+    <h3 id="sec7-6">7.6 底稿管理的操作细则</h3>
     <p>底稿管理是一套贯穿尽调到归档的规则：尽调阶段产生的每一份底稿，都按本节口径实时归档、命名与索引，再按7.2—7.4节的要求上传。尽调阶段的底稿管理与项目收尾的底稿归档，本质上是同一件事的两个阶段——<strong>把钱（时间）花在平时，还是花在补做上</strong>。</p>
 
     <div class="info-card">
@@ -3262,7 +3467,7 @@
       </ol>
     </div>
 
-    <h3>8.1 香港联交所核心规则</h3>
+    <h3 id="sec8-1">8.1 香港联交所核心规则</h3>
 
     <div class="info-card">
       <div class="card-title">📌 近年规则修订时间轴（2023-2026）</div>
@@ -3334,7 +3539,7 @@
       </table>
     </div>
 
-    <h3>8.2 香港证监会（SFC）相关规则</h3>
+    <h3 id="sec8-2">8.2 香港证监会（SFC）相关规则</h3>
 
     <div class="table-wrapper">
       <table>
@@ -3366,7 +3571,7 @@
       </table>
     </div>
 
-    <h3>8.3 中国证监会监管要求</h3>
+    <h3 id="sec8-3">8.3 中国证监会监管要求</h3>
 
     <div class="table-wrapper">
       <table>
@@ -3403,7 +3608,7 @@
       <strong>🔑 关键变化 — 备案制 vs 核准制：</strong>2023年3月31日前，中国企业境外上市须取得中国证监会"核准"。2023年3月31日后改为"备案制"——中国证监会不再进行实质性审核，主要关注合规性（外资准入、数据安全、反垄断等）。备案材料须在递交A1后3个工作日内提交，中国证监会在20个工作日内完成备案（材料完备的情况下）。
     </div>
 
-    <h3>8.4 其他相关法规及指引</h3>
+    <h3 id="sec8-4">8.4 其他相关法规及指引</h3>
     <ul style="padding-left:20px;color:var(--color-text-light);">
       <li><strong>行业监管法规：</strong>根据发行人所处行业，需关注相关行业主管部门的监管要求（如金融行业需关注人民银行/金融监管总局的规定，医疗行业需关注药监局的规定等）</li>
       <li><strong>外资准入负面清单：</strong>国家发改委和商务部联合发布的《外商投资准入特别管理措施（负面清单）》，明确限制或禁止外资进入的领域，是境内法律尽调需重点核查的事项</li>
@@ -3411,7 +3616,7 @@
       <li><strong>香港《公司条例》（第622章）：</strong>招股书登记相关的公司法律程序</li>
     </ul>
 
-    <h3>8.5 官方参考链接</h3>
+    <h3 id="sec8-5">8.5 官方参考链接</h3>
     <p>以下为本指南制作过程中参考的主要官方来源，建议在实际项目执行中直接查阅最新版本：</p>
 
     <div class="info-card">
@@ -3481,25 +3686,123 @@
     'sec8': '规则汇编'
   };
 
-  const navLinks = Array.from(document.querySelectorAll('.sidebar-nav a'));
+  const navLinks = Array.from(document.querySelectorAll('.sidebar-nav a.nav-link'));
+  const subLinks = Array.from(document.querySelectorAll('.sidebar-nav a.nav-sub'));
+  const navItems = Array.from(document.querySelectorAll('.sidebar-nav .nav-item'));
   const pages = pageOrder.map(id => document.getElementById(id)).filter(Boolean);
   let currentIndex = 0;
+
+  const ANCHOR_OFFSET = 24;          // 二级锚点滚动后的顶部留白
+  let pendingAnchor = null;          // 切页后需要滚动过去的小节 id
+  const pinnedOpen = new Set();      // 用户手动展开过的章节
 
   function goToId(rawId) {
     const id = redirect[rawId] || rawId;
     let idx = pageOrder.indexOf(id);
+    let anchor = null;
+
     if (idx < 0) {
-      const el = document.getElementById(rawId);
+      const el = document.getElementById(id);
       if (el) {
         const sec = el.closest('.section');
-        if (sec) {
-          const pid = redirect[sec.id] || sec.id;
-          idx = pageOrder.indexOf(pid);
-        } else if (el.id === 'cover' || el.closest('#cover')) idx = 0;
+        if (sec && pageOrder.indexOf(sec.id) >= 0) {
+          idx = pageOrder.indexOf(sec.id);
+          anchor = el.id;
+        } else if (el.id === 'cover' || el.closest('#cover')) {
+          idx = 0;
+        }
       }
     }
-    if (idx >= 0) { currentIndex = idx; render(); }
+
+    if (idx >= 0) {
+      currentIndex = idx;
+      pendingAnchor = anchor;
+      render();
+    }
   }
+
+  // 只展开当前章节的二级目录（外加用户手动展开的章节）
+  function syncChildrenOpen(activeId) {
+    navItems.forEach(item => {
+      const link = item.querySelector('a.nav-link');
+      const kids = item.querySelector('.nav-children');
+      if (!link || !kids) return;
+      const sid = (link.getAttribute('href') || '').slice(1);
+      const open = sid === activeId || pinnedOpen.has(sid);
+      kids.classList.toggle('open', open);
+      const caret = item.querySelector('.nav-caret');
+      if (caret) {
+        caret.classList.toggle('open', open);
+        caret.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+    });
+  }
+
+  function setActiveSub(id) {
+    subLinks.forEach(link => {
+      link.classList.toggle('active', !!id && link.getAttribute('href') === '#' + id);
+    });
+  }
+
+  // 文档内绝对位置：用 offsetTop 链计算，避开切页动画 translateY 对 rect 的干扰
+  function docTop(el) {
+    let y = 0, n = el;
+    while (n) { y += n.offsetTop; n = n.offsetParent; }
+    return y;
+  }
+
+  // 让侧栏内的目标条目滚进可视区（只影响侧栏自身，不动页面）
+  // chapterLink 为章节一级条目，subLink 为命中的二级条目；优先保证整组二级条目都露出来
+  function revealInSidebar(chapterLink, subLink) {
+    const sb = document.querySelector('.sidebar');
+    if (!sb) return;
+    const pad = 12;
+    const target = subLink || chapterLink;
+    if (!target) return;
+
+    let sbRect = sb.getBoundingClientRect();
+
+    // 上方被遮住：把目标条目贴到可视区顶部
+    let tRect = target.getBoundingClientRect();
+    if (tRect.top < sbRect.top + pad) {
+      sb.scrollTop += tRect.top - sbRect.top - pad;
+      sbRect = sb.getBoundingClientRect();
+      tRect = target.getBoundingClientRect();
+    }
+
+    // 下方超出：把展开的整组二级条目一起带进来，但不超过"章节行贴顶"
+    const item = chapterLink ? chapterLink.closest('.nav-item') : null;
+    const kids = item ? item.querySelector('.nav-children.open') : null;
+    const bottom = Math.max(tRect.bottom, kids ? kids.getBoundingClientRect().bottom : 0);
+    const overflow = bottom - (sbRect.bottom - pad);
+    if (overflow > 0) {
+      const cap = chapterLink
+        ? chapterLink.getBoundingClientRect().top - sbRect.top - pad
+        : Infinity;
+      sb.scrollTop += Math.min(overflow, Math.max(cap, 0));
+    }
+  }
+
+  // 滚动时按视口顶部反查当前小节
+  let spyTicking = false;
+  function updateSpy() {
+    const page = pages[currentIndex];
+    if (!page) return;
+    const heads = Array.from(page.querySelectorAll('h3[id]'));
+    let current = null;
+    for (let i = 0; i < heads.length; i++) {
+      if (heads[i].getBoundingClientRect().top <= ANCHOR_OFFSET + 56) current = heads[i].id;
+      else break;
+    }
+    setActiveSub(current);
+  }
+  function onScrollSpy() {
+    if (spyTicking) return;
+    spyTicking = true;
+    requestAnimationFrame(() => { spyTicking = false; updateSpy(); });
+  }
+  window.addEventListener('scroll', onScrollSpy, { passive: true });
+  window.addEventListener('resize', onScrollSpy);
 
   function render() {
     // Show only the active page; hide the rest
@@ -3511,6 +3814,10 @@
     navLinks.forEach(link => {
       link.classList.toggle('active', link.getAttribute('href') === '#' + hlId);
     });
+
+    // 二级目录跟随当前章节展开/收起
+    syncChildrenOpen(currentId);
+    const activeChapterLink = navLinks.find(l => l.getAttribute('href') === '#' + hlId);
 
     // Prev / Next buttons + target titles
     const prevBtn = document.getElementById('prevBtn');
@@ -3526,13 +3833,31 @@
     indicator.textContent = '第 ' + (currentIndex + 1) + ' / ' + pages.length + ' 页';
 
     syncHash();
-    window.scrollTo({ top: 0, behavior: 'auto' });
+
+    // 切页后：有二级锚点就定位过去，否则回到页首
+    const anchorId = pendingAnchor;
+    pendingAnchor = null;
+    const target = anchorId ? document.getElementById(anchorId) : null;
+    if (target) {
+      const y = docTop(target) - ANCHOR_OFFSET;
+      window.scrollTo({ top: y > 0 ? y : 0, behavior: 'auto' });
+      setActiveSub(target.id);
+      revealInSidebar(activeChapterLink, subLinks.find(l => l.getAttribute('href') === '#' + target.id));
+      requestAnimationFrame(() => setActiveSub(target.id));
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      updateSpy();
+      revealInSidebar(activeChapterLink);
+    }
   }
 
   function syncHash() {
-    const id = pageOrder[currentIndex];
-    if (('#' + id) !== location.hash) {
+    const id = pendingAnchor || pageOrder[currentIndex];
+    if (('#' + id) === location.hash) return;
+    try {
       history.replaceState(null, '', '#' + id);
+    } catch (e) {
+      /* file:// 等受限环境下忽略即可，不影响导航 */
     }
   }
 
@@ -3541,6 +3866,28 @@
     link.addEventListener('click', (e) => {
       e.preventDefault();
       goToId(link.getAttribute('href').substring(1));
+    });
+  });
+
+  // 二级目录点击 → 先切到所属章节，再滚动到小节
+  subLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToId(link.getAttribute('href').substring(1));
+    });
+  });
+
+  // 展开/收起二级目录（不影响一级条目的跳转）
+  document.querySelectorAll('.sidebar-nav .nav-caret').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = btn.closest('.nav-item');
+      const link = item ? item.querySelector('a.nav-link') : null;
+      if (!link) return;
+      const sid = (link.getAttribute('href') || '').slice(1);
+      if (pinnedOpen.has(sid)) pinnedOpen.delete(sid); else pinnedOpen.add(sid);
+      syncChildrenOpen(pageOrder[currentIndex]);
     });
   });
 
@@ -3579,10 +3926,42 @@
 
   // Open from hash on load (deep link support)
   const initialHash = location.hash.replace('#', '');
-  if (initialHash && pageOrder.indexOf(initialHash) >= 0) {
-    currentIndex = pageOrder.indexOf(initialHash);
+  if (initialHash) {
+    if (pageOrder.indexOf(initialHash) >= 0) {
+      currentIndex = pageOrder.indexOf(initialHash);
+    } else {
+      const el = document.getElementById(initialHash);
+      const sec = el ? el.closest('.section') : null;
+      if (sec && pageOrder.indexOf(sec.id) >= 0) {
+        currentIndex = pageOrder.indexOf(sec.id);
+        pendingAnchor = el.id;
+      }
+    }
   }
   render();
+
+  // 浏览器自身的锚点滚动发生在脚本之后，会在 load 时再校准一次位置
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  let userMoved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(ev => {
+    window.addEventListener(ev, () => { userMoved = true; }, { passive: true });
+  });
+
+  function applyCurrentPosition() {
+    const hid = location.hash.replace('#', '');
+    const el = hid ? document.getElementById(hid) : null;
+    if (el && pageOrder.indexOf(hid) < 0) {
+      const y = docTop(el) - ANCHOR_OFFSET;
+      window.scrollTo({ top: y > 0 ? y : 0, behavior: 'auto' });
+      setActiveSub(el.id);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      updateSpy();
+    }
+  }
+
+  window.addEventListener('load', () => { if (!userMoved) applyCurrentPosition(); });
 
   // ---------- 封面：贡献邀请按钮 ----------
   const contribPanel = document.getElementById('contribPanel');
