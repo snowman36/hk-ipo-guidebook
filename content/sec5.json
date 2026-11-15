@@ -1,0 +1,834 @@
+{
+  "id": "sec5",
+  "num": "5",
+  "title": "申报审核",
+  "toc": [
+    "A1申请文件准备",
+    "递交A1申请",
+    "港交所审核与反馈",
+    "聆讯前准备",
+    "中国证监会境外上市备案流程",
+    "H股全流通（同步备案）",
+    "招股书有效期与重新递交（Refile）"
+  ],
+  "nav_title": "申报审核",
+  "nav_icon": null,
+  "nav_style": null,
+  "nav_group": null,
+  "blocks": [
+    {
+      "type": "p",
+      "md": "本章覆盖从A1申请文件准备到再递表（Refile）的全过程。申报审核阶段的节奏受**三个外部变量**约束：港交所的受理与反馈时限、中国证监会备案进度、以及A股（如适用）的信息披露窗口。三者中任何一个卡住，都会把挂牌时间往后推，因此立项阶段就应按三者中**最长的一条**倒排时间表。"
+    },
+    {
+      "type": "callout",
+      "variant": "highlight",
+      "body": [
+        {
+          "k": "p",
+          "md": "**📌 递交的日期与时间窗口**",
+          "bare": true
+        },
+        {
+          "k": "ul",
+          "items": [
+            "**当日截点：**A1经港交所电子提交系统（ESS）递交，系统以当日**23:59**为截点。实操中印刷商通常要求在当晚**20:00-21:00前**完成上传与确认，建议在此基础上再预留2小时缓冲，避免因文件版本替换而跨日。",
+            "**节假日递交：**周六、周日可以递交，但须提前与印刷商确认**披露系统在非工作日的刊发时间与显示方式**，以及申请有效期的起算口径——非工作日递交在系统上\"收到了\"，不等于当天就能在披露易看到。",
+            "**A+H（A to H）：**须**提前与A股上市公司专管员沟通**，A1公告须在**A股收盘后提交**（通常当日**19:00前**完成公告上传），避免与A股信息披露时点冲突；A股停牌或存在未披露重大事项期间不得递交。",
+            "**当天是团队作业日：**董事签字页、文件版本锁定、上市费缴费凭证、中英文翻译定稿，都必须在递交日之前完成。递交当天只剩\"上传—确认—盯回执\"三件事。"
+          ],
+          "a": {
+            "style": "padding-left:20px;margin-top:8px;color:var(--color-text-light);"
+          }
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-1",
+      "text": "5.1 A1申请文件准备"
+    },
+    {
+      "type": "p",
+      "md": "内核通过后，进入港交所A1申报阶段。A1申请是向港交所上市科正式提交上市申请的起点，全套申请文件（A1 Pack）通常包含以下文件："
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": "a1-table",
+        "head": [
+          {
+            "md": "文件名称",
+            "attrs": {
+              "style": "width:44%"
+            }
+          },
+          "内容说明"
+        ],
+        "rows": [
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`01.A1 application cover letter.docx`",
+              "致港交所的A1申请函（Cover Letter），概述申请事项并随附文件清单索引。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`02.Form M103.pdf`",
+              "上市申请表格Form M103（即A1表格），载明发行人基本资料、上市股本及申请类别等。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`03.MB Rule 9.03(1)(b) Initial listing fee.jpg`",
+              "首次上市费缴费凭证，依据主板规则9.03(1)(b)缴纳（按上市时市值计，不可退还）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`04.Application Proof(MMDD2026).txt`",
+              "申请版本（Application Proof, AP）招股书；公开递交的于递交时同步在\"披露易\"刊发，非公开（保密）递交的延至PHIP刊发日。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`05.AP publication and OC announcement confirmation.docx`",
+              "AP公示及海外监管公告（OC Announcement）确认函，确认已按要求完成公示安排。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`06.Form M104.doc`",
+              "随A1提交的补充资料（Additional information to be submitted together with Form A1），按M104(1)—M104(12)分项提交。**并非A1表格本身（A1＝M103）**。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`07.Attachment M104(1)Form M111.docx`",
+              "附件M104(1)：Form M111，**市场估值／可比公司分析**（Market comparable analysis）。声明类文件另见表内M401（Form E 保荐人声明）、FFD004M（Form F 声明）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`08.Attachment M104(2)Trade receivables analysis.pdf`",
+              "附件M104(2)：应收账款分析。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`09.Attachment M104(3)Trade payables analysis.pdf`",
+              "附件M104(3)：应付账款分析。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`10.Attachment M104(4)Advanced draft PRC Legal Opinion.pdf`",
+              "附件M104(4)：中国法律意见书草稿（Advanced draft）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`11.Attachment M104(5)Reporting Accountant's confirmation.doc`",
+              "附件M104(5)：申报会计师确认函。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`12.Attachment M104(6)Form M119 Working parties list.pdf`",
+              "附件M104(6)：Form M119，随A1提交的补充资料（Additional Information to be submitted with Form A1），含中介工作小组名单等。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`13.Attachment M104(7)Listing expenses breakdown.pdf`",
+              "附件M104(7)：上市费用明细（Listing expenses breakdown）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`14.Attachment M104(8)Memorandum on management continuity analysis.docx`",
+              "附件M104(8)：管理层延续性分析备忘录。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`15.Attachment M104(9)Memorandum on ownership continuity analysis.docx`",
+              "附件M104(9)：股权延续性分析备忘录。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`16.Attachment M104(10)Summary of material findings.docx`",
+              "附件M104(10)：重大发现摘要（Summary of material findings）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`17.Attachment M104(11)Form M112.pdf`",
+              "附件M104(11)：Form M112，**豁免申请**（Application for waiver from strict compliance）。与第18项为同一份文件，实操中合并处理。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`18.Waiver and exemption application.docx`",
+              "豁免／宽免申请（即M112 e-Form），如适用；与第17项为同一份文件。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`19.Attachment M104(12)Additional information.docx`",
+              "附件M104(12)：补充信息（Additional information）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`20.MB Rule 9.11(17d)e-Form FF004(1).pdf`",
+              "主板规则9.11(17d) e-Form FF004（第1部分）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`20.MB Rule 9.11(17d)e-Form FF004(2).pdf`",
+              "主板规则9.11(17d) e-Form FF004（第2部分）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`21.MB Rule 9.11(10)Profit and working capital forecast memorandum.txt`",
+              "主板规则9.11(10) 盈利及营运资金预测备忘录。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`22.MB Rule 9.11(17b)Joint Sponsors confirmation.docx`",
+              "主板规则9.11(17b) 联席保荐人确认函。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`23.Prospectus cover.txt`",
+              "招股书封面（Prospectus cover）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`24.OC Announcement CN.pdf`",
+              "海外监管公告（中文版）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`24.OC Announcement EN.pdf`",
+              "海外监管公告（英文版）。"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "`25.Reporting accountants' confirmation on no significant adjustment.pdf`",
+              "申报会计师关于无重大调整确认函（确认财务报表在报告期后无重大调整）。"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "highlight",
+      "body": [
+        {
+          "k": "p",
+          "md": "**📌 关键变化：**自**2013年10月1日**起（第22项应用指引；主板规则9.03(3)），港交所要求申请版本（AP）须于递交A1时同步在港交所网站登载，2014年4月1日起全面执行；**2026年7月24日**起，选择非公开（保密）递交的申请人，其申请版本及申请公告延至刊发PHIP当日一并公开。这意味着市场（包括媒体、竞争对手、投资者）将在早期阶段就能看到发行人的招股书草案。项目团队需提前做好舆情管理预案。",
+          "bare": true
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-2",
+      "text": "5.2 递交A1申请"
+    },
+    {
+      "type": "p",
+      "md": "A1申请通过港交所的**电子提交系统（ESS）**递交。具体操作流程："
+    },
+    {
+      "type": "card",
+      "title": "A1申请递交操作步骤",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<p style=\"margin-top:8px;color:var(--color-text-light);\">A1申请实际由<strong>印刷商（Printer）</strong>通过港交所电子提交系统（ESS）代为递交，包括A1表格（<strong>Form M103</strong>）及M104项下全套附件、AP版招股书等全部申请文件。保荐人及发行人董事完成签字确认后，由印刷商在ESS上传并正式提交。</p>"
+        },
+        {
+          "kind": "raw",
+          "html": "<ul style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>缴纳首次上市费：</strong>根据上市时市值规模缴纳相应的首次上市费（不可退还）。</li>\n        <li><strong>AP公示：</strong>港交所在收到申请后，在\"披露易\"网站公布AP版招股书。</li>\n      </ul>"
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "id": "",
+      "text": "递交时点与节假日规则"
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": null,
+        "head": [
+          {
+            "md": "事项",
+            "attrs": {
+              "style": "width:18%"
+            }
+          },
+          {
+            "md": "规则",
+            "attrs": {
+              "style": "width:30%"
+            }
+          },
+          "操作提示"
+        ],
+        "rows": [
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**当日截点**",
+              "ESS以当日23:59为截点",
+              "印刷商实操要求当晚20:00-21:00前完成上传与确认；建议提前一天锁定文件版本，递交日只做替换与确认"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**建议递交日**",
+              "无强制限制",
+              "优先选周二至周四，便于次一工作日跟进受理、刊发与系统回执问题"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**周六、周日递交**",
+              "可以递交",
+              "须提前与印刷商书面确认**披露系统在非工作日的刊发时间与显示方式**，以及有效期起算口径；不要假设\"交了就等于当天刊发\""
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**公众假期递交**",
+              "系统可接收，刊发可能顺延",
+              "提前确认港交所假期期间的安排；如非必要，避开长假前最后一个工作日"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**递交后核对**",
+              "递交当日或次日",
+              "核对披露易上的申请版本（或申请公告）是否已刊发、文件名与版本是否与提交一致、附件是否齐全"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "h4",
+      "id": "",
+      "text": "A+H（A to H）特别安排"
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "**提前与A股上市公司专管员沟通：**说明拟递交时间、发行规模、是否构成重大事项，取得对信息披露安排的口径确认。这一步不做，后面公告时点一定出问题。",
+        "**A1公告时点：**须在**A股收盘后提交**，通常**当日19:00前**完成公告上传，确保A股投资者在收市后、次日开盘前获得信息，避免盘中信息不对称。",
+        "**与A股公告衔接：**若同日还涉及董事会决议、募投项目、关联交易等A股公告，须与A股公告**同日或按交易所要求排序**，内容口径必须一致（同一事项不能在两份公告里写出两个数字）。",
+        "**停牌限制：**A股停牌期间，或存在尚未披露的重大事项时，**不得递交A1**。",
+        "**对整体时间表的影响：**A股信息披露窗口 + 中国证监会备案（周期见5.5节）+ 港交所审核需并行排布，A+H项目整体周期通常比纯H股项目**多3-6个月**。立项阶段排时间表时，不能简单套用纯H股的经验值。"
+      ],
+      "attrs": {
+        "style": "padding-left:20px;margin:8px 0 16px;color:var(--color-text-light);"
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "tip",
+      "title": "💡 新人提示",
+      "body": [
+        {
+          "k": "p",
+          "md": "A1递交是项目的关键里程碑节点。递交前需完成一个重要的\"签字页\"流程——请所有发行人董事签署A1表格及一系列确认函。由于董事通常分散各地、日程繁忙，建议提前至少一周开始协调签字安排。"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-3",
+      "text": "5.3 港交所审核与反馈"
+    },
+    {
+      "type": "p",
+      "md": "A1递交后，港交所上市科进入审核反馈阶段。**两者的差异不在\"轮次多少\"，而在A+H可适用加速通道**——能否享受取决于市值规模与合规记录，排时间表时不能想当然。"
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": null,
+        "head": [
+          {
+            "md": "维度",
+            "attrs": {
+              "style": "width:16%"
+            }
+          },
+          {
+            "md": "单纯H股（首次上市）",
+            "attrs": {
+              "style": "width:42%"
+            }
+          },
+          "A+H（A股已上市）"
+        ],
+        "rows": [
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**适用流程**",
+              "联交所常规审核流程",
+              "可适用《优化新上市申请审批流程时间表》下的**合资格A股公司加速通道**（联交所与SFC 2024年10月18日《联合声明》）：合资格者只经**1轮**意见，两家监管机构各**不超过30个工作日**完成监管评估"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**审核轮次**",
+              "按《优化审批流程时间表》：材料\"完全符合要求\"的，监管评估**最多2轮**、两家机构**各不超过40个工作日**；材料不完备或出现重大新事项的，轮次与时程均会突破",
+              "符合加速通道条件的只经**1轮**意见（各≤30个工作日）；一旦监管提出重大关注，即回到\"≤2轮／各≤40个工作日\"的常规轨道"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**首轮意见**",
+              "递交后约15个工作日发出",
+              "按加速通道时限完成监管评估（各≤30个工作日，自\"完全符合要求\"的申请起算）"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**适用条件**",
+              "—",
+              "**预期市值≥100亿港元**（A股市值按申请前5个交易日收盘均价、加H股上市时预期市值计算）；由律师意见确认其**紧接申请前两个完整财政年度**一直遵守A股适用的法律法规；申请材料完全符合要求、无重大未决事项"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**主要风险点**",
+              "业务模式、收入确认与关联交易的问询通常较深",
+              "A股与H股披露口径不一致；A股未披露的事项首次在港股出现；CSRC备案进度滞后于港交所审核"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "p",
+      "md": "单纯H股的标准流程如下：",
+      "attrs": {
+        "style": "margin-top:12px;"
+      }
+    },
+    {
+      "type": "flow",
+      "steps": [
+        {
+          "num": "1",
+          "label": "首轮反馈",
+          "desc": "递交后约15个工作日发出首轮问题"
+        },
+        {
+          "num": "2",
+          "label": "首轮回复",
+          "desc": "项目团队在15个工作日内提交回复"
+        },
+        {
+          "num": "3",
+          "label": "第二轮反馈",
+          "desc": "上市科约10个工作日发出第二轮问题"
+        },
+        {
+          "num": "4",
+          "label": "最终回复",
+          "desc": "在10个工作日内提交最终回复"
+        },
+        {
+          "num": "5",
+          "label": "聆讯推荐",
+          "desc": "上市科推荐/不推荐上市委员会聆讯"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "⚠️ 快速通道不是\"免审核\"",
+      "body": [
+        {
+          "k": "p",
+          "md": "快速审批时间表压缩的是**审核时限与轮次**，不是审核标准。相反，轮次少意味着**首轮回复必须一次到位**——标准流程中\"第二轮再补充\"的余地，在快速通道下往往不存在。若首轮回复不充分被要求补充多轮，反而会丧失时间优势，最终慢于常规流程。另外，快速通道的适用须在递交前与联交所沟通确认，不能由项目组自行假设适用；A+H项目还应同步关注中国证监会备案进度，避免\"港交所已过会、备案未落地\"的空转（见5.5节）。"
+        }
+      ]
+    },
+    {
+      "type": "card",
+      "title": "港交所常见反馈问题类型",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<ul style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>业务模式：</strong>要求进一步解释收入模式、客户集中度、行业地位等</li>\n        <li><strong>财务数据：</strong>要求解释财务指标异常波动、关联交易定价、会计准则适用</li>\n        <li><strong>法律合规：</strong>要求补充外资准入限制分析</li>\n        <li><strong>历史沿革：</strong>要求补充历次股权变更的合规性说明</li>\n        <li><strong>信息披露：</strong>要求补充风险因素披露、管理层讨论与分析的深度</li>\n        <li><strong>保荐人独立性：</strong>核查保荐人与发行人之间的独立性</li>\n      </ul>"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-4",
+      "text": "5.4 聆讯前准备"
+    },
+    {
+      "type": "p",
+      "md": "港交所上市科的反馈问题全部解决后，将推荐项目至**上市委员会**进行聆讯（Hearing）。聆讯前需完成："
+    },
+    {
+      "type": "checklist",
+      "ordered": false,
+      "items": [
+        "**更新招股书至聆讯前版本：**即接近定稿的招股书（Pre-Hearing draft），须已将港交所前几轮反馈意见全部落实，供上市委员会审阅。注意：**该版本不是PHIP**。",
+        "内部模拟聆讯（Mock Hearing）",
+        "发行人与保荐人共同准备聆讯Q&A预案",
+        "安排聆讯当日参会人员（通常为发行人CEO/CFO及保荐人负责人）"
+      ],
+      "attrs": {
+        "class": "checklist"
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "⚠️ 概念区分：PHIP是\"聆讯后\"资料集，不是聆讯前版本",
+      "body": [
+        {
+          "k": "p",
+          "md": "AP、聆讯前版本与PHIP分属三个时点，最容易混淆的是把PHIP当成\"聆讯前的定稿\"。四份文件的时间顺序如下："
+        },
+        {
+          "k": "table",
+          "wrap": false,
+          "table": {
+            "cls": null,
+            "head": [
+              {
+                "md": "文件",
+                "attrs": {
+                  "style": "width:24%"
+                }
+              },
+              {
+                "md": "时点",
+                "attrs": {
+                  "style": "width:20%"
+                }
+              },
+              "说明"
+            ],
+            "rows": [
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**AP（申请版本）**",
+                  "递交A1时",
+                  "在披露易刊发；以非公开方式递交的申请人，则延至刊发PHIP当日一并刊发申请公告"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**聆讯前版本**",
+                  "聆讯前",
+                  "接近定稿的招股书草案，仅供上市委员会与中介内部使用，**不对外刊发**"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**PHIP（聆讯后资料集）**",
+                  "**聆讯通过后**",
+                  "Post-Hearing Information Pack，聆讯通过后刊发，是第一个完整披露的公开文件"
+                ]
+              },
+              {
+                "cls": null,
+                "attrs": {},
+                "cells": [
+                  "**正式招股章程**",
+                  "招股期开始",
+                  "载明发行价、发行规模等发行条款，香港公开发售同步启动"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "k": "p",
+          "md": "记忆方法：**AP在\"进门\"时（A1），PHIP在\"过会\"后（Hearing）**。聆讯前要准备的是\"接近定稿的招股书\"，不是PHIP。",
+          "a": {
+            "style": "margin-top:10px;"
+          }
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "⚠️ 避坑指南 — 聆讯当日",
+      "body": [
+        {
+          "k": "p",
+          "md": "聆讯当日，上市委员会提出的问题往往不会太难，但如果发行人管理层在回答时表现出对自身业务或招股书内容的不熟悉，将给委员留下极差的印象。务必确保参加聆讯的管理层对招股书内容了如指掌，特别是财务数据、风险因素和业务数据部分。"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-5",
+      "text": "5.5 中国证监会境外上市备案流程（补充）"
+    },
+    {
+      "type": "p",
+      "md": "2023年3月31日起，境内企业境外上市全面实施**备案制**（替代此前的核准制）。备案而非审核——中国证监会不实质审查企业是否符合境外上市条件，主要关注合规性（外资准入、数据安全、反垄断等）。"
+    },
+    {
+      "type": "card",
+      "title": "备案关键时间节点",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<div class=\"flow-steps\">\n        <div class=\"flow-step\">\n          <div class=\"step-num\">1</div>\n          <div class=\"step-label\">递交A1后<br>3个工作日内</div>\n          <div class=\"step-desc\">向中国证监会提交备案材料</div>\n        </div>\n        <div class=\"flow-step\">\n          <div class=\"step-num\">2</div>\n          <div class=\"step-label\">收到材料后<br>5个工作日内</div>\n          <div class=\"step-desc\">中国证监会告知需补充材料（如需要）</div>\n        </div>\n        <div class=\"flow-step\">\n          <div class=\"step-num\">3</div>\n          <div class=\"step-label\">发行人30个<br>工作日内</div>\n          <div class=\"step-desc\">补充材料（补充材料时间和征求意见时间不计入备案时限）</div>\n        </div>\n        <div class=\"flow-step\">\n          <div class=\"step-num\">4</div>\n          <div class=\"step-label\">收到材料后<br>20个工作日内</div>\n          <div class=\"step-desc\">办结备案并公示（材料完备的情况下）</div>\n        </div>\n      </div>"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "⚠️ 备案实际周期已明显缩短，但仍可能是整条时间表上最慢的一环",
+      "body": [
+        {
+          "k": "p",
+          "md": "上图的\"20个工作日内办结\"是**法定时限**，前提是材料完备、且无需征求其他部门意见。实践中备案周期**差异很大**（2023—2024年个案常达一年以上；2025年以来多数项目缩短至数月，但涉及多部门会签的项目仍可能接近或超过一年；落地排期应以近12个月同类项目的中位数为准，不要套用单一经验值）：备案过程需征求**商务部、国家发改委、工信部**等行业主管部门意见（会签），视发行人所处行业还可能涉及网信、市场监管等部门，每一轮征求意见都会把时间往后推。这也意味着，港交所审核通过、甚至聆讯通过，都不代表可以发行——备案未落地，项目只能停在原地。"
+        },
+        {
+          "k": "p",
+          "md": "**时间表影响与应对：**",
+          "a": {
+            "style": "margin-top:10px;"
+          }
+        },
+        {
+          "k": "ul",
+          "items": [
+            "**把备案设为关键路径：**在立项时间表中按近12个月同类项目中位数排布，与港交所审核**并行**而非串行；不要写成\"聆讯通过后启动备案\"。",
+            "**立项即做合规自查：**重点排查外资准入（负面清单）、数据出境、行业许可与反垄断申报义务——这些正是会签部门关注的核心，越早整改代价越小。",
+            "**备案材料与A1同步准备：**两套材料的事实描述、股权结构、业务数据必须完全一致，口径不一致是反馈的高发点。",
+            "**对客户如实提示：**A+H与涉及敏感行业（电信、数据、能源、金融）的项目，应把备案周期作为发行时间表的前置条件向客户说明，避免做出无法兑现的时间承诺。"
+          ],
+          "a": {
+            "style": "padding-left:20px;margin-top:8px;color:var(--color-text-light);"
+          }
+        }
+      ]
+    },
+    {
+      "type": "h4",
+      "id": "",
+      "text": "H股全流通（同步备案）"
+    },
+    {
+      "type": "p",
+      "md": "对于H股发行人，内资股股东可申请将其持有的境内未上市股份转换为H股在香港市场流通，即\"全流通\"。全流通须向中国证监会备案，且可在IPO时与境外上市备案同步申请，因此归入本章而非发行环节。主要操作要点如下："
+    },
+    {
+      "type": "card",
+      "title": "H股全流通操作要点",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<ul style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>申请时点：</strong>可在IPO时同步申请（在向中国证监会提交境外上市备案材料时一并提交全流通申请），也可在上市后单独申请。</li>\n        <li><strong>适用股份：</strong>上市前境内股东持有的全部内资股（包括发起人股、Pre-IPO轮投资股等）。</li>\n        <li><strong>备案程序：</strong>全流通须向中国证监会备案，备案为前置流程。</li>\n        <li><strong>减持限制（注意：这不是\"全流通\"的规则）：</strong>全流通股份本身<strong>不设监管锁定期</strong>，转换后即可流通（仍受股东原有承诺约束）。控股股东的禁售来自《主板规则》<strong>10.07</strong>，与全流通无关：首个禁售期自上市文件披露持股当日起至上市后<strong>6个月</strong>，其后6个月内减持不得导致其失去控股股东地位（<strong>18C发行人为12+12</strong>）。</li>\n        <li><strong>外汇管理：</strong>减持资金回流须符合外汇管理规定。内资股东在港交所减持以港币结算，减持资金进入股东在境内银行开立的外币账户。</li>\n      </ul>"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec5-6",
+      "text": "5.6 招股书有效期与重新递交（Refile）"
+    },
+    {
+      "type": "p",
+      "md": "先区分两个容易混淆的\"有效期\"：一是**上市申请本身的有效期**（自递交A1之日起计），二是**招股书财务数据的新鲜度**（报告期末距招股书日期不得超过6个月）。前者已由**6个月延长至12个月**，后者没有变化——两者不能混为一谈。"
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": null,
+        "head": [
+          {
+            "md": "项目",
+            "attrs": {
+              "style": "width:22%"
+            }
+          },
+          {
+            "md": "原规定",
+            "attrs": {
+              "style": "width:26%"
+            }
+          },
+          {
+            "md": "现规定",
+            "attrs": {
+              "style": "width:28%"
+            }
+          },
+          "说明"
+        ],
+        "rows": [
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**新上市申请有效期**",
+              "自递交申请表格之日起**6个月**，届满后处理期限即告已过，须重新递交",
+              "自**2026年8月21日**起，合资格新上市申请的有效期**延长至12个月**（短期豁免）",
+              "适用于公告日仍然有效、以及公告日或之后提交／重新提交的申请；实施期三年，即**2026年8月21日至2029年8月20日**"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**财务数据新鲜度**",
+              "报告期末距招股书日期不超过6个月",
+              "**未变化**",
+              "有效期延长不等于可以不更新数据，加期（Update）仍须照做"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "highlight",
+      "body": [
+        {
+          "k": "p",
+          "md": "**📌 12个月有效期不是自动获得：**该延长属**短期豁免**，须同时符合公告所载**两项条件**：① 联交所并未在其意见函中表示已暂停审批该申请；② 联交所与SFC均未发出**直接质询函（SMLR Letter）或重大关注函（MCL）**——若该等函件所载问题在首个6个月有效期届满前已获解决，仍可获豁免。另须注意：**有效期内更换保荐人**并因此触发重新递交的，申请即时失效。申请人持续提交完整及最新信息、保荐人提交**切实可行的时间表**，属监管期望，**不是豁免条件**。",
+          "bare": true
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "md": "在实践中，港股IPO项目从A1递交至最终完成上市往往耗时较长（特别是涉及多轮反馈、A+H备案或市场窗口不理想的情况）。若有效期届满仍未完成，发行人须进行**加期（Update）**并**重新递交（Refile）**更新后的申请与招股书。"
+    },
+    {
+      "type": "card",
+      "title": "Refile注意事项",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<ul style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>加期要求：</strong>Refile时须将财务数据滚动更新至最近一期（如最近财政年度已结束，则补充整年审计数据；如中期已超过6个月，则补充中期审阅数据）。</li>\n        <li><strong>尽调更新：</strong>Refile前须将尽调覆盖期间同步延伸至加期后的最新报告期。第三方走访、工商调档、法律尽调等程序可能需要补充执行。</li>\n        <li><strong>A1 Pack同步更新：</strong>Refile时A1 Pack中的M104/M111/M113等财务分析文件须同步更新至最新期间数据。</li>\n        <li><strong>审核延续：</strong>Refile后上市科的审核意见继续有效，但上市科可能就新补充的财务数据提出额外问题。</li>\n        <li><strong>多次Refile：</strong>实践中一个项目可能进行2-3次Refile。每次Refile均须重新经过ESC Meeting审批（视公司内部规定）。</li>\n      </ul>"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "⚠️ A1 Pack常见错误",
+      "body": [
+        {
+          "k": "p",
+          "md": "① A1表格与招股书中的同一数据不一致（如股本结构、发行前股数等）；② M104/M111/M113中的数据与招股书中披露的数据口径不一致；③ 盈利及现金流预测的假设与行业报告或管理层访谈中的表述自相矛盾；④ Listing Expenses遗漏某项中介费用；⑤ A1 Pack中的文件版本与招股书AP版本不匹配（如招股书已更新但A1 Pack未同步更新）。递交前须安排专人逐项交叉核对。"
+        }
+      ]
+    }
+  ]
+}
