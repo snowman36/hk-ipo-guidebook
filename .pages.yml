@@ -1,0 +1,145 @@
+media:
+  input: assets
+  output: /assets
+
+content:
+  - name: pages
+    label: 手册页面
+    type: collection
+    path: content
+    format: json
+    view:
+      fields: [nav_title, num, title]
+      primary: nav_title
+      sort: [num, nav_title]
+    fields:
+      - name: id
+        label: 页面标识（请勿修改）
+        type: string
+        required: true
+        hidden: true
+      - name: num
+        label: 章节号（如 1、8；首页留空）
+        type: string
+      - name: title
+        label: 页面标题（显示在正文顶部）
+        type: string
+      - name: nav_title
+        label: 侧栏显示名
+        type: string
+      - name: nav_group
+        label: 侧栏分组
+        type: select
+        options:
+          values: ["", 执行层面, 其他资料]
+      - name: nav_icon
+        label: 侧栏图标（保持默认请勿修改）
+        type: string
+        hidden: true
+      - name: nav_style
+        label: 侧栏徽标样式（保持默认请勿修改）
+        type: string
+        hidden: true
+      - name: toc
+        label: 本节内容（目录列表，可增删）
+        type: string
+        list: true
+      - name: blocks
+        label: 内容块
+        type: object
+        list: true
+        fields:
+          - name: type
+            label: 块类型
+            type: select
+            options:
+              values: [h3, h4, p, list, checklist, table, card, callout, flow, pipeline, raw]
+          - name: text
+            label: 小标题文字（h3 / h4 用）
+            type: string
+          - name: md
+            label: 正文（p 用，支持 **粗体**、`代码`、[链接](url)、换行）
+            type: text
+          - name: id
+            label: 锚点（h3 / h4 用，勿改）
+            type: string
+            hidden: true
+          - name: variant
+            label: 提示框样式（callout 用）
+            type: select
+            options:
+              values: [tip, warning, highlight]
+          - name: title
+            label: 标题（card / callout 用）
+            type: string
+          - name: ordered
+            label: 是否为有序列表（list 用）
+            type: boolean
+          - name: items
+            label: 列表条目（list / checklist 用，一行一条）
+            type: string
+            list: true
+          - name: steps
+            label: 步骤（flow / pipeline 用）
+            type: object
+            list: true
+            fields:
+              - name: num
+                label: 编号
+                type: string
+              - name: label
+                label: 名称（flow 用）
+                type: string
+              - name: title
+                label: 名称（pipeline 用）
+                type: string
+              - name: desc
+                label: 说明（flow 用）
+                type: string
+              - name: detail
+                label: 说明（pipeline 用）
+                type: string
+          - name: table
+            label: 表格
+            type: object
+            fields:
+              - name: head
+                label: 表头（每列一格）
+                type: string
+                list: true
+              - name: rows
+                label: 表格行
+                type: object
+                list: true
+                fields:
+                  - name: cls
+                    label: 行样式（勿改）
+                    type: string
+                    hidden: true
+                  - name: cells
+                    label: 单元格（每列一格；以 html: 开头表示含特殊格式，请整段保留）
+                    type: string
+                    list: true
+          - name: items_json
+            label: 高级：卡片的附加内容（勿改）
+            type: code
+            hidden: true
+          - name: body
+            label: 提示框正文（callout 用）
+            type: object
+            list: true
+            fields:
+              - name: k
+                label: 类型（p 或 ul / ol / table）
+                type: string
+                hidden: true
+              - name: md
+                label: 文字
+                type: text
+              - name: items
+                label: 列表条目
+                type: string
+                list: true
+          - name: html
+            label: 原始 HTML（raw 块与特殊提示框用，请整段保留）
+            type: text
