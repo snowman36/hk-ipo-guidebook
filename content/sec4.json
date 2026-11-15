@@ -1,0 +1,184 @@
+{
+  "id": "sec4",
+  "num": "4",
+  "title": "质控审核",
+  "toc": [
+    "Legal Call",
+    "ESC Meeting",
+    "CC Meeting（资本承诺委员会）"
+  ],
+  "nav_title": "质控审核",
+  "nav_icon": null,
+  "nav_style": null,
+  "nav_group": null,
+  "blocks": [
+    {
+      "type": "h4",
+      "id": "",
+      "text": "三个会议与递交A1的先后关系"
+    },
+    {
+      "type": "p",
+      "md": "质控内核流程是**Legal Call → ESC Meeting → CC Meeting → 递交A1**，四个节点顺序不可颠倒。最容易排错的是ESC与CC之间的间隔：**CC Meeting必须在ESC Meeting后一天召开，开完CC Meeting当天即可申报**。部分内部文件将ESC Meeting写作\"ESA Meeting\"，本手册统一使用ESC Meeting。"
+    },
+    {
+      "type": "table",
+      "table": {
+        "cls": null,
+        "head": [
+          {
+            "md": "节点",
+            "attrs": {
+              "style": "width:20%"
+            }
+          },
+          {
+            "md": "时点",
+            "attrs": {
+              "style": "width:22%"
+            }
+          },
+          {
+            "md": "关键事项",
+            "attrs": {
+              "style": "width:34%"
+            }
+          },
+          "与A1的关系"
+        ],
+        "rows": [
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**Legal Call**",
+              "尽调基本完成、招股书草案基本定稿后\n（A1前约4-6周）",
+              "保荐人境内、境外律师分别汇报重大法律问题；LG、CP审核员确认处理方案",
+              "通过后方可推进至ESC"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**ESC Meeting**\n（申请全面审核会议）",
+              "Legal Call通过后\n（A1前约2-4周）",
+              "质控部门独立审核底稿与招股书；委员质询；宣布决议（无条件通过／有条件通过／退回补充尽调／不予通过）",
+              "通过后方可召开CC"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**CC Meeting**\n（资本承诺委员会）",
+              "**ESC Meeting后一天**\n（须晚于ESC至少一个工作日）",
+              "就市场风险、估值合理性、投资者需求、监管不确定性及承销规模作出内部决议",
+              "**开完当天即可申报**"
+            ]
+          },
+          {
+            "cls": null,
+            "attrs": {},
+            "cells": [
+              "**递交A1**",
+              "CC Meeting当日或次日",
+              "印刷商经ESS提交A1全套装档文件；同步刊发申请版本（或按非公开方式递交）",
+              "—"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "callout",
+      "variant": "highlight",
+      "body": [
+        {
+          "k": "p",
+          "md": "**📌 为什么CC必须排在ESC后一天：**CC的表决以ESC的质控结论为前提——委员要判断\"这个项目能不能承销\"，首先要看到\"质控认为这个项目可以报\"。若两会同日召开，CC委员在尚未看到ESC决议的情况下判断承销风险，等于把两个独立判断合并成一次，既不满足内部治理要求，也无法在底稿中留下两个独立的决策记录。因此排期时应**先锁ESC日期，再倒排CC（ESC＋1个工作日）**，并把\"A1递交日\"直接挂在CC当日。",
+          "bare": true
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec4-1",
+      "text": "4.1 Legal Call"
+    },
+    {
+      "type": "p",
+      "md": "在尽调工作基本完成、招股书草案基本定稿后，公司流程首先召开**Legal Call**。Legal Call的主要目的是由保荐人境内律师和境外律师分别就尽调过程中发现的重要法律问题进行系统性梳理和风险评估。"
+    },
+    {
+      "type": "card",
+      "title": "Legal Call标准流程",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<ol style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>参会人员：</strong>全体LG（法律）、CP（合规）审核员上线，保荐人境内律师、保荐人境外律师上线。</li>\n        <li><strong>境内律师汇报：</strong>保荐人中国律师就境内法律尽调中发现的重要问题进行汇报，包括但不限于历史沿革瑕疵、重大诉讼/仲裁、社保公积金欠缴、经营资质有效性、行政处罚记录等，并对各项问题的严重程度和法律后果发表专业意见。</li>\n        <li><strong>境外律师汇报：</strong>保荐人境外律师就香港法律层面的问题发表意见，包括公司治理结构合规性、关连交易安排、招股书披露的充分性等。</li>\n        <li><strong>风险评估与讨论：</strong>全体参会人员就律师提出的问题进行讨论，逐项评估各项法律问题对上市条件、招股书披露和上市时间表的潜在影响，形成初步意见。</li>\n        <li><strong>Legal Call通过标准：</strong>各项重大法律问题均已充分识别，处理方案已明确，且不会构成对上市条件的实质性障碍。LG、CP确认通过后（或有条件通过后），方可推进至下一阶段。</li>\n      </ol>"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "风险提示",
+      "body": [
+        {
+          "k": "p",
+          "md": "Legal Call中律师发表的意见是后续招股书披露和风险因素章节的重要基础。保荐人项目团队须在Legal Call前将尽调过程中自身发现的法律合规问题整理汇总，与律师的意见进行交叉验证。"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec4-2",
+      "text": "4.2 ESC Meeting"
+    },
+    {
+      "type": "p",
+      "md": "Legal Call通过后，召开**ESC Meeting**，对项目进行全面质控评审。ESC Meeting是项目申报前的重要审批关口。"
+    },
+    {
+      "type": "card",
+      "title": "ESC Meeting标准流程",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<p style=\"margin-top:8px;\">\n        <strong>会前审核（ESC Meeting前1-2周）：</strong><br>\n        项目团队提交全套评审材料，质控部门独立进行底稿审核和招股书审核。质控重点关注以下事项：<br>\n        ① 尽调计划是否覆盖了所有重大风险领域<br>\n        ② 关键尽调程序的执行是否达到合理标准（如客户走访比例是否充分、第三方访谈是否按照要求完成）<br>\n        ③ 尽调工作底稿是否能够支撑招股书中的每一项重大陈述<br>\n        ④ 招股书披露是否存在误导性陈述或重大遗漏<br>\n        ⑤ 利益冲突、关联交易等敏感事项是否已充分识别和披露<br>\n        ⑥ 财务预测及估值模型的关键假设是否具有商业合理性<br>\n        ⑦ Legal Call中提出的各项法律问题是否已落实处理方案<br><br>\n        <strong>ESC Meeting议程：</strong><br>\n        ① 项目负责人汇报：项目概况、关键进展、Legal Call结论、重大风险及缓释措施<br>\n        ② 质控部汇报（10分钟）：质控审核中发现的问题及整改落实情况<br>\n        ③ ESC委员提问与讨论（30分钟）：重点围绕重大风险事项、信息披露充分性、保荐人履职的适当性<br>\n        ④ 宣布ESC决议<br><br>\n       \n        <strong>ESC决议类型：</strong>无条件通过 / 有条件通过（须在特定时限内满足特定条件后方可推进申报）/ 退回补充尽调 / 不予通过\n      </p>"
+        }
+      ]
+    },
+    {
+      "type": "callout",
+      "variant": "warning",
+      "title": "风险提示",
+      "body": [
+        {
+          "k": "p",
+          "md": "ESC Meeting中，项目团队应确保对所有重大事项进行充分且坦诚的披露。ESC委员通常具有丰富的项目审查经验，能够识别信息披露中的不完整或模糊之处。与其在委员追问时被动回应，不如在汇报材料中主动、全面地呈现所有重大风险及缓释措施。"
+        }
+      ]
+    },
+    {
+      "type": "h3",
+      "id": "sec4-3",
+      "text": "4.3 CC Meeting（资本承诺委员会）"
+    },
+    {
+      "type": "p",
+      "md": "CC Meeting（资本承诺委员会）是发行相关的重要内部会议，主要用于公司领导层对项目的发行风险作出判断和决策，是保荐人就承销风险向内部最高决策层进行汇报的关键节点。"
+    },
+    {
+      "type": "card",
+      "title": "CC Meeting核心要点",
+      "items": [
+        {
+          "kind": "raw",
+          "html": "<ul style=\"padding-left:20px;margin-top:8px;color:var(--color-text-light);\">\n        <li><strong>会议性质：</strong>发行相关会议，聚焦项目承销与发行风险，供公司领导层判断是否具备推进发行的条件。</li>\n        <li><strong>风险研判：</strong>就项目的市场风险、估值合理性、投资者需求、监管不确定性及潜在声誉风险进行综合评估，作为承销承诺决策的依据。</li>\n        <li><strong>研究员参与：</strong>会议通常邀请研究部分析师（研究员）上线分享对发行人的行业研究与估值观点，为决策提供独立的研究支持。</li>\n        <li><strong>决策输出：</strong>形成是否推进发行、承销规模建议及风险缓释要求的内部决议，作为后续路演与定价工作的前置决策依据。</li>\n      </ul>"
+        }
+      ]
+    }
+  ]
+}
