@@ -1,0 +1,29 @@
+{
+  "id": "cover",
+  "nav_title": "指南首页",
+  "nav_icon": "⌂",
+  "nav_style": "muted",
+  "nav_group": null,
+  "blocks": [
+    {
+      "type": "raw",
+      "html": "<div class=\"badge\">Guidebook</div>",
+      "note": "badge"
+    },
+    {
+      "type": "raw",
+      "html": "<h1>港股IPO业务操作指南<br><span style=\"font-size:0.62em;color:var(--color-accent);font-weight:600;letter-spacing:0.04em;\">——金牌银行家Guidebook</span></h1>",
+      "note": "h1"
+    },
+    {
+      "type": "raw",
+      "html": "<div class=\"meta\">\n      <span>📋 适用对象：新入职员工 / 首次参与港股IPO项目人员</span>\n      <span>📅 更新日期：2026年11月9日</span>\n      <span>👥 维护部门：投行分会执行小组</span>\n    </div>",
+      "note": "meta"
+    },
+    {
+      "type": "raw",
+      "html": "<div class=\"cover-cta\">\n      <div class=\"cover-cta-head\">\n        <strong>欢迎一起完善这本 Guidebook</strong>\n        <span style=\"white-space: pre-wrap;\">本手册由投行分会执行小组维护。规则、监管口径和各家做法每年都在变，文中的内容难免有滞后，欢迎大家把项目上验证过的做法、踩过的坑和刚出台的规则补充进来，下一版汇总采纳，共同建设！​​​</span>\n      </div>\n      <div class=\"cover-cta-actions\">\n        \n        \n        \n      </div>\n      <div class=\"contrib-panel\" id=\"contribPanel\" hidden=\"\">\n        <h4>提交方式</h4>\n        <p style=\"margin:0;\">复制上面的模板，填好后发回投行分会执行小组，或在版本评审会上直接提出。每季度汇总一次，采纳的条目会在页脚修订记录中注明建议人。</p>\n        <h4>写作要求</h4>\n        <ol>\n          <li><strong>一节一议：</strong>每条建议只针对一个小节，便于核对与回滚。</li>\n          <li><strong>写清三段：</strong>现行表述 → 建议改为 → 依据。只说“这里不对”，编写组无法判断怎么改。</li>\n          <li><strong>附依据：</strong>尽量给出《上市规则》条文号、指引信编号或具体项目实例；属经验判断的请注明“经验判断”。</li>\n          <li><strong>脱敏：</strong>涉及客户名称、交易金额、未公开项目信息的，请先脱敏再提交。</li>\n        </ol>\n        <h4>当前更需要补充的方向</h4>\n        <ul>\n          <li>第1—2章：2026年新规下非公开递交、提前递表的实际排期经验。</li>\n          <li>第3章：分行业尽调的特殊关注点（生物科技、特专科技、消费连锁等）。</li>\n          <li>第5章：A+H 项目在备案与审核环节与首次上市的差异。</li>\n          <li>第6章：机制A／机制B在近期项目中的定价与配售结果。</li>\n          <li>全篇：可公开的一线案例（脱敏后），用于替换文中的原则性表述。</li>\n        </ul>\n      </div>\n    </div>",
+      "note": "cover-cta"
+    }
+  ]
+}
