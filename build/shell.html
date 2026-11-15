@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>港股IPO业务操作指南——金牌银行家Guidebook</title>
+<meta name="description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="港股IPO业务操作指南">
+<meta property="og:title" content="港股IPO业务操作指南——金牌银行家Guidebook">
+<meta property="og:description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="港股IPO业务操作指南——金牌银行家Guidebook">
+<meta name="twitter:description" content="面向投行新员工及首次参与港股IPO项目人员的业务操作手册，覆盖项目承揽、立项、尽职调查、质控内核、申报审核、发行上市与底稿归档全流程。">
+<style>
+  :root {
+    --sidebar-width: 260px;
+    --color-primary: #1a3a5c;
+    --color-accent: #c9a84c;
+    --color-bg: #f8f7f4;
+    --color-card: #ffffff;
+    --color-text: #2d2d2d;
+    --color-text-light: #5a5a5a;
+    --color-border: #e5e0d8;
+    --color-highlight: #f0ebe0;
+    --color-info: #2c5f8a;
+    --color-success: #2e7d32;
+    --color-warning: #e67e22;
+    --color-danger: #c0392b;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.8;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ==================== SIDEBAR ==================== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--color-primary);
+    color: #fff;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 20px rgba(0,0,0,0.15);
+  }
+
+  .sidebar-header {
+    padding: 28px 22px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .sidebar-header .logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .sidebar-header h1 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .sidebar-header .subtitle {
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    padding: 12px 0;
+  }
+
+  .sidebar-nav .nav-section-title {
+    padding: 14px 22px 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.45;
+    font-weight: 600;
+  }
+
+  .sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 22px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .sidebar-nav a:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+
+  .sidebar-nav a.active {
+    color: var(--color-accent);
+    background: rgba(201,168,76,0.1);
+    border-left-color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .sidebar-nav a .nav-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.15);
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .sidebar-nav a.active .nav-num {
+    background: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .sidebar-footer {
+    padding: 16px 22px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 11px;
+    opacity: 0.4;
+    line-height: 1.6;
+  }
+
+  /* ---------- 二级目录（章节内小节） ---------- */
+  .sidebar-nav .nav-item {
+    position: relative;
+  }
+
+  /* 给右侧箭头留出位置，避免长标题压到箭头 */
+  .sidebar-nav .nav-item.has-children > a.nav-link {
+    padding-right: 34px;
+  }
+
+  .sidebar-nav .nav-caret {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: rgba(255,255,255,0.42);
+    font-size: 11px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .sidebar-nav .nav-caret span {
+    display: block;
+    transition: transform 0.22s ease;
+  }
+
+  .sidebar-nav .nav-caret:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.10);
+  }
+
+  .sidebar-nav .nav-caret.open {
+    color: var(--color-accent);
+  }
+
+  .sidebar-nav .nav-caret.open span {
+    transform: rotate(90deg);
+  }
+
+  .sidebar-nav .nav-children {
+    display: none;
+    padding: 1px 0 7px;
+  }
+
+  .sidebar-nav .nav-children.open {
+    display: block;
+  }
+
+  /* 小节链接：左侧竖线与一级条目同一条线，缩进体现层级 */
+  .sidebar-nav a.nav-sub {
+    display: block;
+    padding: 5px 14px 5px 34px;
+    border-left: 3px solid transparent;
+    color: rgba(255,255,255,0.55);
+    font-size: 12.5px;
+    line-height: 1.55;
+    text-decoration: none;
+    transition: color 0.18s, background 0.18s, border-color 0.18s;
+  }
+
+  .sidebar-nav a.nav-sub:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .sidebar-nav a.nav-sub.active {
+    color: var(--color-accent);
+    background: rgba(201,168,76,0.08);
+    border-left-color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .sidebar-nav a.nav-sub .sub-num {
+    margin-right: 5px;
+    color: rgba(255,255,255,0.30);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sidebar-nav a.nav-sub:hover .sub-num {
+    color: rgba(255,255,255,0.60);
+  }
+
+  .sidebar-nav a.nav-sub.active .sub-num {
+    color: var(--color-accent);
+  }
+
+  /* ==================== MAIN CONTENT ==================== */
+  .main-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    padding: 40px 56px 80px 48px;
+    max-width: 1100px;
+  }
+
+  /* Hero section */
+  .hero {
+    margin-bottom: 48px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero .meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--color-text-light);
+  }
+
+  .hero .meta span { display: flex; align-items: center; gap: 4px; }
+
+  /* Hero: 贡献邀请 */
+  .cover-cta {
+    margin-top: 26px;
+    max-width: 820px;
+    padding: 18px 22px;
+    background: rgba(201, 168, 76, 0.07);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 6px;
+  }
+
+  .cover-cta-head strong {
+    display: block;
+    font-size: 15px;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+  }
+
+  .cover-cta-head span {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--color-text-light);
+  }
+
+  .cover-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--color-primary);
+    background: #fff;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: background .18s, color .18s, border-color .18s;
+  }
+
+  .cta-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cta-btn.cta-primary {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cta-btn.cta-primary:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+
+  .contrib-panel {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--color-border);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--color-text-light);
+  }
+
+  .contrib-panel h4 {
+    font-size: 13px;
+    color: var(--color-primary);
+    margin: 12px 0 4px;
+  }
+
+  .contrib-panel h4:first-child { margin-top: 0; }
+
+  .contrib-panel ol,
+  .contrib-panel ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .contrib-panel li { margin-bottom: 3px; }
+
+  /* Section styling */
+  .section {
+    margin-bottom: 48px;
+    scroll-margin-top: 24px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section h2 .sec-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 28px 0 12px;
+    padding-left: 14px;
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 20px 0 8px;
+  }
+
+  .section p {
+    margin-bottom: 14px;
+    color: var(--color-text-light);
+  }
+
+  /* Info cards */
+  .info-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-card .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-card .card-title::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  /* Highlight box */
+  .highlight-box {
+    background: var(--color-highlight);
+    border-left: 4px solid var(--color-accent);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .highlight-box strong {
+    color: var(--color-primary);
+  }
+
+  /* Warning box */
+  .warning-box {
+    background: #fef9e7;
+    border-left: 4px solid var(--color-warning);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .warning-box .warn-title {
+    font-weight: 700;
+    color: var(--color-warning);
+    margin-bottom: 4px;
+  }
+
+  /* Tip box */
+  .tip-box {
+    background: #eaf7ea;
+    border-left: 4px solid var(--color-success);
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 14px;
+  }
+
+  .tip-box .tip-title {
+    font-weight: 700;
+    color: var(--color-success);
+    margin-bottom: 4px;
+  }
+
+  /* Tables */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 16px 0;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  table thead {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-light);
+  }
+
+  table tbody tr:hover {
+    background: var(--color-highlight);
+  }
+
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .clickable-row {
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .clickable-row:hover {
+    background: var(--color-highlight) !important;
+  }
+
+  .clickable-row td:last-child::after {
+    content: ' ↗';
+    font-size: 11px;
+    color: var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  .clickable-row:hover td:last-child::after {
+    opacity: 1;
+  }
+
+  /* Process flow */
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .flow-step {
+    flex: 1;
+    min-width: 120px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+
+  .flow-step .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .flow-step .step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .flow-step .step-desc {
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-top: 4px;
+  }
+
+  /* Pipeline (horizontal flow) */
+  .pipeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin: 24px 0;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .pipeline-stage {
+    text-align: center;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+
+  .pipeline-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .pipeline-body {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 14px 12px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pipeline-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+  }
+
+  .pipeline-detail {
+    font-size: 11px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  .pipeline-time {
+    font-size: 10px;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--color-highlight);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  .pipeline-arrow {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    font-size: 20px;
+    color: var(--color-accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 24px;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .pipeline {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .pipeline-stage { min-width: auto; }
+    .pipeline-arrow {
+      transform: rotate(90deg);
+      padding-top: 0;
+      padding: 4px 0;
+    }
+  }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+
+  .checklist li {
+    padding: 10px 16px;
+    margin: 4px 0;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .checklist li::before {
+    content: '☐';
+    color: var(--color-accent);
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .checklist li.done::before {
+    content: '☑';
+    color: var(--color-success);
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  .tag-blue { background: #dbeafe; color: #1e40af; }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-orange { background: #fff7ed; color: #9a3412; }
+  .tag-red { background: #fce4ec; color: #880e4f; }
+  .tag-gray { background: #f3f4f6; color: #4b5563; }
+
+  /* TOC within section */
+  .section-toc {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    margin: 16px 0;
+  }
+
+  .section-toc .toc-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--color-primary);
+  }
+
+  .section-toc ol {
+    padding-left: 20px;
+    font-size: 13.5px;
+    color: var(--color-text-light);
+  }
+
+  .section-toc ol li {
+    margin: 4px 0;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    z-index: 99;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    background: var(--color-accent);
+  }
+
+  /* Print */
+  @media print {
+    .sidebar, .back-to-top { display: none; }
+    .main-content { margin-left: 0; padding: 20px; max-width: 100%; }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar-nav { display: flex; flex-wrap: wrap; padding: 8px; }
+    .sidebar-nav .nav-section-title { display: none; }
+    .sidebar-nav a { padding: 6px 12px; font-size: 12px; border-left: none; }
+    /* 窄屏下侧栏变成横排标签条，二级目录改为不展开 */
+    .sidebar-nav .nav-caret { display: none; }
+    .sidebar-nav .nav-children { display: none !important; }
+    .sidebar-nav .nav-item.has-children > a.nav-link { padding-right: 12px; }
+    body { flex-direction: column; }
+    .main-content { margin-left: 0; padding: 24px 16px 60px; }
+    .hero h1 { font-size: 24px; }
+    .section h2 { font-size: 20px; }
+    .flow-steps { flex-direction: column; }
+    .page-nav { flex-wrap: wrap; gap: 10px; }
+    .page-nav .page-indicator { order: -1; width: 100%; padding: 0 0 8px; }
+    .page-nav button { flex: 1 1 45%; }
+  }
+
+  /* ==================== PRINCIPLES LIST SPACING ==================== */
+  .principles-list li { margin-bottom: 14px; line-height: 1.95; }
+  .principles-list li:last-child { margin-bottom: 0; }
+
+  /* ==================== PAGINATION ==================== */
+  /* Only the active page is shown; all others are hidden. */
+  .hero, .section { display: none; }
+  .hero.active, .section.active {
+    display: block;
+    animation: pageFade 0.25s ease;
+  }
+  @keyframes pageFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .page-nav {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border);
+  }
+  .page-nav button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 22px;
+    border: 1px solid var(--color-border);
+    background: var(--color-card);
+    border-radius: var(--radius);
+    color: var(--color-primary);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-sm);
+  }
+  .page-nav button.next { text-align: right; align-items: flex-end; }
+  .page-nav button:hover:not(:disabled) {
+    border-color: var(--color-accent);
+    background: var(--color-highlight);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .page-nav button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .page-nav .nav-label {
+    font-size: 12px;
+    color: var(--color-text-light);
+    font-weight: 400;
+  }
+  .page-nav .nav-title {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .page-nav .page-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--color-text-light);
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+
+  /* ==================== 5.1 A1 PACK TABLE ==================== */
+  .a1-table thead th {
+    background: var(--color-primary);
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .a1-table td {
+    line-height: 1.65;
+    vertical-align: top;
+  }
+  .a1-table td:first-child {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 12.5px;
+    color: #1f2a37;
+    background: rgba(201,168,76,0.10);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .a1-table td:first-child code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: 12.5px;
+    word-break: break-all;
+  }
+</style>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body style="position: relative;">
+
+<!-- ==================== SIDEBAR ==================== -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">GUIDEBOOK</div>
+    <h1>港股IPO<br>业务操作指南</h1>
+    <div class="subtitle">金牌银行家 · 执行组</div>
+  </div>
+  <nav class="sidebar-nav">
+<!--NAV-->
+  </nav>
+  <div class="sidebar-footer">
+    版本 V2.2 · 2026年11月<br>
+    投行分会执行小组
+  </div>
+</aside>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="main-content">
+
+  <!-- HERO (cover page) -->
+  <!--PAGE:cover-->
+
+  <!-- ==================== SECTION 0: 手册概览与使用说明 ==================== -->
+  <!--PAGE:sec0-->
+
+  <!-- ==================== 港股IPO相关基础知识 ==================== -->
+  <!--PAGE:sec-intro-->
+
+  <!-- ==================== SECTION 1: 项目承揽 ==================== -->
+  <!--PAGE:sec1-->
+
+  <!-- ==================== SECTION 2: 项目立项 ==================== -->
+  <!--PAGE:sec2-->
+
+  <!-- ==================== SECTION 3: 尽职调查 ==================== -->
+  <!--PAGE:sec3-->
+
+  <!-- ==================== SECTION 4: 质控内核 ==================== -->
+  <!--PAGE:sec4-->
+
+  <!-- ==================== SECTION 5: 申报审核 ==================== -->
+  <!--PAGE:sec5-->
+
+  <!-- ==================== SECTION 6: 发行上市 ==================== -->
+  <!--PAGE:sec6-->
+
+  <!-- ==================== SECTION 7: 底稿归档 ==================== -->
+  <!--PAGE:sec7-->
+
+  <!-- ==================== SECTION 8: 规则汇编 ==================== -->
+  <!--PAGE:sec8-->
+
+  <!-- ==================== FOOTER ==================== -->
+  <div style="margin-top:60px;padding-top:30px;border-top:2px solid var(--color-border);text-align:center;color:var(--color-text-light);font-size:13px;">
+    <p><strong>港股IPO业务操作指南——金牌银行家Guidebook · V2.2</strong></p>
+    <p>投行分会执行小组 · Guidebook 大赛</p>
+    <p style="margin-top:12px;">
+      <span class="tag tag-gray">本指南仅供内部培训使用</span>
+      <span class="tag tag-gray">更新时间：2026年11月9日</span>
+    </p>
+    <p style="margin-top:16px;font-size:11px;opacity:0.6;">
+      Disclaimer：本指南旨在为投行新员工提供港股IPO业务的实操指引，不构成任何法律意见或监管合规建议。<br>
+      具体项目执行中，请以最新法规及公司内部政策为准，必要时咨询法律及合规部门。
+    </p>
+  </div>
+
+  <!-- ==================== PAGE NAV (上一章 / 下一章) ==================== -->
+  <nav class="page-nav" id="pageNav" aria-label="章节导航">
+    <button type="button" class="prev" id="prevBtn" disabled="">
+      <span class="nav-label">← 上一章</span>
+      <span class="nav-title" id="prevTitle"></span>
+    </button>
+    <div class="page-indicator" id="pageIndicator">第 1 / 11 页</div>
+    <button type="button" class="next" id="nextBtn">
+      <span class="nav-label">下一章 →</span>
+      <span class="nav-title" id="nextTitle">手册概览与使用说明</span>
+    </button>
+  </nav>
+
+</main>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" title="返回顶部">↑</button>
+
+<script>
+  // ==================== PAGINATION CONTROLLER ====================
+  // 首页(cover) 为封面；「港股IPO相关基础知识」自成一章(sec-intro)，已在目录中呈现，
+  // 点击目录可直接回到该章节。阅读顺序见 pageOrder。
+  const redirect = {};                              // 无重定向：每个章节均为独立分页
+  const navHighlight = {};                          // 首页(#cover)已进目录，按 href 直接高亮
+  const pageOrder = ['cover', 'sec0', 'sec-intro', 'sec1', 'sec2', 'sec3', 'sec4', 'sec5', 'sec6', 'sec7', 'sec8'];
+  const pageTitles = {
+    'cover': '指南首页',
+    'sec-intro': '港股IPO相关基础知识',
+    'sec0': '手册概览与使用说明',
+    'sec1': '项目承揽',
+    'sec2': '项目立项',
+    'sec3': '尽职调查',
+    'sec4': '质控内核',
+    'sec5': '申报审核',
+    'sec6': '发行上市',
+    'sec7': '底稿归档',
+    'sec8': '规则汇编'
+  };
+
+  const navLinks = Array.from(document.querySelectorAll('.sidebar-nav a.nav-link'));
+  const subLinks = Array.from(document.querySelectorAll('.sidebar-nav a.nav-sub'));
+  const navItems = Array.from(document.querySelectorAll('.sidebar-nav .nav-item'));
+  const pages = pageOrder.map(id => document.getElementById(id)).filter(Boolean);
+  let currentIndex = 0;
+
+  const ANCHOR_OFFSET = 24;          // 二级锚点滚动后的顶部留白
+  let pendingAnchor = null;          // 切页后需要滚动过去的小节 id
+  const pinnedOpen = new Set();      // 用户手动展开过的章节
+
+  function goToId(rawId) {
+    const id = redirect[rawId] || rawId;
+    let idx = pageOrder.indexOf(id);
+    let anchor = null;
+
+    if (idx < 0) {
+      const el = document.getElementById(id);
+      if (el) {
+        const sec = el.closest('.section');
+        if (sec && pageOrder.indexOf(sec.id) >= 0) {
+          idx = pageOrder.indexOf(sec.id);
+          anchor = el.id;
+        } else if (el.id === 'cover' || el.closest('#cover')) {
+          idx = 0;
+        }
+      }
+    }
+
+    if (idx >= 0) {
+      currentIndex = idx;
+      pendingAnchor = anchor;
+      render();
+    }
+  }
+
+  // 只展开当前章节的二级目录（外加用户手动展开的章节）
+  function syncChildrenOpen(activeId) {
+    navItems.forEach(item => {
+      const link = item.querySelector('a.nav-link');
+      const kids = item.querySelector('.nav-children');
+      if (!link || !kids) return;
+      const sid = (link.getAttribute('href') || '').slice(1);
+      const open = sid === activeId || pinnedOpen.has(sid);
+      kids.classList.toggle('open', open);
+      const caret = item.querySelector('.nav-caret');
+      if (caret) {
+        caret.classList.toggle('open', open);
+        caret.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+    });
+  }
+
+  function setActiveSub(id) {
+    subLinks.forEach(link => {
+      link.classList.toggle('active', !!id && link.getAttribute('href') === '#' + id);
+    });
+  }
+
+  // 文档内绝对位置：用 offsetTop 链计算，避开切页动画 translateY 对 rect 的干扰
+  function docTop(el) {
+    let y = 0, n = el;
+    while (n) { y += n.offsetTop; n = n.offsetParent; }
+    return y;
+  }
+
+  // 让侧栏内的目标条目滚进可视区（只影响侧栏自身，不动页面）
+  // chapterLink 为章节一级条目，subLink 为命中的二级条目；优先保证整组二级条目都露出来
+  function revealInSidebar(chapterLink, subLink) {
+    const sb = document.querySelector('.sidebar');
+    if (!sb) return;
+    const pad = 12;
+    const target = subLink || chapterLink;
+    if (!target) return;
+
+    let sbRect = sb.getBoundingClientRect();
+
+    // 上方被遮住：把目标条目贴到可视区顶部
+    let tRect = target.getBoundingClientRect();
+    if (tRect.top < sbRect.top + pad) {
+      sb.scrollTop += tRect.top - sbRect.top - pad;
+      sbRect = sb.getBoundingClientRect();
+      tRect = target.getBoundingClientRect();
+    }
+
+    // 下方超出：把展开的整组二级条目一起带进来，但不超过"章节行贴顶"
+    const item = chapterLink ? chapterLink.closest('.nav-item') : null;
+    const kids = item ? item.querySelector('.nav-children.open') : null;
+    const bottom = Math.max(tRect.bottom, kids ? kids.getBoundingClientRect().bottom : 0);
+    const overflow = bottom - (sbRect.bottom - pad);
+    if (overflow > 0) {
+      const cap = chapterLink
+        ? chapterLink.getBoundingClientRect().top - sbRect.top - pad
+        : Infinity;
+      sb.scrollTop += Math.min(overflow, Math.max(cap, 0));
+    }
+  }
+
+  // 滚动时按视口顶部反查当前小节
+  let spyTicking = false;
+  function updateSpy() {
+    const page = pages[currentIndex];
+    if (!page) return;
+    const heads = Array.from(page.querySelectorAll('h3[id]'));
+    let current = null;
+    for (let i = 0; i < heads.length; i++) {
+      if (heads[i].getBoundingClientRect().top <= ANCHOR_OFFSET + 56) current = heads[i].id;
+      else break;
+    }
+    setActiveSub(current);
+  }
+  function onScrollSpy() {
+    if (spyTicking) return;
+    spyTicking = true;
+    requestAnimationFrame(() => { spyTicking = false; updateSpy(); });
+  }
+  window.addEventListener('scroll', onScrollSpy, { passive: true });
+  window.addEventListener('resize', onScrollSpy);
+
+  function render() {
+    // Show only the active page; hide the rest
+    pages.forEach((p, i) => p.classList.toggle('active', i === currentIndex));
+
+    // Highlight the matching sidebar item（首页高亮「港股IPO简介」）
+    const currentId = pageOrder[currentIndex];
+    const hlId = navHighlight[currentId] || currentId;
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + hlId);
+    });
+
+    // 二级目录跟随当前章节展开/收起
+    syncChildrenOpen(currentId);
+    const activeChapterLink = navLinks.find(l => l.getAttribute('href') === '#' + hlId);
+
+    // Prev / Next buttons + target titles
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevTitle = document.getElementById('prevTitle');
+    const nextTitle = document.getElementById('nextTitle');
+    const indicator = document.getElementById('pageIndicator');
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex === pages.length - 1;
+    prevTitle.textContent = currentIndex > 0 ? pageTitles[pageOrder[currentIndex - 1]] : '';
+    nextTitle.textContent = currentIndex < pages.length - 1 ? pageTitles[pageOrder[currentIndex + 1]] : '';
+    indicator.textContent = '第 ' + (currentIndex + 1) + ' / ' + pages.length + ' 页';
+
+    syncHash();
+
+    // 切页后：有二级锚点就定位过去，否则回到页首
+    const anchorId = pendingAnchor;
+    pendingAnchor = null;
+    const target = anchorId ? document.getElementById(anchorId) : null;
+    if (target) {
+      const y = docTop(target) - ANCHOR_OFFSET;
+      window.scrollTo({ top: y > 0 ? y : 0, behavior: 'auto' });
+      setActiveSub(target.id);
+      revealInSidebar(activeChapterLink, subLinks.find(l => l.getAttribute('href') === '#' + target.id));
+      requestAnimationFrame(() => setActiveSub(target.id));
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      updateSpy();
+      revealInSidebar(activeChapterLink);
+    }
+  }
+
+  function syncHash() {
+    const id = pendingAnchor || pageOrder[currentIndex];
+    if (('#' + id) === location.hash) return;
+    try {
+      history.replaceState(null, '', '#' + id);
+    } catch (e) {
+      /* file:// 等受限环境下忽略即可，不影响导航 */
+    }
+  }
+
+  // Sidebar click → jump to chapter
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToId(link.getAttribute('href').substring(1));
+    });
+  });
+
+  // 二级目录点击 → 先切到所属章节，再滚动到小节
+  subLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToId(link.getAttribute('href').substring(1));
+    });
+  });
+
+  // 展开/收起二级目录（不影响一级条目的跳转）
+  document.querySelectorAll('.sidebar-nav .nav-caret').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = btn.closest('.nav-item');
+      const link = item ? item.querySelector('a.nav-link') : null;
+      if (!link) return;
+      const sid = (link.getAttribute('href') || '').slice(1);
+      if (pinnedOpen.has(sid)) pinnedOpen.delete(sid); else pinnedOpen.add(sid);
+      syncChildrenOpen(pageOrder[currentIndex]);
+    });
+  });
+
+  // Clickable table rows → jump to their target page
+  document.querySelectorAll('.clickable-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const href = row.getAttribute('data-href');
+      if (href && href.startsWith('#')) goToId(href.substring(1));
+    });
+  });
+
+  // Footer prev / next
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    if (currentIndex > 0) { currentIndex--; render(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    if (currentIndex < pages.length - 1) { currentIndex++; render(); }
+  });
+
+  // Keyboard navigation: ← / →
+  document.addEventListener('keydown', (e) => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+    if (e.key === 'ArrowLeft' && currentIndex > 0) { currentIndex--; render(); }
+    if (e.key === 'ArrowRight' && currentIndex < pages.length - 1) { currentIndex++; render(); }
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  function toggleBackToTop() {
+    if (window.scrollY > 400) backToTop.classList.add('visible');
+    else backToTop.classList.remove('visible');
+  }
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', toggleBackToTop);
+  toggleBackToTop();
+
+  // Open from hash on load (deep link support)
+  const initialHash = location.hash.replace('#', '');
+  if (initialHash) {
+    if (pageOrder.indexOf(initialHash) >= 0) {
+      currentIndex = pageOrder.indexOf(initialHash);
+    } else {
+      const el = document.getElementById(initialHash);
+      const sec = el ? el.closest('.section') : null;
+      if (sec && pageOrder.indexOf(sec.id) >= 0) {
+        currentIndex = pageOrder.indexOf(sec.id);
+        pendingAnchor = el.id;
+      }
+    }
+  }
+  render();
+
+  // 浏览器自身的锚点滚动发生在脚本之后，会在 load 时再校准一次位置
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  let userMoved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach(ev => {
+    window.addEventListener(ev, () => { userMoved = true; }, { passive: true });
+  });
+
+  function applyCurrentPosition() {
+    const hid = location.hash.replace('#', '');
+    const el = hid ? document.getElementById(hid) : null;
+    if (el && pageOrder.indexOf(hid) < 0) {
+      const y = docTop(el) - ANCHOR_OFFSET;
+      window.scrollTo({ top: y > 0 ? y : 0, behavior: 'auto' });
+      setActiveSub(el.id);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      updateSpy();
+    }
+  }
+
+  window.addEventListener('load', () => { if (!userMoved) applyCurrentPosition(); });
+
+  // ---------- 封面：贡献邀请按钮 ----------
+  const contribPanel = document.getElementById('contribPanel');
+  const contribToggle = document.getElementById('contribToggle');
+
+  if (contribToggle && contribPanel) {
+    contribToggle.addEventListener('click', () => {
+      const open = contribPanel.hasAttribute('hidden');
+      if (open) {
+        contribPanel.removeAttribute('hidden');
+        contribToggle.textContent = '📖 收起说明';
+      } else {
+        contribPanel.setAttribute('hidden', '');
+        contribToggle.textContent = '📖 怎么贡献';
+      }
+    });
+  }
+
+  const templates = {
+    feedback: [
+      '【Guidebook 修订建议】',
+      '· 涉及章节：第X章 X.X 节（或“手册概览·第X节”）',
+      '· 现行表述：（原文摘录；建议新增的写“暂无此内容”）',
+      '· 建议改为：（改写后的文字；新增内容请注明插入位置）',
+      '· 依据：（《上市规则》条文号／指引信编号／项目实例；经验判断请注明）',
+      '· 建议人：（姓名·部门，用于修订记录署名）'
+    ].join('\n'),
+    claim: [
+      '【Guidebook 章节认领】',
+      '· 认领章节：第X章 X.X 节',
+      '· 可投入时间：（预计初稿交付时间）',
+      '· 计划补充内容：（案例／规则更新／操作步骤等）',
+      '· 是否需要编写组提供材料：（需要哪些背景资料）',
+      '· 认领人：（姓名·部门）'
+    ].join('\n')
+  };
+
+  function flash(btn, text) {
+    const original = btn.textContent;
+    btn.textContent = text;
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  }
+
+  function copyText(text, btn) {
+    const ok = () => flash(btn, '✓ 已复制，可直接粘贴');
+    const fallback = () => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      let done = false;
+      try { done = document.execCommand('copy'); } catch (e) { done = false; }
+      document.body.removeChild(ta);
+      if (done) { ok(); } else { flash(btn, '复制失败，请手动选择文本'); }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  const btnFeedbackTpl = document.getElementById('btnFeedbackTpl');
+  const btnClaimTpl = document.getElementById('btnClaimTpl');
+  if (btnFeedbackTpl) btnFeedbackTpl.addEventListener('click', () => copyText(templates.feedback, btnFeedbackTpl));
+  if (btnClaimTpl) btnClaimTpl.addEventListener('click', () => copyText(templates.claim, btnClaimTpl));
+</script>
+
+
+
+</body></html>
